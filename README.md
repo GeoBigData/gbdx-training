@@ -26,12 +26,11 @@ gbdxtools expects a config file to exist at ~.gbdx-config with your GBDX credent
   user_name = your_user_name
   user_password = your_password
   ```
-
 This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io/login). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io/en/latest/index.html and https://github.com/DigitalGlobe/gbdxtools.
 
- After installation and config file setup, it is recommended that you start a python session with the following code
+Ensure that the gbdxtools installation and your config file are working by starting a Python session with the following code
   ```
   from gbdxtools import Interface
   gbdx = Interface()
   ```
-If gbdxtools and the config file are correctly set up, this code will instantiate a gbdx Interface object, which you will likely want to do every time you use gbdxtools. If you receive a config file error, please review the instructions. Common problems include formatting mistakes introduced from copy/paste, a config file extension, and/or not saving your config file to your home drive. 
+This will instantiate a gbdx Interface object, which is something you'll want to do each time you begin a gbdxtools session. Congratulations! You are now ready to explore GBDX. If you receive an error message, you may need to check your config file for copy/paste errors, that the file doesn't have an extension (it may be hidden), and/or make sure it is stored in your root directory.   
