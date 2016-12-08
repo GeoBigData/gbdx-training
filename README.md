@@ -26,7 +26,7 @@ gbdxtools expects a config file to exist at ~.gbdx-config with your GBDX credent
   user_name = your_user_name
   user_password = your_password
   ```
-This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io/login). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io/en/latest/index.html and https://github.com/DigitalGlobe/gbdxtools.
+This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io/login). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io/en/latest/index.html and https://github.com/DigitalGlobe/gbdxtools. 
 
 Ensure that the gbdxtools installation and your config file are working by starting a Python session with the following code
   ```
@@ -34,3 +34,7 @@ Ensure that the gbdxtools installation and your config file are working by start
   gbdx = Interface()
   ```
 This will instantiate a gbdx Interface object, which is something you'll want to do each time you begin a gbdxtools session. Congratulations! You are now ready to explore GBDX. If you receive an error message, you may need to check your config file for copy/paste errors, that the file doesn't have an extension (it may be hidden), and/or make sure it is stored in your root directory.   
+
+## Docker
+Docker is a software containerization platform that allows developers to package up an application with its dependencies, and deliver it to a user in a single, self-sufficient package (referred to as a container). GBDX utilizes Docker technology to  (..........)
+In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com/engine/getstarted/step_one/), and sign up for free account on [DockerHub](https://hub.docker.com/)
