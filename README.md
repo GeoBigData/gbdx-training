@@ -1,7 +1,7 @@
 # TO-DO in preparation for GBDX Training
 
 ## GBDX Credentials
-Please email GBDX-Support@digitalglobe.com for credentials or sign up for a free evaluation account via the [GBDX Web App](https://gbdx.geobigdata.io/login) and ensure that your credentials allow you to successfully log in.
+Please email GBDX-Support@digitalglobe.com for credentials or sign up for a free evaluation account via the [GBDX Web App](https://gbdx.geobigdata.io) and ensure that your credentials allow you to successfully log in.
 
 ## Postman
 Postman is a HTTP client that allows you to test API requests and create collections of frequently-used requests. Follow the instructions from [this GBDX University tutorial](http://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections) to install Postman, set up your environment, and import GBDX postman collections.
@@ -26,7 +26,7 @@ gbdxtools expects a config file to exist at ~.gbdx-config with your GBDX credent
   user_name = your_user_name
   user_password = your_password
   ```
-This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io/login). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io/en/latest/index.html and https://github.com/DigitalGlobe/gbdxtools. 
+This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io and https://github.com/DigitalGlobe/gbdxtools. 
 
 Ensure that the gbdxtools installation and your config file are working by starting a Python session with the following code
   ```
@@ -39,3 +39,17 @@ This will instantiate a gbdx Interface object, which is something you'll want to
 Docker is a software containerization platform that allows developers to package up an application with its dependencies, and deliver it to a user in a single, self-sufficient package (referred to as a container). GBDX utilizes Docker technology to  (..........)
 
 In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com/engine/getstarted/step_one/), and sign up for free account on [DockerHub](https://hub.docker.com/).
+
+## Resources
+Those listed from above, and additional resources
+
+https://gbdx.geobigdata.io GBDX Web App
+
+GBDX University http://gbdxdocs.digitalglobe.com
+
+gbdxtools documentation
+
+gbdxtools github
+
+docker
+dockerhub
