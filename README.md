@@ -1,14 +1,14 @@
 # TO-DO in preparation for GBDX Training
 
 ## GBDX Credentials
-If you do not already have a GBDX account through your organization, please email GBDX-Support@digitalglobe.com for credentials or sign up for a free evaluation account on the [GBDX Web App](https://gbdx.geobigdata.io/login) and check that your credentials allow you to log in
+If you do not already have a GBDX account through your organization, please email GBDX-Support@digitalglobe.com for credentials or sign up for a free evaluation account from the [GBDX Web App](https://gbdx.geobigdata.io/login) and check that you are able to successfully log in the Web App with your credentials 
 
 ## Postman
-Postman is a HTTP client that allows you to test API requests and create collections of frequently-used requests. Follow the instructions from [this GBDX University tutorial](http://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections) on how to install Postman, set up your environment, and import GBDX postman collections
+Postman is a HTTP client that allows you to test API requests and create collections of frequently-used requests. Follow the instructions from [this GBDX University tutorial](http://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections) to install Postman, set up your environment, and import GBDX postman collections
 
-## gbdxtools (python/pip or anaconda) 
+## gbdxtools  
 
-gbdxtools is a python wrapper (sdk?) for GBDX APIs that makes it easy to search the DigitalGlobe catalog, and order and process imagery. In order to install gbdxtools, [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) will need to be installed on your machine. 
+gbdxtools is a python wrapper to GBDX APIs that makes it easy to search the DigitalGlobe catalog, and order and process imagery. In order to install gbdxtools, [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) will need to be installed on your machine. 
 
 (Alternatively, you can install the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution, which includes Python, Pip, and Jupyter, and IPython. Jupyter Notebook is an interactive computational environment that provides an easy way to demonstrate gbdxtools. By installing Anaconda, you will be able to follow the gbdxtools tutorial within the notebook, although python code sample will also be provided. IPython is (...better than python)
 
