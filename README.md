@@ -10,7 +10,7 @@ Postman is a HTTP client that allows you to test API requests and create collect
 
 gbdxtools is a python wrapper to GBDX APIs that allows one to easily search the DigitalGlobe catalog, and order and process imagery. [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) are required to install gbdxtools 
 
-(Alternatively, you can install the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution, which includes Python, Pip, and Jupyter, and IPython. Jupyter Notebook is an interactive computational environment that provides an easy way to demonstrate gbdxtools. By installing Anaconda, you will be able to follow the gbdxtools tutorial within the notebook, although python code sample will also be provided. IPython is (...better than python)
+Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution installs Python, Pip, Jupyter, and IPython. Jupyter Notebook is an interactive computational environment that we employ when demonstrating gbdxtools. By installing Anaconda, you will be able to follow the gbdxtools tutorial within the notebook, although sample python code will also be provided
 
 Once Python and Pip are installed, install gbdxtools installation instruction from gbdxtool documentation. The gbdxtools documentation includes instructions on how to use pip to install gbdxtools and set up a config file with your gbdx credentials to authenticate your gbdxtools session. Your GBDX credentials can be found in your user profile information within the [GBDX Web App](https://gbdx.geobigdata.io/login). After installation and config file setup, it is recommended that you start a python session with the following code
   '''
