@@ -13,18 +13,18 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) are required to install gbdxtools. Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution installs Python, Pip, Jupyter, and IPython. By installing Anaconda, you will have the option to follow the gbdxtools demo through a provided Jupyter Notebook. Sample python code, however, will also be provided
 
 gbdxtools is easy to install via pip
-'''
-pip install gbdxtools
-'''
+  '''
+  pip install gbdxtools
+  '''
 Following installation, store a configuration file containing your GBDX credentials to your root drive with the following format
-'''
-[gbdx]
-auth_url = https://geobigdata.io/auth/v1/oauth/token/
-client_id = your_client_id
-client_secret = your_client_secret
-user_name = your_user_name
-user_password = your_password
-'''
+  '''
+  [gbdx]
+  auth_url = https://geobigdata.io/auth/v1/oauth/token/
+  client_id = your_client_id
+  client_secret = your_client_secret
+  user_name = your_user_name
+  user_password = your_password
+  '''
 
 
 Follow the instructions provided in the [gbdxtools documentation](http://gbdxtools.readthedocs.io) to install gbdxtools. 
