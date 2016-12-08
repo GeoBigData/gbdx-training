@@ -43,33 +43,33 @@ In preparation of dockerizing a task to run on GBDX, install [Docker](https://do
 ## Resources
 Those listed from above, and additional resources
 
-GBDX Web App
+GBDX Web App:
 https://gbdx.geobigdata.io 
 
-GBDX University 
+GBDX University: 
 http://gbdxdocs.digitalglobe.com
 
-gbdxtools Documentation
+gbdxtools Documentation:
 http://gbdxtools.readthedocs.io 
 
-gbdxtools Github
+gbdxtools Github:
 https://github.com/DigitalGlobe/gbdxtools.
 
-s3 browser
+s3 browser:
 http://s3browser-env.elasticbeanstalk.com/
 
-Task-to-GBDX tutorials
+Task-to-GBDX tutorials:
 http://gbdxstories.digitalglobe.com/create-task/#registering-a-task-on-gbdx
 https://github.com/GeoBigData/Taskifying
 
-Postman
+Postman:
 https://www.getpostman.com/
 
-Docker
+Docker:
 https://www.docker.com/
 
-Dockerhub
+Dockerhub:
 https://hub.docker.com
 
-Jupyter
+Jupyter:
 http://jupyter.org/
