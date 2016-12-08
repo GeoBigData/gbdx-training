@@ -10,7 +10,7 @@ Postman is a HTTP client that allows you to test API requests and create collect
 
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery
 
-Install [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) before installing gbdxtools. Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution also installs Python, Pip, Jupyter, and IPython. By installing Anaconda, you will have the option to follow the gbdxtools demo through the provided Jupyter Notebook (sample python code is also be provided)
+Install [Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) before installing gbdxtools. Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution installs Python, Pip, Jupyter, and IPython. By installing Anaconda, you will have the option to follow the gbdxtools demo through the provided Jupyter Notebook (sample python code is also be provided)
 
 gbdxtools is easy to install via pip
   ```
