@@ -10,26 +10,26 @@ Postman is a HTTP client that allows you to test API requests and create collect
 
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery
 
-[Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) are required to install gbdxtools. Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution installs Python, Pip, Jupyter, and IPython. By installing Anaconda, you will have the option to follow the gbdxtools demo through a provided Jupyter Notebook. Sample python code, however, will also be provided
+[Python](https://www.python.org/) and [Pip](https://pip.pypa.io/en/stable/installing/) are required to install gbdxtools. Alternatively, the [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html) distribution installs Python, Pip, Jupyter, and IPython. By installing Anaconda, you will have the option to follow the gbdxtools demo through the provided Jupyter Notebook. Sample python code, however, will also be provided
 
 gbdxtools is easy to install via pip
-  '''
+  ```
   pip install gbdxtools
-  '''
-Following installation, store a configuration file containing your GBDX credentials to your root drive with the following format
-  '''
+  ```
+
+gbdxtools expects a config file to exist at ~.gbdx-config with your GBDX credentials, in the following format
+  ```
   [gbdx]
   auth_url = https://geobigdata.io/auth/v1/oauth/token/
   client_id = your_client_id
   client_secret = your_client_secret
   user_name = your_user_name
   user_password = your_password
-  '''
+  ```
 
+This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io/login). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io/en/latest/index.html and https://github.com/DigitalGlobe/gbdxtools
 
-Follow the instructions provided in the [gbdxtools documentation](http://gbdxtools.readthedocs.io) to install gbdxtools. 
-
-Once Python and Pip are installed, install gbdxtools installation instruction from gbdxtool documentation. The gbdxtools documentation includes instructions on how to use pip to install gbdxtools and set up a config file with your gbdx credentials to authenticate your gbdxtools session. Your GBDX credentials can be found in your user profile information within the [GBDX Web App](https://gbdx.geobigdata.io/login). After installation and config file setup, it is recommended that you start a python session with the following code
+ After installation and config file setup, it is recommended that you start a python session with the following code
   '''
   from gbdxtools import Interface
   gbdx = Interface()
