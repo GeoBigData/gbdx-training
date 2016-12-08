@@ -38,18 +38,38 @@ This will instantiate a gbdx Interface object, which is something you'll want to
 ## Docker
 Docker is a software containerization platform that allows developers to package up an application with its dependencies, and deliver it to a user in a single, self-sufficient package (referred to as a container). GBDX utilizes Docker technology to  (..........)
 
-In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com/engine/getstarted/step_one/), and sign up for free account on [DockerHub](https://hub.docker.com/).
+In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com), and sign up for free account on [DockerHub](https://hub.docker.com).
 
 ## Resources
 Those listed from above, and additional resources
 
-https://gbdx.geobigdata.io GBDX Web App
+GBDX Web App
+https://gbdx.geobigdata.io 
 
-GBDX University http://gbdxdocs.digitalglobe.com
+GBDX University 
+http://gbdxdocs.digitalglobe.com
 
-gbdxtools documentation
+gbdxtools Documentation
+http://gbdxtools.readthedocs.io 
 
-gbdxtools github
+gbdxtools Github
+https://github.com/DigitalGlobe/gbdxtools.
 
-docker
-dockerhub
+s3 browser
+http://s3browser-env.elasticbeanstalk.com/
+
+Task-to-GBDX tutorials
+http://gbdxstories.digitalglobe.com/create-task/#registering-a-task-on-gbdx
+https://github.com/GeoBigData/Taskifying
+
+Postman
+https://www.getpostman.com/
+
+Docker
+https://www.docker.com/
+
+Dockerhub
+https://hub.docker.com
+
+Jupyter
+http://jupyter.org/
