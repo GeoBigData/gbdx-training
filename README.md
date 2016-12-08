@@ -41,8 +41,6 @@ Docker is a software containerization platform that allows developers to package
 In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com), and sign up for free account on [DockerHub](https://hub.docker.com).
 
 ## Resources
-Those listed from above, and additional resources
-
 GBDX Web App:
 https://gbdx.geobigdata.io 
 
