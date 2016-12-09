@@ -1,7 +1,7 @@
 # TO-DO in preparation for GBDX Training
 
 ## GBDX Credentials
-Please email GBDX-Support@digitalglobe.com for credentials or sign up for a free evaluation account via the [GBDX Web App](https://gbdx.geobigdata.io) and ensure that your credentials allow you to successfully log in.
+Sign up for a free evaluation account via the [GBDX Web App](https://gbdx.geobigdata.io) and ensure that your credentials allow you to successfully log in.
 
 ## Postman
 Postman is a HTTP client that allows you to test API requests and create collections of frequently-used requests. Follow the instructions from [this GBDX University tutorial](http://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections) to install Postman, set up your environment, and import GBDX postman collections.
