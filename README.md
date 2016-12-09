@@ -36,7 +36,7 @@ Ensure that the gbdxtools installation and your config file are working by start
 This will instantiate a gbdx Interface object, which is something you'll want to do each time you begin a gbdxtools session. Congratulations! You are now ready to explore GBDX. If you receive an error message, you may need to check your config file for copy/paste errors, that the file doesn't have an extension (it may be hidden), and/or make sure it is stored in your root directory.   
 
 ## Docker
-Docker is a software containerization platform that allows developers to package up an application with its dependencies, and deliver it to a user in a single, self-sufficient package (referred to as a container). GBDX utilizes Docker technology to  (..........)
+Docker is a software containerization platform that allows developers to package up an application with its dependencies, and deliver it to a user in a single, self-sufficient package (referred to as a container). GBDX utilizes Docker technology to enable 3rd party developers to bring their intellectual property to GBDX. 
 
 In preparation of dockerizing a task to run on GBDX, install [Docker](https://docs.docker.com), and sign up for free account on [DockerHub](https://hub.docker.com).
 
