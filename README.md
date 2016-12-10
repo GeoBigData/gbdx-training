@@ -28,7 +28,7 @@ gbdxtools expects a config file to exist at ~.gbdx-config with your GBDX credent
   ```
 This information can be found in your user profile from the [GBDX Web App](https://gbdx.geobigdata.io). Documentation on gbdxtools installation and use can be found at http://gbdxtools.readthedocs.io and https://github.com/DigitalGlobe/gbdxtools. 
 
-Ensure that the gbdxtools installation and your config file are working by starting a Python session with the following code
+Ensure that the gbdxtools installation and config file are working by starting a Python session with the following code
   ```
   from gbdxtools import Interface
   gbdx = Interface()
