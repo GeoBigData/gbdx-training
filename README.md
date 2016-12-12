@@ -51,13 +51,14 @@ gbdxtools Documentation:
 http://gbdxtools.readthedocs.io 
 
 gbdxtools Github:
-https://github.com/DigitalGlobe/gbdxtools.
+https://github.com/DigitalGlobe/gbdxtools
 
 s3 browser:
 http://s3browser-env.elasticbeanstalk.com/
 
 Task-to-GBDX tutorials:
 http://gbdxstories.digitalglobe.com/create-task/
+
 https://github.com/GeoBigData/Taskifying
 
 Postman:
