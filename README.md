@@ -57,7 +57,7 @@ s3 browser:
 http://s3browser-env.elasticbeanstalk.com/
 
 Task-to-GBDX tutorials:
-http://gbdxstories.digitalglobe.com/create-task/#registering-a-task-on-gbdx
+http://gbdxstories.digitalglobe.com/create-task/
 https://github.com/GeoBigData/Taskifying
 
 Postman:
