@@ -54,24 +54,23 @@ gbdxtools Github:
 https://github.com/DigitalGlobe/gbdxtools
 
 s3 browser:
-http://s3browser-env.elasticbeanstalk.com/
+http://s3browser-env.elasticbeanstalk.com
 
 Task-to-GBDX tutorials:
-http://gbdxstories.digitalglobe.com/create-task/
-
+http://gbdxstories.digitalglobe.com/create-task
 https://github.com/GeoBigData/Taskifying
 
 Postman:
-https://www.getpostman.com/
+https://www.getpostman.com
 
 Docker:
-https://www.docker.com/
+https://www.docker.com
 
 Dockerhub:
 https://hub.docker.com
 
 Jupyter:
-http://jupyter.org/
+http://jupyter.org
 
 Python:
 https://www.python.org
@@ -80,4 +79,4 @@ Pip:
 https://pip.pypa.io
 
 JSON Lint:
-http://jsonlint.com/
+http://jsonlint.com
