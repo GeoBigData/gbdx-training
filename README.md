@@ -78,5 +78,5 @@ https://www.python.org
 Pip:
 https://pip.pypa.io
 
-Json Lint:
+JSON Lint:
 http://jsonlint.com/
