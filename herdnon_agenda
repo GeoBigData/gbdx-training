@@ -13,7 +13,7 @@ WebApp 2.0: Elizabeth
     - s3 browser
 
 Docker: Elizabeth
-    - quick overview, integration with the platform
+    - overview, integration with the platform
     - pull container, push container
     ​- register on DockerHub 
     - add gbdx collaborators
