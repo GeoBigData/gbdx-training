@@ -82,3 +82,6 @@ https://pip.pypa.io
 
 JSON Lint:
 http://jsonlint.com
+
+Docker slides:
+https://docs.google.com/presentation/d/1StQvatyQk05TwZRH-GuRpbY6apobEiVbc9ioSD5lwCk/edit?usp=sharing
