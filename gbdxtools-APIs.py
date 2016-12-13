@@ -54,7 +54,7 @@ order_status = gbdx.ordering.status(order_id)
 
 print order_status
 
-cat_ids = ['103001005B38CE00', '103001005B078B00']
+cat_ids = ['103001005B38CE00', '1040010014816F00']
 
 order_id = gbdx.ordering.order(cat_ids)
 order_status = gbdx.ordering.status(order_id)
