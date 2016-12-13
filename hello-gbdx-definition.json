@@ -1,5 +1,5 @@
 {
-	"name": "hello-gbdx",
+	"name": "hello-gbdx-<your initials>",
 	"description": "Writes list of the input file names and a user defined message to output file out.txt.",
 	"properties": {
 		"isPublic": true,
