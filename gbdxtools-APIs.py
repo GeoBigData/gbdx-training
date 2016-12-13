@@ -113,3 +113,9 @@ print task.inputs
 print task.inputs.enable_acomp
 print task.outputs
 print task.outputs.data
+
+# Register a task onto GBDX, first navigate to the directory with the JSON task definition
+gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')
+
+# Delete a task 
+gbdx.task_registry.delete(<task-name>)
