@@ -83,5 +83,8 @@ https://pip.pypa.io
 JSON Lint:
 http://jsonlint.com
 
+App that reads and writes Well-Known Text (WKT) strings.
+http://arthur-e.github.io/Wicket/sandbox-gmaps3.html
+
 Docker slides:
 https://docs.google.com/presentation/d/1StQvatyQk05TwZRH-GuRpbY6apobEiVbc9ioSD5lwCk/edit?usp=sharing
