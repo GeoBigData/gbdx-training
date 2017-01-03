@@ -54,7 +54,7 @@ gbdxtools Github:
 https://github.com/DigitalGlobe/gbdxtools
 
 s3 browser:
-http://s3browser-env.elasticbeanstalk.com
+http://s3browser.geobigdata.io
 
 Task-to-GBDX tutorials:
 
