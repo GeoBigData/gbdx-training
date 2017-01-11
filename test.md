@@ -1,4 +1,4 @@
-## Step 1) write algorithm that processes locally 
+## step 1) write algorithm that processes locally 
 here is an example python script that clips a raster image using a shapefile
   ```
   import fiona
