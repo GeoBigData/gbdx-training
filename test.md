@@ -1,5 +1,5 @@
 ## Step 1) write algorithm that processes locally 
-Here is an example script that clips a raster image using a shapefile
+here is an example python script that clips a raster image using a shapefile
   ```
   import fiona
   import rasterio
