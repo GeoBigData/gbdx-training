@@ -1,16 +1,13 @@
-## local script
-
-Step 1) Write an algorithm that successfully processes imagery in the way you intend on your local machine
-
+## Step 1) write algorithm that processes locally 
 Here is an example script that clips a raster image using a shapefile
   ```
   import fiona
   import rasterio
   from rasterio.tools.mask import mask
 
-  shapefile = '/Users/elizabethgolden/Downloads/shpefiel'
-  image = '/Users/elizabethgolden/Downloads/055636722010_01_assembly_MS_clip.tif'
-
+  shapefile = <path to shapefile>
+  image = <path to image>
+  
   with fiona.open(shapefile, "r") as shapefile:
       features = [feature["geometry"] for feature in shapefile]
 
