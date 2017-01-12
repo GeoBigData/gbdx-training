@@ -15,8 +15,9 @@
 ## step 1) write and test algorithm that processes locally 
 here is an example python script that clips a raster image using a shapefile
   ```python
+  
   import fiona
-  from rasterio.tools.mask import mask
+  import rasterio
   import os
 
   shapefile = <path to shapefile>
@@ -26,7 +27,7 @@ here is an example python script that clips a raster image using a shapefile
       features = [feature["geometry"] for feature in shapefile]
 
   with rasterio.open(image) as src:
-      out_image, out_transform = mask(src, features, crop=True)
+      out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
       out_meta = src.meta.copy()
   
   out_meta.update({"driver": "GTiff",
