@@ -19,7 +19,7 @@
 - write i/o cheatsheet/diagram (highlighted text?)
 - add test files (test the test files)
 - explain to upload test files to s3
-- add TOC hyperlinks 
+- [X]add TOC hyperlinks 
 - troubleshooting? (Dockerfile extension)
 
 ## this tutorial.. 
@@ -50,7 +50,9 @@
 - you can then process data in concert with other data and algorithms to execute an entire workflow
 
 ## write and test algorithm that processes locally 
-here is an example python script that clips a raster image using a shapefile (need to explain how)
+- write and test local script 
+- example python script-> clips a raster image using a shapefile
+
   ```python
   import fiona
   import rasterio
@@ -81,7 +83,9 @@ here is an example python script that clips a raster image using a shapefile (ne
   ```
   
 ## modify to match I/O structure within Docker container
-(short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
+- data gets moved in and out of Docker ports with a specific filepath
+- modify inputs and outputs declarations within script to mimic those ports
+
   ```python
   import fiona
   import rasterio
@@ -114,8 +118,10 @@ here is an example python script that clips a raster image using a shapefile (ne
   ```
 
 ## prepare Docker Hub repository
-(short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
-![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
+- register for free acount on [Docker Hub](https://hub.docker.com/)
+- create a repository for your algorithm 
+- add platform collaborators, which will allow the platform to pull and execute your image during a workflow:
+	tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
 
 ## write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
