@@ -27,11 +27,13 @@
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
 - has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
-- TOC
 
+## TOC
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
 
 [step 2. modify to match I/O structure within Docker container](#modify-to-match-structure-within-Docker-container)
+
+[step 3. prepare Docker Hub repository](#prepare-Docker-Hub-repository)
 
 
 (placeholder for diagram of platform architecture)
@@ -104,7 +106,7 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
 
-## step 3) prepare Docker Hub repository
+## prepare Docker Hub repository
 (short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
 ![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
 
