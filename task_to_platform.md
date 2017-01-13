@@ -14,6 +14,7 @@
 - [X]keep commented out lines?
 - add more docker hub screen shots
 - fix Dockerfile (check libraries)(docker hub first? build without naming?)
+- add image showing navigation within Docker container ('exit', right?)
 - show how test script within Docker container 
 - add push instructions
 - fix JSON script (include required versioning)
@@ -125,6 +126,7 @@
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
 ## write, build, test, push build Dockerfile 
+## write Dockerfile
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
@@ -147,11 +149,15 @@
   CMD python /training-indices/mud_water_indices.py
   ```
 
-- next, navigate to the directory containin your Dockerfile and use the following command within a Docker session to build the Docker image
+- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place the script inside it, and execute the script when a container is built from that Docker image
 
-`docker build -t <docker username>/<docker repository> .` (note '.' at end of command)
+## build Docker image from Dockerfile
+- next, navigate to the directory containin your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
+- this may take several minutes the first time, but because Docker build an image in layers, should build quicker the next time
+- use the command `docker images` to see if your image was successfully built 
+- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, and `exit` to get out of the container  
 
-Look at your images `docker images`
+## run and test 
 Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
 ## write JSON task definition 
