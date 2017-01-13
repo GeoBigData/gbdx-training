@@ -112,7 +112,7 @@ here is an example python script that clips a raster image using a shapefile (ne
 (short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
 ![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
 
-## step 4) write, build, test, push build Dockerfile 
+## write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
   ```
   FROM ubuntu:14.04
@@ -132,7 +132,7 @@ Docker command to build container `docker build -t <docker username>/<docker rep
 Look at your images `docker images`
 Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
-## step 5) write JSON task definition 
+## write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
 ```json
 {
@@ -176,7 +176,7 @@ Docker command to run container with mounted data for testing `docker run -v ~/<
 }
 ```
 
-## step 6) register and test your task within a workflow using gbdxtools
+## register and test your task within a workflow using gbdxtools
 (navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
 
 (Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
