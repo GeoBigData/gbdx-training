@@ -9,9 +9,10 @@
   - naming conventions consistency
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
-- expand/clarify section intros
 - add short explanations/intro for each segment
+- expand/clarify section intros
 - [X]keep commented out lines?
+- add more docker hub screen shots
 - fix Dockerfile (check libraries)(docker hub first? build without naming?)
 - show how test script within Docker container 
 - add push instructions
@@ -83,7 +84,7 @@
   ```
   
 ## modify to match I/O structure within Docker container
-- data gets moved in and out of Docker ports with a specific filepath
+- data gets moved in and out of Docker ports with a specific filepath, /mnt/work/input/ and /mnt/work/output/
 - modify inputs and outputs declarations within script to mimic those ports
 
   ```python
@@ -120,9 +121,9 @@
 ## prepare Docker Hub repository
 - register for free acount on [Docker Hub](https://hub.docker.com/)
 - create a repository for your algorithm 
-- add platform collaborators, which will allow the platform to pull and execute your image during a workflow:
-	tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
-
+- [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow:
+	tdgpbuild, tdgpdeploy, tdgplatform 
+	
 ## write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
   ```
