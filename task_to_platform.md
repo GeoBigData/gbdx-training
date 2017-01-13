@@ -37,7 +37,6 @@
 - you can then process data in concert with other data and algorithms to execute an entire workflow
 
 ## step 1) write and test algorithm that processes locally 
-## TEST
 here is an example python script that clips a raster image using a shapefile (need to explain how)
   ```python
   import fiona
@@ -100,6 +99,7 @@ here is an example python script that clips a raster image using a shapefile (ne
   with rasterio.open("masked.tif", "w", **out_meta) as dest:
       dest.write(out_image)
   ```
+## TEST
 
 ## step 3) prepare Docker Hub repository
 (short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)<a href="http://example.com/" target="_blank">example</a>
