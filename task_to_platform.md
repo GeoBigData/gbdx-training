@@ -32,7 +32,7 @@
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
 
-[step 2. modify to match I/O structure within Docker container](#modify-to-match-structure-within-docker-container)
+[step 2. modify to match I/O structure within Docker container](#modify-to-match-io-structure-within-docker-container)
 
 [step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
