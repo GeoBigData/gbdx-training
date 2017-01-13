@@ -36,9 +36,14 @@
 
 [step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
+[step 4. write, build, test, push build Dockerfile](#write-build-test-push-build-dockerfile)
+
+[step 5. write JSON task definition](#write-json-task-definition)
+
+[step 6. register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
 
-(placeholder for diagram of platform architecture)
+(diagram of platform architecture)
 - platform orchestrates movement and processing of data within AWS
 - data is stored in AWS S3, processing happens in AWS EC2s
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
