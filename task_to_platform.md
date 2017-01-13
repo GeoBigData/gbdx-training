@@ -21,6 +21,7 @@
 - explain to upload test files to s3
 - add TOC hyperlinks 
 - troubleshooting? (Dockerfile extension)
+
 ## this tutorial.. 
 - demonstrates how to put a very simple task on the platform, from start to finish 
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
@@ -29,6 +30,7 @@
 - TOC
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
+
 [step 2. modify to match I/O structure within Docker container](#modify-to-match-structure-within-Docker-container)
 
 
