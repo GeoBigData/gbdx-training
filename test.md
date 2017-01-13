@@ -52,12 +52,12 @@ here is an example python script that clips a raster image using a shapefile (ne
   import os
   import glob
 
-  ~~in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')~~
+  ~in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')~
   in_path = '/mnt/work/input/data_in'
   ward_shape = glob.glob(in_path + '/*.shp')
   ward_image = glob.glob(in_path + '/*.tif')
   
-  ~~out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')~~
+  ~out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')~
   out_path = '/mnt/work/output/data_out'
   os.chdir(out_path)
   
