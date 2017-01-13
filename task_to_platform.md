@@ -29,7 +29,7 @@
 - TOC
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
-[step 2. modify to match I/O structure within Docker container](#modify-to-match-I/O-structure-within-Docker-container)
+[step 2. modify to match I/O structure within Docker container](#modify-to-match-structure-within-Docker-container)
 
 
 (placeholder for diagram of platform architecture)
@@ -69,7 +69,7 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
   
-## modify to match I/O structure within Docker container
+## modify to match structure within Docker container
 (short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
   ```python
   import fiona
