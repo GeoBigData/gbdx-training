@@ -27,7 +27,7 @@
 - has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
 (TOC)
-[step 1) write and test algorithm that processes locally](#TEST) 
+[step 1) write and test algorithm that processes locally](#test) 
 
 
 (placeholder for diagram of platform architecture)
