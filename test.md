@@ -1,11 +1,16 @@
 # (TO DOs)
 - purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
+  - gbdxtools
+- change script so image and shapefile input diff directory
+- add string input to script and task definition
+- diagrams (how platform orchestrates data movement and processing using AWS and Docker)
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
 - add explanation of what script is doing
 - add short explanations/intro for each segment
 - keep commented out lines?
-- fix Dockerfile (left off in middle of editing)(check libraries)
+- fix Dockerfile (left off in middle of editing)(check libraries)(docker hub first? build without naming?)(crop image)
+- fix JSON script
 - write i/o cheatsheet
 - show how test script within Docker container 
 - add test files (test the test files)
@@ -77,7 +82,11 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
 
-## write, build, push build Dockerfile 
+## Docker: prepare Docker Hub repository
+(short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) 
+![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
+
+## Docker: write, build, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
   ```
   FROM ubuntu:14.04
@@ -93,4 +102,48 @@ here is an example python script that clips a raster image using a shapefile (ne
   ADD ./bin /training-indices
   CMD python /training-indices/mud_water_indices.py
   ```
-(The last step will be to add gbdx collaborators to Docker repository: tdgpbuild, tdgpdeploy, tdgplatform) 
+
+## register task 
+(will need to write a JSON doc with a task definition, then use task registery API to register to platform)
+```json
+{
+    "name": "demo_task<your_initials>",
+    "description": "clips a raster to a shapefile",
+    "properties": {
+        "isPublic": false,
+        "timeout": 7200
+    },
+    "inputPortDescriptors": [
+		{
+			"required": true,
+			"type": "directory",
+			"description": "s3 location of image and shapefile",
+			"name": "data_in"
+		},
+		{
+			"required": true,
+			"type": "string",
+			"description": "Index to calculate - 'NDMI' or 'MNDWI'",
+			"name": "index"
+		}
+    ],
+    "outputPortDescriptors": [
+		{
+			"required": true,
+			"type": "directory",
+			"description": "s3 output location",
+			"name": "data_out"
+		}
+    ],
+    "containerDescriptors": [
+		{
+			"type": "DOCKER",
+			"command": "",
+			"properties": {
+				"image": "egolden/training-indices:latest"
+			}
+		}
+    ]
+}
+```
+(navigate to directory containing JSON task definition, then register using the gbdxtools command `
