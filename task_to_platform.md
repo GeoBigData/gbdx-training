@@ -28,7 +28,8 @@
 
 - TOC
 
-[step 1. write and test algorithm that processes locally](#step-1-write-and-test-algorithm-that-processes-locally)
+[step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
+[step 2. modify to match I/O structure within Docker container](#modify-to-match-I/O-structure-within-Docker-container)
 
 
 (placeholder for diagram of platform architecture)
@@ -37,7 +38,7 @@
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
 - you can then process data in concert with other data and algorithms to execute an entire workflow
 
-## step 1 write and test algorithm that processes locally 
+## write and test algorithm that processes locally 
 here is an example python script that clips a raster image using a shapefile (need to explain how)
   ```python
   import fiona
@@ -67,7 +68,7 @@ here is an example python script that clips a raster image using a shapefile (ne
   with rasterio.open("masked.tif", "w", **out_meta) as dest:
       dest.write(out_image)
   ```
-## modify
+  
 ## modify to match I/O structure within Docker container
 (short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
   ```python
