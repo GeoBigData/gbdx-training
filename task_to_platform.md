@@ -122,8 +122,7 @@
 ## prepare Docker Hub repository
 - register for free acount on [Docker Hub](https://hub.docker.com/)
 - create a repository for your algorithm 
-- [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow:
-	tdgpbuild, tdgpdeploy, tdgplatform 
+- [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
 ## write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
