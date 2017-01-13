@@ -19,9 +19,14 @@ here is an example python script that clips a raster image using a shapefile
   import fiona
   import rasterio
   import os
+  import glob
 
-  shapefile = <path to shapefile>
-  image = <path to image>
+  in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+  ward_shape = glob.glob(in_path + '/*.shp')
+  ward_image = glob.glob(in_path + '/*.tif')
+  
+  out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+  os.chdir(out_path)
   
   with fiona.open(shapefile, "r") as shapefile:
       features = [feature["geometry"] for feature in shapefile]
