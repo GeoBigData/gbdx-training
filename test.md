@@ -103,6 +103,9 @@ here is an example python script that clips a raster image using a shapefile (ne
   ADD ./bin /training-indices
   CMD python /training-indices/mud_water_indices.py
   ```
+Docker command to build container `docker build -t <docker username>/<docker repository> .` (note '.' at end of command)
+Look at your images `docker images`
+Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
 ## step 5) write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
