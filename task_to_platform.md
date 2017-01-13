@@ -3,13 +3,16 @@
   - gbdxtools
 - change script so image and shapefile input diff directory
 - add string input to script and task definition
-- diagrams (how platform orchestrates data movement and processing using AWS and Docker)
+- images to folder with hyperlinks
+  - diagrams (how platform orchestrates data movement and processing using AWS and Docker)
+  - docker hub (crop image first)
+  - naming conventions consistency
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
-- add explanation of what script is doing
+- expand/clarify section intros
 - add short explanations/intro for each segment
 - [X]keep commented out lines?
-- fix Dockerfile (check libraries)(docker hub first? build without naming?)(crop image)
+- fix Dockerfile (check libraries)(docker hub first? build without naming?)
 - show how test script within Docker container 
 - add push instructions
 - fix JSON script (include required versioning)
@@ -18,9 +21,23 @@
 - explain to upload test files to s3
 - add TOC hyperlinks 
 - troubleshooting? (Dockerfile extension)
+## this tutorial.. 
+- demonstrates how to put a very simple task on the platform, from start to finish 
+- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
+- has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
+(TOC)
+[step 1) write and test algorithm that processes locally](#TEST) 
+
+
+(placeholder for diagram of platform architecture)
+- platform orchestrates movement and processing of data within AWS
+- data is stored in AWS S3, processing happens in AWS EC2s
+- by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
+- you can then process data in concert with other data and algorithms to execute an entire workflow
 
 ## step 1) write and test algorithm that processes locally 
+## TEST
 here is an example python script that clips a raster image using a shapefile (need to explain how)
   ```python
   import fiona
