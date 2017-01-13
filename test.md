@@ -1,7 +1,7 @@
 # (TO DOs)
 - purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
-- Xuse os library to write i/o
-- Xcreate output directory to write out masked tif
+- [X]use os library to write i/o
+- [X]create output directory to write out masked tif
 - add explanation of what script is doing
 - add short explanations/intro for each segment
 - keep commented out lines?
@@ -52,12 +52,12 @@ here is an example python script that clips a raster image using a shapefile (ne
   import os
   import glob
 
-  ~in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')~
+  # in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
   in_path = '/mnt/work/input/data_in'
   ward_shape = glob.glob(in_path + '/*.shp')
   ward_image = glob.glob(in_path + '/*.tif')
   
-  ~out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')~
+  # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
   out_path = '/mnt/work/output/data_out'
   os.chdir(out_path)
   
