@@ -85,7 +85,7 @@ here is an example python script that clips a raster image using a shapefile (ne
   ```
 
 ## step 3) prepare Docker Hub repository
-(short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png)
+(short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) [screenshot](screenshots/add_collaborators.png){:target="_blank"}
 ![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
 
 ## step 4) write, build, test, push build Dockerfile 
