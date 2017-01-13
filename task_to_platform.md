@@ -28,7 +28,7 @@
 
 - TOC
 
-[write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
+[write and test algorithm that processes locally](#step-1.-write-and-test-algorithm-that-processes-locally)
 
 
 (placeholder for diagram of platform architecture)
@@ -37,7 +37,7 @@
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
 - you can then process data in concert with other data and algorithms to execute an entire workflow
 
-## write and test algorithm that processes locally 
+## step 1. write and test algorithm that processes locally 
 here is an example python script that clips a raster image using a shapefile (need to explain how)
   ```python
   import fiona
