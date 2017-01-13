@@ -5,7 +5,7 @@
 - add explanation of what script is doing
 - add short explanations/intro for each segment
 - keep commented out lines?
-- fix Dockerfile (left off in middle of editing)
+- fix Dockerfile (left off in middle of editing)(check libraries)
 - write i/o cheatsheet
 - show how test script within Docker container 
 - add test files (test the test files)
@@ -77,7 +77,7 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
 
-## write Dockerfile 
+## write, build, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
   ```
   FROM ubuntu:14.04
@@ -93,3 +93,4 @@ here is an example python script that clips a raster image using a shapefile (ne
   ADD ./bin /training-indices
   CMD python /training-indices/mud_water_indices.py
   ```
+(The last step will be to add gbdx collaborators to Docker repository: tdgpbuild, tdgpdeploy, tdgplatform) 
