@@ -8,12 +8,13 @@
 - [X]create output directory to write out masked tif
 - add explanation of what script is doing
 - add short explanations/intro for each segment
-- keep commented out lines?
-- fix Dockerfile (left off in middle of editing)(check libraries)(docker hub first? build without naming?)(crop image)
-- fix JSON script
-- write i/o cheatsheet
+- [X]keep commented out lines?
+- fix Dockerfile (check libraries)(docker hub first? build without naming?)(crop image)
 - show how test script within Docker container 
+- fix JSON script (include required versioning)
+- write i/o cheatsheet/diagram (highlighted text?)
 - add test files (test the test files)
+- explain to upload test files to s3
 - add TOC hyperlinks 
 - troubleshooting? (Dockerfile extension)
 
@@ -82,11 +83,11 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
 
-## Docker: prepare Docker Hub repository
+## step 3) prepare Docker Hub repository
 (short explanation about how platform uses Docker Hub, sign up, log in, create repository, add platform collaborators: tdgpbuild, tdgpdeploy, tdgplatform) 
 ![alt tag](https://cloud.githubusercontent.com/assets/9055899/21915498/79db2586-d8f7-11e6-9b0a-91ec51740f30.png)
 
-## Docker: write, build, push build Dockerfile 
+## step 4) write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
   ```
   FROM ubuntu:14.04
@@ -103,7 +104,7 @@ here is an example python script that clips a raster image using a shapefile (ne
   CMD python /training-indices/mud_water_indices.py
   ```
 
-## register task 
+## step 5) write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
 ```json
 {
@@ -146,6 +147,8 @@ here is an example python script that clips a raster image using a shapefile (ne
     ]
 }
 ```
+
+## step 6) register and test your task within a workflow using gbdxtools
 (navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
 
 (Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
