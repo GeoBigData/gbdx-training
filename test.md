@@ -1,7 +1,8 @@
 # (TO DOs)
 - purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
-- use os library to write i/o
-- create output directory to write out masked tif
+- Xuse os library to write i/o
+- Xcreate output directory to write out masked tif
+- add explanation of what script is doing
 - add short explanations/intro for each segment
 - keep commented out lines?
 - fix Dockerfile (left off in middle of editing)
@@ -13,9 +14,8 @@
 
 
 ## step 1) write and test algorithm that processes locally 
-here is an example python script that clips a raster image using a shapefile
+here is an example python script that clips a raster image using a shapefile (need to explain how)
   ```python
-  
   import fiona
   import rasterio
   import os
@@ -48,21 +48,24 @@ here is an example python script that clips a raster image using a shapefile
 (short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
   ```python
   import fiona
-  from rasterio.tools.mask import mask
-  import glob
+  import rasterio
   import os
+  import glob
 
-  # shapefile = <path to shapefile>
-  # image = <path to image>
-  input_directory = /mnt/work/input/data_in
-  shapefile = glob.glob(input_directory + '/*.shp')
-  image = glob.glob(input_directory + '/*.shp')
+  # in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+  in_path = '/mnt/work/input/data_in'
+  ward_shape = glob.glob(in_path + '/*.shp')
+  ward_image = glob.glob(in_path + '/*.tif')
+  
+  # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+  out_path = '/mnt/work/output/data_out'
+  os.chdir(out_path)
   
   with fiona.open(shapefile, "r") as shapefile:
       features = [feature["geometry"] for feature in shapefile]
 
   with rasterio.open(image) as src:
-      out_image, out_transform = mask(src, features, crop=True)
+      out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
       out_meta = src.meta.copy()
   
   out_meta.update({"driver": "GTiff",
