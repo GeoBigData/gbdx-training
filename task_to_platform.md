@@ -129,10 +129,11 @@
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
-	- recommended directory structure for Dockerfile and scripts
-	  - my_docker_project/bin/clip_raster.py (along with any other scripts your algorithm requires)
-	  - my_docker_project/Dockerfile (this is an extensionless file containing the following code)
-	
+  - recommended directory structure for Dockerfile and scripts
+    - my_docker_project/bin/clip_raster.py (along with any other scripts your algorithm requires)
+    - my_docker_project/Dockerfile (this is an extensionless file containing the following code)
+
+
   ```
   FROM ubuntu:14.04
   RUN apt-get update && apt-get -y install\
