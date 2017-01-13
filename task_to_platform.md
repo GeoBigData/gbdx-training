@@ -10,7 +10,7 @@
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
 - add short explanations/intro for each segment
-- expand/clarify section intros
+- expand/clarify section intros and improve titles (adjust TOC links)
 - [X]keep commented out lines?
 - add more docker hub screen shots
 - fix Dockerfile (check libraries)(docker hub first? build without naming?)
@@ -126,6 +126,12 @@
 	
 ## write, build, test, push build Dockerfile 
 (explantion about why, what it does, best practices, etc)
+- a Dockerfile contains the set of instructions to build a Docker image
+- this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
+- directory structure for Dockerfile and scripts
+	- my_docker_project/bin/clip_raster.py (along with any other scripts your algorithm requires)
+	- my_docker_project/Dockerfile (this is an extensionless file containing the following code)
+	
   ```
   FROM ubuntu:14.04
   RUN apt-get update && apt-get -y install\
@@ -140,6 +146,7 @@
   ADD ./bin /training-indices
   CMD python /training-indices/mud_water_indices.py
   ```
+  
 Docker command to build container `docker build -t <docker username>/<docker repository> .` (note '.' at end of command)
 Look at your images `docker images`
 Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
