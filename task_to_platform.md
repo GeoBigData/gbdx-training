@@ -21,6 +21,7 @@
 - add test files (test the test files)
 - explain to upload test files to s3
 - [X]add TOC hyperlinks 
+- add TOP anchors
 - troubleshooting? (Dockerfile extension)
 
 ## this tutorial.. 
