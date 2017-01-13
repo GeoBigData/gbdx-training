@@ -146,4 +146,6 @@ here is an example python script that clips a raster image using a shapefile (ne
     ]
 }
 ```
-(navigate to directory containing JSON task definition, then register using the gbdxtools command `
+(navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
+
+(Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
