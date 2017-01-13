@@ -26,7 +26,8 @@
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
 - has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
-(TOC)
+- TOC
+
 [write and test algorithm that processes locally](write-and-test-algorithm-that-processes-locally)
 
 
