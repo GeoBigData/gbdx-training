@@ -30,11 +30,13 @@
 
 ## TOC
 
+[step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
+
+[step 2. modify to match I/O structure within Docker container](#modify-to-match-i/o-structure-within-docker-container)
+
+[step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
 
-[step 3. prepare Docker Hub repository](#prepare-Docker-Hub-repository)
-
-[test](https://github.com/GeoBigData/gbdx-training/blob/master/task_to_platform.md#modify-to-match-structure-within-docker-container)
 
 (placeholder for diagram of platform architecture)
 - platform orchestrates movement and processing of data within AWS
@@ -73,7 +75,7 @@ here is an example python script that clips a raster image using a shapefile (ne
       dest.write(out_image)
   ```
   
-## modify to match structure within Docker container
+## modify to match I/O structure within Docker container
 (short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
   ```python
   import fiona
