@@ -28,7 +28,7 @@
 
 - TOC
 
-[write and test algorithm that processes locally](write-and-test-algorithm-that-processes-locally)
+[write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
 
 
 (placeholder for diagram of platform architecture)
@@ -67,8 +67,8 @@ here is an example python script that clips a raster image using a shapefile (ne
   with rasterio.open("masked.tif", "w", **out_meta) as dest:
       dest.write(out_image)
   ```
-
-## step 2) modify to match I/O structure within Docker container
+## modify
+## modify to match I/O structure within Docker container
 (short explanation about platform orchestrating data movement within docker container and i/o naming conventions)
   ```python
   import fiona
