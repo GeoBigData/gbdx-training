@@ -35,6 +35,7 @@
 
 [step 3. prepare Docker Hub repository](#prepare-Docker-Hub-repository)
 
+[test](https://github.com/GeoBigData/gbdx-training/blob/master/task_to_platform.md#modify-to-match-structure-within-docker-container)
 
 (placeholder for diagram of platform architecture)
 - platform orchestrates movement and processing of data within AWS
