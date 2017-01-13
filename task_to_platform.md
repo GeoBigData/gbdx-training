@@ -125,12 +125,12 @@
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
 ## write, build, test, push build Dockerfile 
-(explantion about why, what it does, best practices, etc)
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
-  - recommended directory structure for Dockerfile and scripts
-- test text 
+  - my_docker_project/bin/clip_raster.py 
+  - my_docker_project/Dockerfile 
+- include the following code in a file named `Dockerfile`, with no extension
 
   ```
   FROM ubuntu:14.04
@@ -146,8 +146,11 @@
   ADD ./bin /training-indices
   CMD python /training-indices/mud_water_indices.py
   ```
-  
-Docker command to build container `docker build -t <docker username>/<docker repository> .` (note '.' at end of command)
+
+- next, navigate to the directory containin your Dockerfile and use the following command within a Docker session to build the Docker image
+
+`docker build -t <docker username>/<docker repository> .` (note '.' at end of command)
+
 Look at your images `docker images`
 Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
