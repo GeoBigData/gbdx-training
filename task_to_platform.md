@@ -130,6 +130,7 @@
 - this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
   - recommended directory structure for Dockerfile and scripts
+- test text 
 
   ```
   FROM ubuntu:14.04
