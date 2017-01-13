@@ -11,6 +11,7 @@
 - [X]keep commented out lines?
 - fix Dockerfile (check libraries)(docker hub first? build without naming?)(crop image)
 - show how test script within Docker container 
+- add push instructions
 - fix JSON script (include required versioning)
 - write i/o cheatsheet/diagram (highlighted text?)
 - add test files (test the test files)
