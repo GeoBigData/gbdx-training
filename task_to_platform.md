@@ -1,37 +1,10 @@
-# (TO DOs)
-- purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
-  - gbdxtools
-- change script so image and shapefile input diff directory
-- add string input to script and task definition
-- images to folder with hyperlinks
-  - diagrams (how platform orchestrates data movement and processing using AWS and Docker)
-  - docker hub (crop image first)
-  - naming conventions consistency
-- [X]use os library to write i/o
-- [X]create output directory to write out masked tif
-- add short explanations/intro for each segment
-- expand/clarify section intros and improve titles (adjust TOC links)
-- [X]keep commented out lines?
-- add more docker hub screen shots
-- fix Dockerfile (check libraries)(docker hub first? build without naming?)
-- add image showing navigation within Docker container ('exit', right?)
-- show how test script within Docker container 
-- add push instructions
-- fix JSON script (include required versioning)
-- write i/o cheatsheet/diagram (highlighted text?)
-- add test files (test the test files)
-- explain to upload test files to s3
-- [X]add TOC hyperlinks 
-- add TOP anchors
-- troubleshooting? (Dockerfile extension)
-
 ## this tutorial.. 
 - demonstrates how to put a very simple task on the platform, from start to finish 
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
 - has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
 
-## TOC
+## contents
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
 
@@ -125,8 +98,8 @@
 - create a repository for your algorithm 
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
-## write, build, test, push build Dockerfile 
-## write Dockerfile
+## dockerfile and image: write, build, test, and push  
+## write 
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
@@ -151,14 +124,19 @@
 
 - these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place the script inside it, and execute the script when a container is built from that Docker image
 
-## build Docker image from Dockerfile
+## build 
 - next, navigate to the directory containin your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
 - this may take several minutes the first time, but because Docker build an image in layers, should build quicker the next time
 - use the command `docker images` to see if your image was successfully built 
-- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, and `exit` to get out of the container  
+- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` to get out of the container  
 
-## run and test 
-Docker command to run container with mounted data for testing `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
+## test 
+- the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to run the container with local data mounted as a volume 
+
+`docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
+
+## push
+
 
 ## write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
@@ -208,3 +186,30 @@ Docker command to run container with mounted data for testing `docker run -v ~/<
 (navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
 
 (Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
+
+# (TO DOs)
+- purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
+  - gbdxtools
+- change script so image and shapefile input diff directory
+- add string input to script and task definition
+- images to folder with hyperlinks
+  - diagrams (how platform orchestrates data movement and processing using AWS and Docker)
+  - docker hub (crop image first)
+  - naming conventions consistency
+- [X]use os library to write i/o
+- [X]create output directory to write out masked tif
+- add short explanations/intro for each segment
+- expand/clarify section intros and improve titles (adjust TOC links)
+- [X]keep commented out lines?
+- add more docker hub screen shots
+- fix Dockerfile (check libraries)(docker hub first? build without naming?)
+- add image showing navigation within Docker container ('exit', right?)
+- show how test script within Docker container 
+- add push instructions
+- fix JSON script (include required versioning)
+- write i/o cheatsheet/diagram (highlighted text?)
+- add test files (test the test files)
+- explain to upload test files to s3
+- [X]add TOC hyperlinks 
+- add TOP anchors
+- troubleshooting? (Dockerfile extension)
