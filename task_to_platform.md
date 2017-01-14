@@ -135,14 +135,15 @@
 
 `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
-- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it. - if successful, you should be able to navigate to `/mnt/work/output` and see your output 
+- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it
+- if successful, you should be able to navigate to `/mnt/work/output` and see your output 
 - if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
 ## push
 - while still within the Docker session, pass in your Docker Hub credentials
 `docker login --username <docker username> --password <docker password>`
 - push the image to your Docker Hub repository
-`docker push <docker username>/<docker repository>'
+`docker push <docker username>/<docker repository>`
 
 ## write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
