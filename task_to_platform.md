@@ -131,12 +131,18 @@
 - you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` to get out of the container  
 
 ## test 
-- the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to run the container with local data mounted as a volume 
+- the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
 
 `docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
-## push
+- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it. - if successful, you should be able to navigate to `/mnt/work/output` and see your output 
+- if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
+## push
+- while still within the Docker session, pass in your Docker Hub credentials
+`docker login --username <docker username> --password <docker password>`
+- push the image to your Docker Hub repository
+`docker push <docker username>/<docker repository>'
 
 ## write JSON task definition 
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
