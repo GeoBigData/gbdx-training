@@ -1,9 +1,3 @@
-## this tutorial.. 
-- demonstrates how to put a very simple task on the platform, from start to finish 
-- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
-- has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
-
-
 ## contents
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
@@ -18,6 +12,10 @@
 
 [step 6. register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
+## this tutorial.. 
+- demonstrates how to put a very simple task on the platform, from start to finish 
+- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
+- has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
 (diagram of platform architecture)
 - platform orchestrates movement and processing of data within AWS
