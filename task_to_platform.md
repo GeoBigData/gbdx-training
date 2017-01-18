@@ -19,7 +19,7 @@ This tutorial...
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python [check READ.ME for instructions](README.md)
 - presumes user has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
-## (diagram of platform architecture)
+## (put a pretty diagram of platform architecture here)
 - data storage and processing occurs in AWS
 - platform orchestrates movement and processing of data within AWS
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
