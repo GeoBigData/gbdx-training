@@ -1,7 +1,7 @@
 ## contents
 Intro
 
-[step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
+[step 1. write and test algorithm that processes locally](#1-write-and-test-algorithm-that-processes-locally)
 
 [step 2. modify to match I/O structure within Docker container](#modify-to-match-io-structure-within-docker-container)
 
