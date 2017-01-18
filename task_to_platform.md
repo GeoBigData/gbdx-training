@@ -39,10 +39,10 @@ import glob
 
 in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
 
-shape_path = in_path + '/shapefile'
+shape_path = in_path + '/input_shapefile'
 my_shape = glob.glob(in_path + '/*.shp')
 
-image_path = in_path + '/image' 
+image_path = in_path + '/input_image' 
 my_image = glob.glob(in_path + '/*.tif')
   
 out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
@@ -50,10 +50,10 @@ out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
 os.makedirs(out_path)
 os.chdir(out_path)
   
-with fiona.open(shapefile, "r") as shape:
-  features = [feature["geometry"] for feature in shape]
+with fiona.open(my_shape, "r") as shapefile:
+  features = [feature["geometry"] for feature in shapefile]
 
-with rasterio.open(image) as src:
+with rasterio.open(my_image) as src:
   out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
   out_meta = src.meta.copy()
 
@@ -73,15 +73,15 @@ with rasterio.open("masked.tif", "w", **out_meta) as dest:
 	- outputs the results to this output port `/mnt/work/output/<your output directory>`
 - the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a Workflow
 
-	*example using 'image' as the input directory name*
+	*example using 'input_image' as the input directory name*
 
 	clip_raster_task.py
 	```python
-	in_path = '/mnt/work/input/image'
+	in_path = '/mnt/work/input/input_image'
 	```
 	my_workflow.py 
 	```python
-	clip_task = gbdx.Task('demo_task', image='s3://<path to S3 location of data') 
+	clip_task = gbdx.Task('demo_task', input_image='s3://<path to S3 location of data') 
 	```
 
 - modify the input and output filepaths within your script to mimic those of the Docker ports
@@ -95,10 +95,10 @@ import glob
 #in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
 in_path = '/mnt/work/input'
 
-shape_path = in_path + '/shapefile' 
+shape_path = in_path + '/input_shapefile' 
 my_shape = glob.glob(shape_path + '/*.shp')
 
-image_path = in_path + '/image' 
+image_path = in_path + '/input_image' 
 my_image = glob.glob(in_path + '/*.tif')
   
 # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
@@ -107,11 +107,11 @@ out_path = '/mnt/work/output/data_out'
 os.makedirs(out_path)
 os.chdir(out_path)
 
-with fiona.open(shapefile, "r") as shape:
-  features = [feature["geometry"] for feature in shape]
+with fiona.open(my_shape, "r") as shapefile:
+  features = [feature["geometry"] for feature in shapefile]
 
-with rasterio.open(image) as src:
-  out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
+with rasterio.open(my_image) as src:
+  out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
   out_meta = src.meta.copy()
 
 out_meta.update({"driver": "GTiff",
@@ -134,7 +134,7 @@ with rasterio.open("masked.tif", "w", **out_meta) as dest:
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependencies needed to execute your script
 - a good practice is to place scripts within a /bin directory that lives next to the Dockerfile
-  - my_docker_project/bin/clip_raster.py 
+  - my_docker_project/bin/clip_raster_task.py 
   - my_docker_project/Dockerfile 
 - include the following code in a file named `Dockerfile` (no extension)
 
@@ -165,9 +165,9 @@ RUN pip install fiona
 RUN git clone https://github.com/mapbox/rasterio.git
 RUN cd rasterio; pip install -e .
 
-RUN mkdir /demo
-ADD ./bin /demo
-CMD python /demo/clip_raster_task.py 
+RUN mkdir /my_scripts
+ADD ./bin /my_scripts
+CMD python /my_scripts/clip_raster_task.py 
 ```
 
 - these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster_task.py script inside it, and execute the script when a container is built from that Docker image
@@ -182,10 +182,10 @@ CMD python /demo/clip_raster_task.py
 ### test 
 - the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
 
-`docker run -v ~/<full path to input directory>:/mnt/work/input/data_in -it <docker username>/<docker repository> bash`
+`docker run -v ~/<full path to input directory>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
-- once inside the container, check that your data exists at `/mnt/work/input/data_in`, then navigate to your script and execute it 'python clip_register.py'
-- if successful, you should be able to navigate to `/mnt/work/output/data_out` and see your output 
+- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it 'python clip_raster.py'
+- if successful, you should be able to navigate to `/mnt/work/output` and see your output 
 - if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
 ### push
@@ -199,85 +199,34 @@ CMD python /demo/clip_raster_task.py
 - the definition will specify everything the platform needs to know to pull and run your task
 ```json
 {
-    "inputPortDescriptors": [
-        {
-            "required": true,
-            "description": "Directory containing image",
-            "name": "",
-            "type": "string"
-        },
-        {
-            "name": "dependency_input",
-            "type": "string"
-        }
-    ],
-    "outputPortDescriptors":[
-        {
-            "name": "dependency_output",
-            "type": "string",
-            "multiplex": true
-        }
-    ],
-    "containerDescriptors": [
-        {
-            "type": "DOCKER",
-            "command": "",
-            "properties": {
-                "image": "<docker username>/<docker repository>",
-                "mounts": [
-                    {
-                        "local": "$task_data_dir",
-                        "container": "/mnt/work",
-                        "read_only": false
-                    }
-                ]
-            }
-        }
-    ],
-    "description": "Clips a raster to shapefile.",
-    "name": "demo_task_<your_intials>",
-    "version": "0.0.1",
-    "properties": null
-}
-
-{
-    "name": "demo_task<your_initials>",
-    "description": "clips a raster to a shapefile",
-    "properties": {
-        "isPublic": false,
-        "timeout": 7200
-    },
-    "inputPortDescriptors": [
-		{
-			"required": true,
-			"type": "directory",
-			"description": "s3 location of image and shapefile",
-			"name": "data_in"
-		},
-		{
-			"required": true,
-			"type": "string",
-			"description": "Index to calculate - 'NDMI' or 'MNDWI'",
-			"name": "index"
+	"inputPortDescriptors": [{
+		"required": true,
+		"description": "Directory containing image.",
+		"name": "input_image",
+		"type": "directory"
+	}, {
+		"required": true,
+		"description": "Directory containing shapefile",
+		"name": "input_shapefile",
+		"type": "directory"
+	}],
+	"outputPortDescriptors": [{
+		"required": true,
+		"description": "Cropped tif.",
+		"name": "data_out",
+		"type": "directory"
+	}],
+	"containerDescriptors": [{
+		"type": "DOCKER",
+		"command": "",
+		"properties": {
+			"image": "<docker username>/<docker repository>:latest"
 		}
-    ],
-    "outputPortDescriptors": [
-		{
-			"required": true,
-			"type": "directory",
-			"description": "s3 output location",
-			"name": "data_out"
-		}
-    ],
-    "containerDescriptors": [
-		{
-			"type": "DOCKER",
-			"command": "",
-			"properties": {
-				"image": "egolden/training-indices:latest"
-			}
-		}
-    ]
+	}],
+	"description": "Clips a raster to shapefile.",
+	"name": "clip_raster_<your_intials>",
+	"version": "0.0.1",
+	"properties": null
 }
 ```
 
