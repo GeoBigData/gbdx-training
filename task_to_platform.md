@@ -1,17 +1,17 @@
 ## contents
 Intro
 
-[step 1) write and test algorithm that processes locally](#1-write-and-test-algorithm-that-processes-locally)
+[step 1) write and test algorithm that processes locally](#step-1-write-and-test-algorithm-that-processes-locally)
 
-[step 2) modify to match I/O structure within Docker container](#modify-to-match-io-structure-within-docker-container)
+[step 2) modify to match I/O structure within Docker container](#step-2-modify-script-to-match-io-structure-within-docker-container)
 
-[step 3) prepare Docker Hub repository](#prepare-docker-hub-repository)
+[step 3) prepare Docker Hub repository](#step-3-prepare-docker-hub-repository)
 
-[step 4) docker: write, build, test, and push](#docker-write-build-test-and-push)
+[step 4) docker: write, build, test, and push](#step-4-docker-write-build-test-and-push)
 
-[step 5) write JSON task definition](#write-json-task-definition)
+[step 5) write JSON task definition](#step-5-write-json-task-definition)
 
-[step 6) register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
+[step 6) register and test your task within a workflow using gbdxtools](#step-6-register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
 # Intro
 This tutorial...
