@@ -1,4 +1,5 @@
 ## contents
+Intro
 
 [step 1. write and test algorithm that processes locally](#write-and-test-algorithm-that-processes-locally)
 
@@ -12,7 +13,8 @@
 
 [step 6. register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
-## this tutorial.. 
+# Intro
+This tutorial...
 - demonstrates how to put a very simple task on the platform 
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python [check READ.ME for instructions](README.md)
 - presumes user has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
@@ -21,7 +23,7 @@
 - data storage and processing occurs in AWS
 - platform orchestrates movement and processing of data within AWS
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
-- you can then process data in concert with other data and algorithms to execute an entire workflow
+- you can then process data in concert with other data and algorithms to execute an entire Workflow
 
 ## write and test algorithm that processes locally 
 - write and test a script locally 
