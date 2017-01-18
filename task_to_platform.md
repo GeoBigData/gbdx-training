@@ -73,15 +73,17 @@ clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
 ## step 2) modify script to match I/O structure within Docker container
 - when you ultimately run your task within a Workflow, via Postman or gbdxtools, the Platform will:
 	- pull your Docker image and spin up the Docker container, data, and compute resources
-	- fetch your data from a specified S3 location (you will specify this S3 location when you set up your task 		within a Workflow) and plug the data into this input port `/mnt/work/input/`
-	- outputs the results to this output port `/mnt/work/output/`
-- the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a workflow
+	- fetch your data from a specified S3 location and plug the data into this input port `/mnt/work/input/<your input 	     directory>` (you'll specify this S3 location when you set up your task within a Workflow, more on this later)
+	- outputs the results to this output port `/mnt/work/output/<your output directory>`
+- the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a Workflow
 
-ex. clip_raster_task.py
+*example using 'data_in' as the input directory name*
+
+clip_raster_task.py
 ```python
 in_path = '/mnt/work/input/data_in'
 ```
-ex. my_workflow.py (using the gbdxtools library to access the Workflow API, more on this later)
+my_workflow.py 
 ```python
 clip_task = gbdx.Task('demo_task', data_in='s3://<path to S3 location of data') 
 ```
