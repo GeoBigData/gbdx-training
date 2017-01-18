@@ -14,7 +14,7 @@
 
 ## this tutorial.. 
 - demonstrates how to put a very simple task on the platform 
-- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python [check READ.ME for instructions](README.MD)
+- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python [check READ.ME for instructions](README.md)
 - presumes user has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
 ## (diagram of platform architecture)
