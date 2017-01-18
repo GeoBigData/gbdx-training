@@ -25,7 +25,9 @@
 
 ## write and test algorithm that processes locally 
 - write and test a script locally 
-- here's an example python script that I've labelled clip_raster.py (clips a raster image using a shapefile)
+- here's an example python script that I've labelled clip_raster.py 
+	- function that clips a raster image using a shapefile
+	- Default is to clip and output the raster within the bounds of the shapefile. If specify 'exclude' as value for the 	       composition parameter, this function will clip and output the raster outside of the shapefile.  
 
 ```python
 import fiona
@@ -66,40 +68,66 @@ exclude_choice = 'exclude'
 clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
   ```
   
-## modify to match I/O structure within Docker container
-- data gets moved in and out of Docker ports with a specific filepath, /mnt/work/input/ and /mnt/work/output/
-- modify inputs and outputs declarations within script to mimic those ports
+## modify script to match I/O structure within Docker container
+- when you ultimately run your task on the platform, the platform will fetch your Docker image and spin up the resources to host the Docker container, data, and compute power
+- the data is fetched from the a S3 location that you'll specify when you set the task within a workflow (through Postman or gbdxtools), and put into an input port in the Docker container `/mnt/work/input/`
+- when the processing is complete, the output is placed in an output port in the Docker container `/mnt/work/output/`
 
-  ```python
-  import fiona
-  import rasterio
-  import os
-  import glob
+- the name you give the input and output directories within your script carries over to how you set your data inputs and outputs when you set up your task within a workflow
+ex. clip_raster.py
+```python
+in_path = '/mnt/work/input/data_in'
+```
+ex. gbdxtools task declaration
+```python
+clip_task = gbdx.Task('demo_task', data_in='s3://gbd-customer-data/5860024.....') 
+```
 
-  # in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
-  in_path = '/mnt/work/input/data_in'
-  my_shape = glob.glob(in_path + '/*.shp')
-  my_image = glob.glob(in_path + '/*.tif')
+- modify the input and output filepaths within your script to mimic those of the Docker ports
+
+```python
+import fiona
+import rasterio
+import os
+import glob
+
+# in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+in_path = '/mnt/work/input/data_in'
+my_shape = glob.glob(in_path + '/*.shp')
+my_image = glob.glob(in_path + '/*.tif')
   
-  # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
-  out_path = '/mnt/work/output/data_out'
-  os.makedirs(out_path)
-  os.chdir(out_path)
-  
-  with fiona.open(my_shape, "r") as shapefile:
-      features = [feature["geometry"] for feature in shapefile]
+# out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+out_path = '/mnt/work/output/data_out'
+os.makedirs(out_path)
+os.chdir(out_path)
 
-  with rasterio.open(my_image) as src:
-      out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
-      out_meta = src.meta.copy()
-  
-  out_meta.update({"driver": "GTiff",
-                   "height": out_image.shape[1],
-                   "width": out_image.shape[2],
-                   "transform": out_transform})
+with open('/mnt/work/input/ports.json') as portsfile:
+    ports_js = json.load(portsfile)
 
-  with rasterio.open("masked.tif", "w", **out_meta) as dest:
-      dest.write(out_image)
+composition_choice = ports_js['clip_composition']
+
+def clip_raster_by_shapefile(shapefile, image, composition=None):
+    if composition == 'exclude':
+        invert_choice = True
+    else:
+        invert_choice = False
+
+    with fiona.open(shapefile, "r") as shape:
+        features = [feature["geometry"] for feature in shape]
+
+    with rasterio.open(image) as src:
+        out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
+        out_meta = src.meta.copy()
+
+    out_meta.update({"driver": "GTiff",
+                     "height": out_image.shape[1],
+                     "width": out_image.shape[2],
+                     "transform": out_transform})
+
+    with rasterio.open("masked.tif", "w", **out_meta) as dest:
+        dest.write(out_image)
+
+clip_raster_by_shapefile(my_shape, my_image, composition_choice)
   ```
 
 ## prepare Docker Hub repository
