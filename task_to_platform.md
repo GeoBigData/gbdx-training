@@ -14,7 +14,7 @@
 
 ## this tutorial.. 
 - demonstrates how to put a very simple task on the platform 
-- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
+- presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python (check READ.ME for instructions)
 - presumes user has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
 ## (diagram of platform architecture)
@@ -167,6 +167,48 @@ CMD python /demo/clip_raster.py
 (will need to write a JSON doc with a task definition, then use task registery API to register to platform)
 ```json
 {
+    "inputPortDescriptors": [
+        {
+            "required": true,
+            "description": "A string input.",
+            "name": "inputstring",
+            "type": "string"
+        },
+        {
+            "name": "dependency_input",
+            "type": "string"
+        }
+    ],
+    "outputPortDescriptors":[
+        {
+            "name": "dependency_output",
+            "type": "string",
+            "multiplex": true
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "command": "",
+            "properties": {
+                "image": "<docker username>/<docker repository>",
+                "mounts": [
+                    {
+                        "local": "$task_data_dir",
+                        "container": "/mnt/work",
+                        "read_only": false
+                    }
+                ]
+            }
+        }
+    ],
+    "description": "Clips a raster to shapefile.",
+    "name": "demo_task_<your_intials>",
+    "version": "0.0.1",
+    "properties": null
+}
+
+{
     "name": "demo_task<your_initials>",
     "description": "clips a raster to a shapefile",
     "properties": {
@@ -213,9 +255,8 @@ CMD python /demo/clip_raster.py
 (Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
 
 # (TO DOs)
-- purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
-  - gbdxtools
-- change script so image and shapefile input diff directory
+- [X]purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
+- [X]change script so image and shapefile input diff directory
 - add string input to script and task definition
 - images to folder with hyperlinks
   - diagrams (how platform orchestrates data movement and processing using AWS and Docker)
@@ -223,20 +264,18 @@ CMD python /demo/clip_raster.py
   - naming conventions consistency
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
-- add short explanations/intro for each segment
+- [X]add short explanations/intro for each segment
 - expand/clarify section intros and improve titles (adjust TOC links)
 - [X]keep commented out lines?
 - add more docker hub screen shots
 - fix Dockerfile (check libraries)(docker hub first? build without naming?)
 - add image showing navigation within Docker container ('exit', right?)
 - show how test script within Docker container 
-- add push instructions
-- fix JSON script (include required versioning)
+- [X]add push instructions
+- [X]fix JSON script (include required versioning)
 - write i/o cheatsheet/diagram (highlighted text?)
 - add test files (test the test files)
-- explain to upload test files to s3
+- explain to download/upload test files to s3
 - [X]add TOC hyperlinks 
 - add TOP anchors
-- troubleshooting? (Dockerfile extension)
-- add download files from s3 location to beginning of tutorial
 - add remove container command to run container command
