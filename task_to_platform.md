@@ -6,7 +6,7 @@
 
 [step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
-[step 4. docker: write, build, test, and push](#docker-write,-build,-test,-and push)
+[step 4. docker: write, build, test, and push](#docker-write,-build,-test,-and-push)
 
 [step 5. write JSON task definition](#write-json-task-definition)
 
