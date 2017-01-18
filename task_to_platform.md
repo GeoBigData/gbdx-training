@@ -27,7 +27,7 @@ This tutorial...
 
 ## step 1) write and test algorithm that processes locally 
 - write and test a script locally 
-- here's an example python script that I've labelled clip_raster_task.py 
+- here's an example python script that I've labelled clip_raster.py 
 	- function that clips a raster image using a shapefile
 	- default is to clip and output the raster within the bounds of the shapefile. If specify 'exclude' as value for the 	       composition parameter, this function will clip and output the raster outside of the shapefile.  
 
@@ -170,21 +170,21 @@ ADD ./bin /my_scripts
 CMD python /my_scripts/clip_raster_task.py 
 ```
 
-- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster_task.py script inside it, and execute the script when a container is built from that Docker image
+- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster_task.py script inside it, and execute the script when the Platform runs a container from this image
 
 ### build 
 - navigate to the directory containing your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)(note, this may take several minutes the first time)
 - use the command `docker images` to see if your image was successfully built 
 - you can now 
 	- run a Docker container from that image `docker run -it <docker username>/<docker repository> bash` 
-	- navigate within the container like you would any Linux system, see your scripts, and `exit` to return to your 	Docker session
+	- [navigate within the container like you would any Linux system, see your scripts, and `exit` to return to your 	   Docker session](screenshots/run_container.png)
 
 ### test 
 - the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
 
 `docker run -v ~/<full path to input directory>:/mnt/work/input -it <docker username>/<docker repository> bash`
 
-- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it 'python clip_raster.py'
+- [once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it 'python clip_raster.py'](screenshots/run_and_test.png)
 - if successful, you should be able to navigate to `/mnt/work/output` and see your output 
 - if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
