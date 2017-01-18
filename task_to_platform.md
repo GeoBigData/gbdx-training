@@ -45,30 +45,22 @@ out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
 os.makedirs(out_path)
 os.chdir(out_path)
   
-def clip_raster_by_shapefile(shapefile, image, composition=None):
-    if composition == 'exclude':
-        invert_choice = True
-    else:
-        invert_choice = False
 
-    with fiona.open(shapefile, "r") as shape:
-        features = [feature["geometry"] for feature in shape]
+with fiona.open(shapefile, "r") as shape:
+  features = [feature["geometry"] for feature in shape]
 
-    with rasterio.open(image) as src:
-        out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
-        out_meta = src.meta.copy()
+with rasterio.open(image) as src:
+  out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
+  out_meta = src.meta.copy()
 
-    out_meta.update({"driver": "GTiff",
-                     "height": out_image.shape[1],
-                     "width": out_image.shape[2],
-                     "transform": out_transform})
+out_meta.update({"driver": "GTiff",
+  "height": out_image.shape[1],
+  "width": out_image.shape[2],
+  "transform": out_transform})
 
-    with rasterio.open("masked.tif", "w", **out_meta) as dest:
-        dest.write(out_image)
-
-exclude_choice = 'exclude'
-clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
-  ```
+with rasterio.open("masked.tif", "w", **out_meta) as dest:
+  dest.write(out_image)
+```
   
 ## step 2) modify script to match I/O structure within Docker container
 - when you ultimately run your task within a Workflow, via Postman or gbdxtools, the Platform will:
@@ -106,34 +98,21 @@ out_path = '/mnt/work/output/data_out'
 os.makedirs(out_path)
 os.chdir(out_path)
 
-with open('/mnt/work/input/ports.json') as portsfile:
-    ports_js = json.load(portsfile)
+with fiona.open(shapefile, "r") as shape:
+  features = [feature["geometry"] for feature in shape]
 
-composition_choice = ports_js['clip_composition']
+with rasterio.open(image) as src:
+  out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
+  out_meta = src.meta.copy()
 
-def clip_raster_by_shapefile(shapefile, image, composition=None):
-    if composition == 'exclude':
-        invert_choice = True
-    else:
-        invert_choice = False
+out_meta.update({"driver": "GTiff",
+  "height": out_image.shape[1],
+  "width": out_image.shape[2],
+  "transform": out_transform})
 
-    with fiona.open(shapefile, "r") as shape:
-        features = [feature["geometry"] for feature in shape]
-
-    with rasterio.open(image) as src:
-        out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
-        out_meta = src.meta.copy()
-
-    out_meta.update({"driver": "GTiff",
-                     "height": out_image.shape[1],
-                     "width": out_image.shape[2],
-                     "transform": out_transform})
-
-    with rasterio.open("masked.tif", "w", **out_meta) as dest:
-        dest.write(out_image)
-
-clip_raster_by_shapefile(my_shape, my_image, composition_choice)
-  ```
+with rasterio.open("masked.tif", "w", **out_meta) as dest:
+  dest.write(out_image)
+```
 
 ## step 3) prepare Docker Hub repository
 - register for free acount on [Docker Hub](https://hub.docker.com/)
@@ -144,11 +123,11 @@ clip_raster_by_shapefile(my_shape, my_image, composition_choice)
 
 ### write 
 - a Dockerfile contains the set of instructions to build a Docker image
-- this Docker image will contain your scripts, along with the OS, libraries and dependencies needed for your script to execute
-- a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
+- this Docker image will contain your scripts, along with the OS, libraries and dependencies needed to execute your script
+- a good practice is to place scripts within a /bin directory that lives next to the Dockerfile
   - my_docker_project/bin/clip_raster.py 
   - my_docker_project/Dockerfile 
-- include the following code in a file named `Dockerfile`, with no extension
+- include the following code in a file named `Dockerfile` (no extension)
 
 ```
 FROM ubuntu:latest
@@ -182,13 +161,14 @@ ADD ./bin /demo
 CMD python /demo/clip_raster_task.py 
 ```
 
-- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster.py script inside it, and execute the script when a container is built from that Docker image
+- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster_task.py script inside it, and execute the script when a container is built from that Docker image
 
 ### build 
-- next, navigate to the directory containing your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
-- this may take several minutes the first time, but because Docker builds an image in layers, should build quicker the next time
+- navigate to the directory containing your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)(note, this may take several minutes the first time)
 - use the command `docker images` to see if your image was successfully built 
-- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` quit the container  
+- you can now 
+	- run a Docker container from that image `docker run -it <docker username>/<docker repository> bash` 
+	- navigate within the container like you would any Linux system, see your scripts, and `exit` to return to your 	Docker session
 
 ### test 
 - the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
@@ -321,4 +301,4 @@ CMD python /demo/clip_raster_task.py
 - explain to download/upload test files to s3
 - [X]add TOC hyperlinks 
 - add TOP anchors
-- add remove container command to run container command
+- add remove container command to run container command (docker run --rm image_name)[doc here](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
