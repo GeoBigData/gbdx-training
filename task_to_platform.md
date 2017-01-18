@@ -38,6 +38,7 @@
   ward_image = glob.glob(in_path + '/*.tif')
   
   out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+  os.makedirs(out_path)
   os.chdir(out_path)
   
   with fiona.open(shapefile, "r") as shapefile:
@@ -73,6 +74,7 @@
   
   # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
   out_path = '/mnt/work/output/data_out'
+  os.makedirs(out_path)
   os.chdir(out_path)
   
   with fiona.open(shapefile, "r") as shapefile:
