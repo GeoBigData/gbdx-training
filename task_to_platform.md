@@ -25,7 +25,7 @@ This tutorial...
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
 - you can then process data in concert with other data and algorithms to execute an entire Workflow
 
-## write and test algorithm that processes locally 
+## 1) write and test algorithm that processes locally 
 - write and test a script locally 
 - here's an example python script that I've labelled clip_raster_task.py 
 	- function that clips a raster image using a shapefile
