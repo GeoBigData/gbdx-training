@@ -38,14 +38,18 @@ import os
 import glob
 
 in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+
+shape_path = in_path + '/shapefile'
 my_shape = glob.glob(in_path + '/*.shp')
+
+image_path = in_path + '/image' 
 my_image = glob.glob(in_path + '/*.tif')
   
 out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+
 os.makedirs(out_path)
 os.chdir(out_path)
   
-
 with fiona.open(shapefile, "r") as shape:
   features = [feature["geometry"] for feature in shape]
 
@@ -69,15 +73,15 @@ with rasterio.open("masked.tif", "w", **out_meta) as dest:
 	- outputs the results to this output port `/mnt/work/output/<your output directory>`
 - the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a Workflow
 
-	*example using 'data_in' as the input directory name*
+	*example using 'image' as the input directory name*
 
 	clip_raster_task.py
 	```python
-	in_path = '/mnt/work/input/data_in'
+	in_path = '/mnt/work/input/image'
 	```
 	my_workflow.py 
 	```python
-	clip_task = gbdx.Task('demo_task', data_in='s3://<path to S3 location of data') 
+	clip_task = gbdx.Task('demo_task', image='s3://<path to S3 location of data') 
 	```
 
 - modify the input and output filepaths within your script to mimic those of the Docker ports
@@ -88,13 +92,18 @@ import rasterio
 import os
 import glob
 
-# in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
-in_path = '/mnt/work/input/data_in'
-my_shape = glob.glob(in_path + '/*.shp')
+#in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+in_path = '/mnt/work/input'
+
+shape_path = in_path + '/shapefile' 
+my_shape = glob.glob(shape_path + '/*.shp')
+
+image_path = in_path + '/image' 
 my_image = glob.glob(in_path + '/*.tif')
   
 # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
 out_path = '/mnt/work/output/data_out'
+
 os.makedirs(out_path)
 os.chdir(out_path)
 
@@ -186,15 +195,15 @@ CMD python /demo/clip_raster_task.py
 `docker push <docker username>/<docker repository>`
 
 ## step 5) write JSON task definition 
-- to register your task on the platform, first write a task definition according the following JSON template
+- to register your task on the platform, first write a task definition according to the following JSON template
 - the definition will specify everything the platform needs to know to pull and run your task
 ```json
 {
     "inputPortDescriptors": [
         {
-            "required": false,
-            "description": "Clips and outputs the raster outside of the shapefile. Default is false",
-            "name": "Exclude",
+            "required": true,
+            "description": "Directory containing image",
+            "name": "",
             "type": "string"
         },
         {
