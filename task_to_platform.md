@@ -6,7 +6,7 @@
 
 [step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
-[step 4. docker: write, build, test, and push](#docker-write,-build,-test,-and-push)
+[step 4. docker: write, build, test, and push](#docker-write-build-test-and-push)
 
 [step 5. write JSON task definition](#write-json-task-definition)
 
@@ -98,7 +98,7 @@
 - create a repository for your algorithm 
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
-## docker write, build, test, and push  
+## docker write build test and push  
 
 ## write 
 - a Dockerfile contains the set of instructions to build a Docker image
