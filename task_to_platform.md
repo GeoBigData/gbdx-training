@@ -69,7 +69,7 @@ clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
   ```
   
 ## modify script to match I/O structure within Docker container
-- when you ultimately run your task on the platform, the platform will fetch your Docker image and spin up the resources to host the Docker container, data, and compute power
+- when you ultimately run your task on the platform, the platform will fetch your Docker image and spin up the Docker container, data, and compute resources
 - the data is fetched from the a S3 location that you'll specify when you set the task within a workflow (through Postman or gbdxtools), and put into an input port in the Docker container `/mnt/work/input/`
 - when the processing is complete, the output is placed in an output port in the Docker container `/mnt/work/output/`
 
