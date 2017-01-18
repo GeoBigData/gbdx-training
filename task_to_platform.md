@@ -27,34 +27,43 @@
 - write and test a script locally 
 - here's an example python script that I've labelled clip_raster.py (clips a raster image using a shapefile)
 
-  ```python
-  import fiona
-  import rasterio
-  import os
-  import glob
+```python
+import fiona
+import rasterio
+import os
+import glob
 
-  in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
-  ward_shape = glob.glob(in_path + '/*.shp')
-  ward_image = glob.glob(in_path + '/*.tif')
+in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
+my_shape = glob.glob(in_path + '/*.shp')
+my_image = glob.glob(in_path + '/*.tif')
   
-  out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
-  os.makedirs(out_path)
-  os.chdir(out_path)
+out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
+os.makedirs(out_path)
+os.chdir(out_path)
   
-  with fiona.open(my_shape, "r") as shapefile:
-      features = [feature["geometry"] for feature in shapefile]
+def clip_raster_by_shapefile(shapefile, image, composition=None):
+    if composition == 'exclude':
+        invert_choice = True
+    else:
+        invert_choice = False
 
-  with rasterio.open(my_image) as src:
-      out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
-      out_meta = src.meta.copy()
-  
-  out_meta.update({"driver": "GTiff",
-                   "height": out_image.shape[1],
-                   "width": out_image.shape[2],
-                   "transform": out_transform})
+    with fiona.open(shapefile, "r") as shape:
+        features = [feature["geometry"] for feature in shape]
 
-  with rasterio.open("masked.tif", "w", **out_meta) as dest:
-      dest.write(out_image)
+    with rasterio.open(image) as src:
+        out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True, invert=invert_property)
+        out_meta = src.meta.copy()
+
+    out_meta.update({"driver": "GTiff",
+                     "height": out_image.shape[1],
+                     "width": out_image.shape[2],
+                     "transform": out_transform})
+
+    with rasterio.open("masked.tif", "w", **out_meta) as dest:
+        dest.write(out_image)
+
+exclude_choice = 'exclude'
+clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
   ```
   
 ## modify to match I/O structure within Docker container
@@ -69,8 +78,8 @@
 
   # in_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'input')
   in_path = '/mnt/work/input/data_in'
-  ward_shape = glob.glob(in_path + '/*.shp')
-  ward_image = glob.glob(in_path + '/*.tif')
+  my_shape = glob.glob(in_path + '/*.shp')
+  my_image = glob.glob(in_path + '/*.tif')
   
   # out_path = os.path.join(os.path.expanduser('~'), 'documents', 'demo', 'output')
   out_path = '/mnt/work/output/data_out'
@@ -164,14 +173,15 @@ CMD python /demo/clip_raster.py
 `docker push <docker username>/<docker repository>`
 
 ## write JSON task definition 
-(will need to write a JSON doc with a task definition, then use task registery API to register to platform)
+- to register your task on the platform, first write a task definition according the following JSON template
+- the definition will specify everything the platform needs to know to pull and run your task
 ```json
 {
     "inputPortDescriptors": [
         {
-            "required": true,
-            "description": "A string input.",
-            "name": "inputstring",
+            "required": false,
+            "description": "Clips and outputs the raster outside of the shapefile. Default is false",
+            "name": "Exclude",
             "type": "string"
         },
         {
