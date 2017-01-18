@@ -100,7 +100,7 @@
 	
 ## docker: write, build, test, and push  
 
-## write 
+### write 
 - a Dockerfile contains the set of instructions to build a Docker image
 - this Docker image will contain your scripts, along with the OS, libraries and dependencies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
@@ -142,13 +142,13 @@ CMD python /demo/clip_raster.py
 
 - these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster.py script inside it, and execute the script when a container is built from that Docker image
 
-## build 
+### build 
 - next, navigate to the directory containing your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
 - this may take several minutes the first time, but because Docker builds an image in layers, should build quicker the next time
 - use the command `docker images` to see if your image was successfully built 
 - you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` quit the container  
 
-## test 
+### test 
 - the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
 
 `docker run -v ~/<full path to input directory>:/mnt/work/input/data_in -it <docker username>/<docker repository> bash`
@@ -157,7 +157,7 @@ CMD python /demo/clip_raster.py
 - if successful, you should be able to navigate to `/mnt/work/output/data_out` and see your output 
 - if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
-## push
+### push
 - while still within the Docker session, pass in your Docker Hub credentials
 `docker login --username <docker username> --password <docker password>`
 - push the image to your Docker Hub repository
