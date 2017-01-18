@@ -6,26 +6,26 @@
 
 [step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
 
-[step 4. write, build, test, push build Dockerfile](#write-build-test-push-build-dockerfile)
+[step 4. docker: write, build, test, and push](#docker: write, build, test, and push)
 
 [step 5. write JSON task definition](#write-json-task-definition)
 
 [step 6. register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
 ## this tutorial.. 
-- demonstrates how to put a very simple task on the platform, from start to finish 
+- demonstrates how to put a very simple task on the platform 
 - presumes user has a gbdx account, has installed gbdxtools including config file, has installed docker, registered for a Docker Hub account, and is familiar with python
-- has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
+- presumes user has previous exposure to AWS, Docker, and GBDX APIs concepts (workflow, tasks, etc..)
 
-(diagram of platform architecture)
+## (diagram of platform architecture)
+- data storage and processing occurs in AWS
 - platform orchestrates movement and processing of data within AWS
-- data is stored in AWS S3, processing happens in AWS EC2s
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
 - you can then process data in concert with other data and algorithms to execute an entire workflow
 
 ## write and test algorithm that processes locally 
-- write and test local script 
-- example python script-> clips a raster image using a shapefile
+- write and test a script locally 
+- here's an example python script that I've labelled clip_raster.py (clips a raster image using a shapefile)
 
   ```python
   import fiona
@@ -41,10 +41,10 @@
   os.makedirs(out_path)
   os.chdir(out_path)
   
-  with fiona.open(shapefile, "r") as shapefile:
+  with fiona.open(my_shape, "r") as shapefile:
       features = [feature["geometry"] for feature in shapefile]
 
-  with rasterio.open(image) as src:
+  with rasterio.open(my_image) as src:
       out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
       out_meta = src.meta.copy()
   
@@ -77,10 +77,10 @@
   os.makedirs(out_path)
   os.chdir(out_path)
   
-  with fiona.open(shapefile, "r") as shapefile:
+  with fiona.open(my_shape, "r") as shapefile:
       features = [feature["geometry"] for feature in shapefile]
 
-  with rasterio.open(image) as src:
+  with rasterio.open(my_image) as src:
       out_image, out_transform = rasterio.tools.mask.mask(src, features, crop=True)
       out_meta = src.meta.copy()
   
@@ -98,45 +98,63 @@
 - create a repository for your algorithm 
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
-## dockerfile and image: write, build, test, and push  
+## docker: write, build, test, and push  
+
 ## write 
 - a Dockerfile contains the set of instructions to build a Docker image
-- this Docker image will contain your scripts, along with the OS, libraries and dependendcies needed for your script to execute
+- this Docker image will contain your scripts, along with the OS, libraries and dependencies needed for your script to execute
 - a good practice is to place scripts within a /bin directory within the directory that contains the Dockerfile
   - my_docker_project/bin/clip_raster.py 
   - my_docker_project/Dockerfile 
 - include the following code in a file named `Dockerfile`, with no extension
 
-  ```
-  FROM ubuntu:14.04
-  RUN apt-get update && apt-get -y install\
-    python \
+```
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get -y install\
+    python \  	
     vim\
     build-essential\
     python-software-properties\
     software-properties-common\
     python-pip\
-    python-dev
-  RUN mkdir /
-  ADD ./bin /training-indices
-  CMD python /training-indices/mud_water_indices.py
-  ```
+    python-dev\
+    python-numpy\
+    wget\
+    git\
+    cython\
+    python-pytest\
+    python-nose
 
-- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place the script inside it, and execute the script when a container is built from that Docker image
+RUN wget http://download.osgeo.org/gdal/CURRENT/gdal-2.1.2.tar.gz
+RUN tar -xzf gdal-2.1.2.tar.gz
+RUN cd gdal-2.1.2; ./configure --enable-debug; make; make install
+
+RUN pip install fiona
+
+RUN git clone https://github.com/mapbox/rasterio.git
+RUN cd rasterio; pip install -e .
+
+RUN mkdir /demo
+ADD ./bin /demo
+CMD python /demo/clip_raster.py 
+```
+
+- these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster.py script inside it, and execute the script when a container is built from that Docker image
 
 ## build 
-- next, navigate to the directory containin your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
-- this may take several minutes the first time, but because Docker build an image in layers, should build quicker the next time
+- next, navigate to the directory containing your Dockerfile and use the following command within a Docker session to build the Docker image `docker build -t <docker username>/<docker repository> .`  (note '.' at end of command)
+- this may take several minutes the first time, but because Docker builds an image in layers, should build quicker the next time
 - use the command `docker images` to see if your image was successfully built 
-- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` to get out of the container  
+- you can now run a Docker container from that image, navigate within the container like you would any Linux system, see your scripts, `exit` quit the container  
 
 ## test 
 - the platform will pull and run your algorithm along with data from an S3 location during runtime, but an easy way to test that your algorithm executes as expected is to first run the container with locally mounted data 
 
-`docker run -v ~/<full path to input data>:/mnt/work/input -it <docker username>/<docker repository> bash`
+`docker run -v ~/<full path to input directory>:/mnt/work/input/data_in -it <docker username>/<docker repository> bash`
 
-- once inside the container, check that your data exists at `/mnt/work/input`, then navigate to your script and execute it
-- if successful, you should be able to navigate to `/mnt/work/output` and see your output 
+- once inside the container, check that your data exists at `/mnt/work/input/data_in`, then navigate to your script and execute it 'python clip_register.py'
+- if successful, you should be able to navigate to `/mnt/work/output/data_out` and see your output 
 - if needed, modify the original script, build from Dockerfile again, run the container with mounted test data, and test your script until it produces the expected output 
 
 ## push
@@ -220,3 +238,5 @@
 - [X]add TOC hyperlinks 
 - add TOP anchors
 - troubleshooting? (Dockerfile extension)
+- add download files from s3 location to beginning of tutorial
+- add remove container command to run container command
