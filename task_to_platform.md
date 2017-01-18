@@ -1,17 +1,17 @@
 ## contents
 Intro
 
-[step 1. write and test algorithm that processes locally](#1-write-and-test-algorithm-that-processes-locally)
+[step 1) write and test algorithm that processes locally](#1-write-and-test-algorithm-that-processes-locally)
 
-[step 2. modify to match I/O structure within Docker container](#modify-to-match-io-structure-within-docker-container)
+[step 2) modify to match I/O structure within Docker container](#modify-to-match-io-structure-within-docker-container)
 
-[step 3. prepare Docker Hub repository](#prepare-docker-hub-repository)
+[step 3) prepare Docker Hub repository](#prepare-docker-hub-repository)
 
-[step 4. docker: write, build, test, and push](#docker-write-build-test-and-push)
+[step 4) docker: write, build, test, and push](#docker-write-build-test-and-push)
 
-[step 5. write JSON task definition](#write-json-task-definition)
+[step 5) write JSON task definition](#write-json-task-definition)
 
-[step 6. register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
+[step 6) register and test your task within a workflow using gbdxtools](#register-and-test-your-task-within-a-workflow-using-gbdxtools)
 
 # Intro
 This tutorial...
@@ -25,7 +25,7 @@ This tutorial...
 - by placing your algorithm within a Docker and registering the image on Docker Hub, the platform is able to retrieve, build, and execute your algorithm within the Workflow system
 - you can then process data in concert with other data and algorithms to execute an entire Workflow
 
-## 1) write and test algorithm that processes locally 
+## step 1) write and test algorithm that processes locally 
 - write and test a script locally 
 - here's an example python script that I've labelled clip_raster_task.py 
 	- function that clips a raster image using a shapefile
@@ -70,7 +70,7 @@ exclude_choice = 'exclude'
 clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
   ```
   
-## modify script to match I/O structure within Docker container
+## step 2) modify script to match I/O structure within Docker container
 - when you ultimately run your task within a Workflow, via Postman or gbdxtools, the Platform will:
 	- pull your Docker image and spin up the Docker container, data, and compute resources
 	- fetch your data from a specified S3 location (you will specify this S3 location when you set up your task 		within a Workflow) and plug the data into this input port `/mnt/work/input/`
@@ -133,12 +133,12 @@ def clip_raster_by_shapefile(shapefile, image, composition=None):
 clip_raster_by_shapefile(my_shape, my_image, composition_choice)
   ```
 
-## prepare Docker Hub repository
+## step 3) prepare Docker Hub repository
 - register for free acount on [Docker Hub](https://hub.docker.com/)
 - create a repository for your algorithm 
 - [add platform collaborators](screenshots/add_collaborators.png), which will allow the platform to pull and execute your image during a workflow: `tdgpbuild`, `tdgpdeploy`, `tdgplatform` 
 	
-## docker: write, build, test, and push  
+## step 4) docker: write, build, test, and push  
 
 ### write 
 - a Dockerfile contains the set of instructions to build a Docker image
@@ -203,7 +203,7 @@ CMD python /demo/clip_raster_task.py
 - push the image to your Docker Hub repository
 `docker push <docker username>/<docker repository>`
 
-## write JSON task definition 
+## step 5) write JSON task definition 
 - to register your task on the platform, first write a task definition according the following JSON template
 - the definition will specify everything the platform needs to know to pull and run your task
 ```json
@@ -290,7 +290,7 @@ CMD python /demo/clip_raster_task.py
 }
 ```
 
-## register and test your task within a workflow using gbdxtools
+## step 6) register and test your task within a workflow using gbdxtools
 (navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
 
 (Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
