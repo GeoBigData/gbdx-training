@@ -77,16 +77,16 @@ clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
 	- outputs the results to this output port `/mnt/work/output/<your output directory>`
 - the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a Workflow
 
-*example using 'data_in' as the input directory name*
+	*example using 'data_in' as the input directory name*
 
-clip_raster_task.py
-```python
-in_path = '/mnt/work/input/data_in'
-```
-my_workflow.py 
-```python
-clip_task = gbdx.Task('demo_task', data_in='s3://<path to S3 location of data') 
-```
+	clip_raster_task.py
+	```python
+	in_path = '/mnt/work/input/data_in'
+	```
+	my_workflow.py 
+	```python
+	clip_task = gbdx.Task('demo_task', data_in='s3://<path to S3 location of data') 
+	```
 
 - modify the input and output filepaths within your script to mimic those of the Docker ports
 
