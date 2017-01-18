@@ -25,7 +25,7 @@
 
 ## write and test algorithm that processes locally 
 - write and test a script locally 
-- here's an example python script that I've labelled clip_raster.py 
+- here's an example python script that I've labelled clip_raster_task.py 
 	- function that clips a raster image using a shapefile
 	- default is to clip and output the raster within the bounds of the shapefile. If specify 'exclude' as value for the 	       composition parameter, this function will clip and output the raster outside of the shapefile.  
 
@@ -69,16 +69,17 @@ clip_raster_by_shapefile(my_shape, my_image, exclude_choice)
   ```
   
 ## modify script to match I/O structure within Docker container
-- when you ultimately run your task on the platform, the platform will fetch your Docker image and spin up the Docker container, data, and compute resources
-- the data is fetched from the a S3 location that you'll specify when you set the task within a workflow (through Postman or gbdxtools), and put into an input port in the Docker container `/mnt/work/input/`
-- when the processing is complete, the output is placed in an output port in the Docker container `/mnt/work/output/`
+- when you ultimately run your task within a Workflow, via Postman or gbdxtools, the Platform will:
+	- pull your Docker image and spin up the Docker container, data, and compute resources
+	- fetch your data from a specified S3 location (you will specify this S3 location when you set up your task 		within a Workflow) and plug the data into this input port `/mnt/work/input/`
+	- outputs the results to this output port `/mnt/work/output/`
+- the name you give the input and output directories within your script carries over to how you set your data inputs and outputs within a workflow
 
-- the name you give the input and output directories within your script carries over to how you set your data inputs and outputs when you set up your task within a workflow
-ex. clip_raster.py
+ex. clip_raster_task.py
 ```python
 in_path = '/mnt/work/input/data_in'
 ```
-ex. gbdxtools task declaration
+ex. my_workflow.py (using the gbdxtools library to access the Workflow API, more on this later)
 ```python
 clip_task = gbdx.Task('demo_task', data_in='s3://gbd-customer-data/5860024.....') 
 ```
@@ -174,7 +175,7 @@ RUN cd rasterio; pip install -e .
 
 RUN mkdir /demo
 ADD ./bin /demo
-CMD python /demo/clip_raster.py 
+CMD python /demo/clip_raster_task.py 
 ```
 
 - these instructions will build a Docker container with a fresh Ubuntu installation, install libraries and dependencies, create a directory, place your clip_raster.py script inside it, and execute the script when a container is built from that Docker image
