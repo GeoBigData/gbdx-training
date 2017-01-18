@@ -83,7 +83,7 @@ in_path = '/mnt/work/input/data_in'
 ```
 ex. my_workflow.py (using the gbdxtools library to access the Workflow API, more on this later)
 ```python
-clip_task = gbdx.Task('demo_task', data_in='s3://gbd-customer-data/5860024.....') 
+clip_task = gbdx.Task('demo_task', data_in='s3://<path to S3 location of data') 
 ```
 
 - modify the input and output filepaths within your script to mimic those of the Docker ports
