@@ -27,7 +27,7 @@
 - write and test a script locally 
 - here's an example python script that I've labelled clip_raster.py 
 	- function that clips a raster image using a shapefile
-	- Default is to clip and output the raster within the bounds of the shapefile. If specify 'exclude' as value for the 	       composition parameter, this function will clip and output the raster outside of the shapefile.  
+	- default is to clip and output the raster within the bounds of the shapefile. If specify 'exclude' as value for the 	       composition parameter, this function will clip and output the raster outside of the shapefile.  
 
 ```python
 import fiona
