@@ -231,27 +231,36 @@ CMD python /my_scripts/clip_raster_task.py
 ```
 
 ## step 6) register and test your task within a workflow using gbdxtools
-(navigate to directory containing JSON task definition, then register using the gbdxtools command `gbdx.task_registry.register(json_filename = 'hello-gbdx-definition.json')`
+(navigate to directory containing JSON task definition, then register using the gbdxtools command) 
+```
+from gbdxtools import Interface
+gbdx = Interface()
 
-(Delete your task from GBDX) `gbdx.task_registry.delete(<task-name>)`
+gbdx.task_registry.register(json_filename = 'clip-raster-definition.json')
+```
+
+(Delete your task from GBDX) 
+
+`gbdx.task_registry.delete(<task-name>)`
 
 # (TO DOs)
 - [X]purpose of tutorial, assumtions about user knowledge before starting this tutorial, link to pre-reqs, etc
 - [X]change script so image and shapefile input diff directory
 - add string input to script and task definition
 - images to folder with hyperlinks
+  - how make full size images display?
   - diagrams (how platform orchestrates data movement and processing using AWS and Docker)
-  - docker hub (crop image first)
+  - [X]docker hub (crop image first)
+  - [X]navigating within docker container
   - naming conventions consistency
 - [X]use os library to write i/o
 - [X]create output directory to write out masked tif
 - [X]add short explanations/intro for each segment
 - expand/clarify section intros and improve titles (adjust TOC links)
 - [X]keep commented out lines?
-- add more docker hub screen shots
-- fix Dockerfile (check libraries)(docker hub first? build without naming?)
-- add image showing navigation within Docker container ('exit', right?)
-- show how test script within Docker container 
+- fix Dockerfile (check libraries)
+- [X]show how test script within Docker container
+- show how test script within Docker container with fake JSON input
 - [X]add push instructions
 - [X]fix JSON script (include required versioning)
 - write i/o cheatsheet/diagram (highlighted text?)
