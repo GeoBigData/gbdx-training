@@ -70,19 +70,17 @@ The Postman client lets you test API requests and create collections of frequent
 ## Install Python, Pip, and gbdxtools
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. We recommend you install Anaconda, which will also install Python, Pip, Jupyter, and IPython for you. We will be demostrating the use of the gbdxtools Python libary via the provided Jupyter Notebook, although sample python code is also provided.
 
-1. ...install [Anaconda](https://www.continuum.io/downloads)
+1. Install [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html). If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
 
-2. If you choose not to install Anaconda, you will need to install [Python 2.7] (https://www.python.org/downloads/release/python-2711) (2.7.x) and [Pip](https://bootstrap.pypa.io/get-pip.py), a Python package manager. 
-
-3. install gbdxtools in the terminal using Pip. 
+2. install gbdxtools in the terminal using Pip. 
 
     ```
     pip install gbdxtools
     ```
 
-4. Check [these troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools) if your installation fails. 
+3. Check [these troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools) if your installation fails. 
 
-5. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
+4. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
     
     ```
     [gbdx]
@@ -93,14 +91,12 @@ gbdxtools is a pip-installable python package that allows one to easily access G
     user_password = your_password
     ```
     
-6. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
+5. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
 
   ```python
   from gbdxtools import Interface
   gbdx = Interface()
   ```
-
-!!! I'm probably not explaining Anaconda sufficiently, what it is and why we use it. And how to use it to install gbdxtools. 
 
 ## Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
