@@ -175,7 +175,7 @@ http://gbdxstories.digitalglobe.com/create-task/#registering-a-task-on-gbdx
 
 
 Task-to-GBDX tutorials <br />
-http://gbdxstories.digitalglobe.com/create-task
+http://gbdxstories.digitalglobe.com/create-task <br/>
 https://github.com/GeoBigData/Taskifying
 
 
