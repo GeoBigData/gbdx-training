@@ -23,10 +23,10 @@ The Catalog API is the backbone of data discovery through the APIs and contains 
 - GET METADATA from a Catalog ID
 
 __Postman__
-- JSON example *(need to write and link)*
+- JSON example
 
 __gbxtools__
-- [Notebook](gbdx-training/gbdxtools-APIs.ipynb) or [Python](gbdx-training/gbdxtools-APIs.py)
+- Notebook or Python
 - http://gbdxtools.readthedocs.io/
 
 ## Ordering API
@@ -49,7 +49,7 @@ The real power of the GBDX platform is the ability to have access to the full ca
 - STATUS - check the status and manage the Workflow
 
 __Postman__
-- Postman JSON scripts *(need to write these and link)*
+- JSON examples
 
 __gbdxtools__
 - continuation of gbdxools Notebook/Python
@@ -67,15 +67,13 @@ Users can and are encouraged to build their own custom analytic capabilities to 
 8. REGISTER Task on Platform
 9. WORKFLOW - use your Task in a Workflow
 
-## 0. establish file names now
-
 ## 1. Develop a Task 
 A 'task' starts with the code you've written to perform some desired analysis or function. For this tutorial, we've provided example code for a Task that simply clips a raster to a shapefile. 
 
 - OVERVIEW of what the code is doing
 
 __code editor__
-- Python script *(need to write these and link)*
+- Python example
 
 ## 2. Modify inputs and outputs
 When the Platform spins up your Task, it will also load the necessary data into input ports within the Docker that runs your Task. These input ports have standard filepath, `/mnt/work/input`, as do the output ports, `/mnt/work/output`. You will need to modify your Task script to accept input and write output from these filepaths.
@@ -83,7 +81,7 @@ When the Platform spins up your Task, it will also load the necessary data into 
 - MODIFY script inputs and outputs to match Docker ports
 
 __code editor__
-- Python script *(need to write these and link)*
+- Python example
 
 ## 3. Dockerfile - instructions for Docker image
 A Dockerfile is a set of instructions to package up your Task script, along with the libraries and dependencies needed to run that script, into a portable Docker. This means that you could give your Docker to anyone using whatever machine or OS, and they would be able to run the Docker and produce the same, consistent output.
@@ -93,7 +91,7 @@ A Dockerfile is a set of instructions to package up your Task script, along with
 
 __code editor__
 - your local working directory
-- Dockerfile *(need to write these and link)*
+- Dockerfile example
 
 ## 4. Build and run a Docker
 From the Dockerfile, you can build, run, and test a Docker
@@ -136,7 +134,7 @@ You're nearly there! In order for the Platform to recognize and execute your Tas
 - MODIFY the Task definition JSON for your task
 
 __code editor__
-- [JSON Task definition]*(need to write these and link)*
+- JSON example
 
 ## 8. Register Task on Platform
 Now that you have a Task definition ready, you can use the GDBX Register API to register your Task to the Platform. 
@@ -163,10 +161,6 @@ You now have your own, custom task that be used on the Platform. This means that
 - WORKFLOW - connect the inputs/outputs of your Task to other Tasks in a Workflow
 
 __gbdxtools__
-- [Notebook](gbdx-training/gbdxtools-APIs.ipynb) or [Python](gbdx-training/gbdxtools-APIs.py)
+- Notebook or Python
 - http://gbdxtools.readthedocs.io/
-
-
-__materials__
-- canned Docker image (Docker Hub)(*need to write this and link*)
 
