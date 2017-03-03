@@ -1,0 +1,30 @@
+{
+    "inputPortDescriptors": [{
+        "required": true,
+        "description": "Directory containing image.",
+        "name": "input_image",
+        "type": "directory"
+    }, {
+        "required": true,
+        "description": "Directory containing shapefile",
+        "name": "input_shapefile",
+        "type": "directory"
+    }],
+    "outputPortDescriptors": [{
+        "required": true,
+        "description": "Cropped tif.",
+        "name": "data_out",
+        "type": "directory"
+    }],
+    "containerDescriptors": [{
+        "type": "DOCKER",
+        "command": "",
+        "properties": {
+            "image": "loominator/clip_raster_now:latest"
+        }
+    }],
+    "description": "Clips a raster to shapefile.",
+    "name": "clip_raster_DL",
+    "version": "0.0.1",
+    "properties": null
+}
