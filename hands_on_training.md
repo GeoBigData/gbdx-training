@@ -162,5 +162,4 @@ You now have your own, custom task that be used on the Platform. This means that
 
 __gbdxtools__
 - Notebook or Python
-- http://gbdxtools.readthedocs.io/
 
