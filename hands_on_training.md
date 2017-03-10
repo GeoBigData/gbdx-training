@@ -14,6 +14,7 @@ The GBDX web application allows users to easily interact with the GBDX APIs in a
 __Web App__
 -  https://gbdx.geobigdata.io
 -  http://s3browser.geobigdata.io
+-  http://gbdxdocs.digitalglobe.com/docs/web-application-course
 
 ## Catalog API
 The Catalog API is the backbone of data discovery through the APIs and contains all of the records and metadata that can be searched. It allows you to seach the entire DigitalGlobe archive and set parameters such as coordinates and search filters to find exactly the data you need.

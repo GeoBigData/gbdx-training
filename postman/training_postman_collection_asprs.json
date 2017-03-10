@@ -1,0 +1,174 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GBDX Training",
+		"_postman_id": "5fb122f1-c9e7-0858-a3a7-a078e16d15c8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get user token",
+			"request": {
+				"url": "https://geobigdata.io/auth/v1/oauth/token/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic {{apikey}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Task Registry",
+			"request": {
+				"url": "https://geobigdata.io/workflows/v1/tasks",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Task - AOP Strip Processor",
+			"request": {
+				"url": "https://geobigdata.io/workflows/v1/tasks/AOP_Strip_Processor",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit AOP AComp Workflow",
+			"request": {
+				"url": "https://geobigdata.io/workflows/v1/workflows",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tasks\": [{\n\t\t\"containerDescriptors\": [{\n\t\t\t\"properties\": {\n\t\t\t\t\"domain\": \"raid\"\n\t\t\t}\n\t\t}],\n\t\t\"name\": \"AOP_Strip_Processor\",\n\t\t\"inputs\": [{\n\t\t\t\"name\": \"enable_dra\",\n\t\t\t\"value\": \"false\"\n\t\t}, {\n\t\t\t\"name\": \"enable_acomp\",\n\t\t\t\"value\": \"true\"\n\t\t}, {\n\t\t\t\"name\": \"enable_pansharpen\",\n\t\t\t\"value\": \"false\"\n\t\t}, {\n\t\t\t\"value\": \"s3://receiving-dgcs-tdgplatform-com/056244928010_01_003\",\n\t\t\t\"name\": \"data\"\n\t\t}],\n\t\t\"outputs\": [{\n\t\t\t\"persistLocation\": \"gbdx_training_postman/10400100245B7800/acomped\",\n\t\t\t\"name\": \"data\",\n\t\t\t\"persist\": true\n\t\t}, {\n\t\t\t\"name\": \"log\"\n\t\t}],\n\t\t\"timeout\": 36000,\n\t\t\"taskType\": \"AOP_Strip_Processor\"\n\t}],\n\t\"name\": \"AOP_LuLc_Workflow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Workflow Status",
+			"request": {
+				"url": "https://geobigdata.io/workflows/v1/workflows/4249073422254282656",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Image Location",
+			"request": {
+				"url": "https://geobigdata.io/orders/v2/location?acquisitionIds=[\"10400100245B7800\"]",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DG Search Aus Image",
+			"request": {
+				"url": "https://geobigdata.io/catalog/v1/search",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"searchAreaWkt\":\"POLYGON ((151.247484595670215 -33.956915138583831, 151.247484595670215 -33.941147704639356, 151.266492160171651 -33.941147704639356, 151.266492160171651 -33.956915138583831,151.247484595670215 -33.956915138583831))\",\n    \"startDate\":\"2016-09-08T00:00:00.000Z\",\n    \"endDate\":\"2017-03-08T23:59:59.999Z\",\n    \"filters\":[  \n       \"cloudCover < 10\",\n        \"offNadirAngle < 15\",\n        \"imageBands = 'Pan_MS1_MS2'\"\n    ],\n    \"tagResults\":false,\n    \"types\":[  \n        \"DigitalGlobeAcquisition\"\n    ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
