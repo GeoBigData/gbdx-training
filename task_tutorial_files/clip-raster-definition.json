@@ -20,11 +20,14 @@
         "type": "DOCKER",
         "command": "",
         "properties": {
-            "image": "loominator/clip_raster_now:latest"
+            "image": "dgetman/clip_raster_now:latest"
         }
     }],
     "description": "Clips a raster to shapefile.",
-    "name": "clip_raster_DL",
+    "name": "clip_raster_[replace this with your initials]",
     "version": "0.0.1",
-    "properties": null
+    "properties": {
+        "isPublic": false,
+        "timeout": 36000
+    }
 }
