@@ -8,10 +8,10 @@ print (sys.executable)
 # Also note that the credentials are available here: https://gbdx.geobigdata.io/
 
 import gbdxtools
-gbdx = gbdxtools.Interface(username='getdano@gmail.com',
-    password='ix8S3YM5PCdW',
-    client_id='!GT-S!uCTjq;fpq08N2m35f7S@2?JLrR4hw=JIRU',
-    client_secret='wR?XFMyYD=o70KU3GA8F4Z7Q.n938YIYCJbT8ypD;LbEql_jB?B@V9hb!G9SZXnA.6cJIqt!8b2dxAYJqLp?_H;NmQX;xAQH.C9fyBA5xIn0IMVd1gPJfHEo_smo.VuO')
+gbdx = gbdxtools.Interface(username='',
+    password='',
+    client_id='',
+    client_secret='')
 
 # We use the JSON library to print the GBDX Tools object, which has some useful information
 print json.dumps(gbdx.s3.info, sort_keys=True, indent=4, separators=(',', ': '))
