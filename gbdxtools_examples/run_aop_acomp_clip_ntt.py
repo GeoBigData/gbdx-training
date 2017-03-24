@@ -2,7 +2,7 @@
 
 #############################################################################################
 #
-#  run_aop_acomp_clip_ntt.py
+#  run_aop_acomp_clip.py
 #
 #  Created by: Dave Loomis
 #              Digitalglobe GBD Solutions
@@ -10,7 +10,7 @@
 #  Version 0.1: Jan 23, 2017
 #               - run aop ortho, acomp and clip using gbdxtools
 #
-#  Usage: python run_aop_acomp_clip_ntt.py
+#  Usage: python run_aop_acomp_clip.py
 #
 #  This script will create a GBDX workflow that will create an ortho that has been acomped
 #   and run raster clip on the result.  RasterClip will also move over the XML and IMD
@@ -42,8 +42,7 @@ for catid in catids :
     # This task will create an ortho with acomp from the input impage strip. Note that pansharp has been
     #  turned on and DRA is turned off
     # This task uses the GSI DEM
-    aoptask = gbdx.Task("AOP_Strip_Processor", data=data_loc, enable_acomp=True, enable_pansharpen=True, enable_dra=False,
-                                               ortho_dem_specifier="s3://gbd-customer-data/13511131-b489-4745-96fe-c679d292b1b5/GSI_DEM")
+    aoptask = gbdx.Task("AOP_Strip_Processor", data=data_loc, enable_acomp=True, enable_pansharpen=True, enable_dra=False)
     # build the shp directory from the s3 information gathered above.
     #  gbdx.s3.info contains all of this
     #shp_dir = "s3://" + gbdx_info['bucket'] + "/" + gbdx_info['prefix'] + "/"
