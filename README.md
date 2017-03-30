@@ -21,6 +21,50 @@ Before we start, you'll need your GBDX username, password, and API key to set up
 8. Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up Postman and gbdxtools to interact with GBDX APIs.
 
 
+## Install Python, Pip, and gbdxtools
+gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. We recommend you install Anaconda, which will also install Python, Pip, Jupyter, and IPython for you. We will be demostrating the use of the gbdxtools Python libary via the provided Jupyter Notebook, although sample python code is also provided.
+
+1. Install [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html). If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
+
+2. install gbdxtools in the terminal using Pip. 
+
+    ```
+    pip install gbdxtools
+    ```
+
+3. Check [these troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools) if your installation fails. 
+
+4. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
+    
+    ```
+    [gbdx]
+    auth_url = https://geobigdata.io/auth/v1/oauth/token/
+    client_id = your_client_id
+    client_secret = your_client_secret
+    user_name = your_user_name
+    user_password = your_password
+    ```
+    
+5. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
+
+  ```python
+  from gbdxtools import Interface
+  gbdx = Interface()
+  ```
+
+## Install Docker and register for a Docker Hub account
+The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
+
+1. Browse to [Docker Hub](hub.docker.com) to create a Docker Hub account.
+
+2. Download and install the [Docker client](https://www.docker.com).
+
+3. Test your installation - open Docker and test that the following code doesn't result in an error.
+
+    ```
+    docker --version
+    ```
+
 ## Install Postman, download GBDX Training Collection for Postman and Import
 The Postman client lets you test API requests and create collections of frequently-used requests.
 
@@ -67,50 +111,6 @@ The Postman client lets you test API requests and create collections of frequent
       *this token is valid for seven days, after which you will need to repeat this step
 
 
-## Install Python, Pip, and gbdxtools
-gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. We recommend you install Anaconda, which will also install Python, Pip, Jupyter, and IPython for you. We will be demostrating the use of the gbdxtools Python libary via the provided Jupyter Notebook, although sample python code is also provided.
-
-1. Install [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html). If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
-
-2. install gbdxtools in the terminal using Pip. 
-
-    ```
-    pip install gbdxtools
-    ```
-
-3. Check [these troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools) if your installation fails. 
-
-4. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
-    
-    ```
-    [gbdx]
-    auth_url = https://geobigdata.io/auth/v1/oauth/token/
-    client_id = your_client_id
-    client_secret = your_client_secret
-    user_name = your_user_name
-    user_password = your_password
-    ```
-    
-5. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
-
-  ```python
-  from gbdxtools import Interface
-  gbdx = Interface()
-  ```
-
-## Install Docker and register for a Docker Hub account
-The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
-
-1. Browse to [Docker Hub](hub.docker.com) to create a Docker Hub account.
-
-2. Download and install the [Docker client](https://www.docker.com).
-
-3. Test your installation - open Docker and test that the following code doesn't result in an error.
-
-    ```
-    docker --version
-    ```
-    
 ## Resources
 GBDX Web App <br />
 https://gbdx.geobigdata.io 
