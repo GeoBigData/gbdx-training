@@ -2,7 +2,7 @@
 DigitalGlobe's GBDX platform provides customers with a fast and easy way to search, order, and process DigitalGlobe images as well as their own data. In this training, we will be concentrating on providing information to enhance your knowledge of GBDX APIs. While there are multiple ways to interact with GBDX APIs, in this tutorial we will focus on Postman- an HTTP client for testing web services, and gbdxtools- a Python SDK for accessing GBDX APIs. 
 
 ## Sign up for GBDX and locate your account credentials
-Before we start, you'll need your GBDX username, password, and API key to set up your Postman environment variables.  
+Before we start, you'll need your GBDX username, password, and API key.  
 
 1. Sign up for GBDX - if you're new to GBDX, you'll need to create an account. If you receive an email invitation to GBDX from your company, follow the instructions to create your user account. Otherwise, start here-
 
@@ -21,10 +21,10 @@ Before we start, you'll need your GBDX username, password, and API key to set up
 8. Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up Postman and gbdxtools to interact with GBDX APIs.
 
 
-## Install Python, Pip, and gbdxtools
-gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. We recommend you install Anaconda, which will also install Python, Pip, Jupyter, and IPython for you. We will be demostrating the use of the gbdxtools Python libary via the provided Jupyter Notebook, although sample python code is also provided.
+## Install gbdxtools
+gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. We recommend you first install Anaconda, an open source Python distribution that simplifies package management. The Anaconda distribution also comes Pip, Jupyter, and Ipthon - all very useful packages for Python development using gbdxtools. Our gbdxtools tools are available as Jupyter Notebooks, but plain Python code is also provided. 
 
-1. Install [Anaconda](https://jupyter.readthedocs.io/en/latest/install.html). If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
+1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that set Path values when prompted.
 
 2. install gbdxtools in the terminal using Pip. 
 
@@ -51,6 +51,8 @@ gbdxtools is a pip-installable python package that allows one to easily access G
   from gbdxtools import Interface
   gbdx = Interface()
   ```
+  
+\*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
 
 ## Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
