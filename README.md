@@ -26,26 +26,11 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 
 1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that set Path values when prompted.
 
-2. Start a terminal session (on windwons, search for and run the cmd program)
+2. Start a terminal session (on windows, search for and run the cmd program)
 
-3. Install gbdxtools using the following two commands at the command line: <br/>
+3. Install gbdxtools using the following two commands at the command line [troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools): <br/>
 `pip install gbdxtools` <br/>
 `pip install gbdx-auth`
- 
-4. Test that Jupyter Notebook runs by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
-`jupyter notebook`
- 
-5 – Create a new Jupyter Notebook using the browser interface (or download the one you are working on Elizabeth)
-Note, this should just open when you start the jupyter server, but if not, you just open the following URL in a browser: http://localhost:8888
-Notes on this are here: https://jupyter.readthedocs.io/en/latest/running.html#running
-
-2. install gbdxtools in the terminal using Pip. 
-
-    ```
-    pip install gbdxtools
-    ```
-
-3. Check [these troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools) if your installation fails. 
 
 4. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
     
@@ -64,8 +49,13 @@ Notes on this are here: https://jupyter.readthedocs.io/en/latest/running.html#ru
   from gbdxtools import Interface
   gbdx = Interface()
   ```
+ 
+6. Test that Jupyter Notebook runs by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
+`jupyter notebook`
+ 
+7. From here, feel free to create your own Notebook using the browser interface or download and start our tutorial notebook, gbdxtools-APIs.ipynb. Note, this should just open when you start the jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation](https://jupyter.readthedocs.io/en/latest/running.html#running)
   
-\*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.
+*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
 
 ## Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
