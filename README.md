@@ -24,9 +24,9 @@ Before we start, you'll need your GBDX username, password, and API key.
 ### Install gbdxtools
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. We recommend you first install Anaconda, an open source Python distribution that simplifies package management. The Anaconda distribution also installs Pip, Jupyter, and Ipython - all very useful packages for Python development on GBDX. We have made our gbdxtools tutorials available as Jupyter Notebooks, but plain Python code is also provided. 
 
-1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that set Path values when prompted.
+1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that sets Path values when prompted.
 
-2. Start a terminal session (on windows, search for and run the cmd program)
+2. Start a terminal session (on windows, search for and run the cmd program).
 
 3. Install gbdxtools using the following two commands at the command line [troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools): <br/>
 `pip install gbdxtools` <br/>
@@ -37,10 +37,10 @@ gbdxtools is a pip-installable python package that allows one to easily access G
     ```
     [gbdx]
     auth_url = https://geobigdata.io/auth/v1/oauth/token/
-    client_id = your_client_id
-    client_secret = your_client_secret
-    user_name = your_user_name
-    user_password = your_password
+    client_id = <your_client_id>
+    client_secret = <your_client_secret>
+    user_name = <your_user_name>
+    user_password = <your_password>
     ```
     
 5. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
