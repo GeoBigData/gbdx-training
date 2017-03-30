@@ -1,7 +1,7 @@
 # Preparation for GBDX Training
 DigitalGlobe's GBDX platform provides customers with a fast and easy way to search, order, and process DigitalGlobe images as well as their own data. In this training, we will be concentrating on providing information to enhance your knowledge of GBDX APIs. While there are multiple ways to interact with GBDX APIs, in this tutorial we will focus on Postman- an HTTP client for testing web services, and gbdxtools- a Python SDK for accessing GBDX APIs. 
 
-## Sign up for GBDX and locate your account credentials
+### Sign up for GBDX and locate your account credentials
 Before we start, you'll need your GBDX username, password, and API key.  
 
 1. Sign up for GBDX - if you're new to GBDX, you'll need to create an account. If you receive an email invitation to GBDX from your company, follow the instructions to create your user account. Otherwise, start here-
@@ -21,7 +21,7 @@ Before we start, you'll need your GBDX username, password, and API key.
 8. Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up Postman and gbdxtools to interact with GBDX APIs.
 
 
-## Install gbdxtools
+### Install gbdxtools
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. We recommend you first install Anaconda, an open source Python distribution that simplifies package management. The Anaconda distribution also installs Pip, Jupyter, and Ipython - all very useful packages for Python development on GBDX. We have made our gbdxtools tutorials available as Jupyter Notebooks, but plain Python code is also provided. 
 
 1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that set Path values when prompted.
@@ -57,7 +57,7 @@ gbdxtools is a pip-installable python package that allows one to easily access G
   
 *If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
 
-## Install Docker and register for a Docker Hub account
+### Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
 
 1. Browse to [Docker Hub](hub.docker.com) to create a Docker Hub account.
@@ -70,7 +70,7 @@ The platform utilizes the Docker technology to bundle algorithms and their depen
     docker --version
     ```
 
-## Install Postman, download GBDX Training Collection for Postman and Import
+### Install Postman, download GBDX Training Collection for Postman and Import
 The Postman client lets you test API requests and create collections of frequently-used requests.
 
 1. Get postman: http://getpostman.com
@@ -116,7 +116,7 @@ The Postman client lets you test API requests and create collections of frequent
       *this token is valid for seven days, after which you will need to repeat this step
 
 
-## Resources
+### Resources
 GBDX Web App <br />
 https://gbdx.geobigdata.io 
 
