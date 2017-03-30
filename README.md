@@ -29,11 +29,11 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 2. Start a terminal session (on windwons, search for and run the cmd program)
 
 3. Install gbdxtools using the following two commands at the command line:
-    `pip install gbdxtools`
-    `pip install gbdx-auth`
+`pip install gbdxtools`
+`pip install gbdx-auth`
  
 4. Test that Jupyter Notebook runs by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running):
-    `jupyter notebook`
+`jupyter notebook`
  
 5 – Create a new Jupyter Notebook using the browser interface (or download the one you are working on Elizabeth)
 Note, this should just open when you start the jupyter server, but if not, you just open the following URL in a browser: http://localhost:8888
