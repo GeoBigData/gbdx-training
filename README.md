@@ -55,7 +55,7 @@ gbdxtools is a pip-installable python package that allows one to easily access G
  
 7. From here, feel free to create your own Notebook using the browser interface or download and start our tutorial notebook, gbdxtools-APIs.ipynb. Note, this should just open when you start the jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation](https://jupyter.readthedocs.io/en/latest/running.html#running)
   
-*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
+*\*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
 
 ### Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
