@@ -24,13 +24,13 @@ Before we start, you'll need your GBDX username, password, and API key.
 ### Install gbdxtools
 gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. However, we recommend that you first install Anaconda, an open source Python distribution that simplifies package management, which will install Python and Pip for you. The Anaconda install also includes Jupyter, which will be very handy during hands-on tutorials. We use Jupyter Notebooks extensively for GBDX demos. 
 
-1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that sets Path values when prompted.
+1. Install Anaconda: Download and install Anaconda from https://www.continuum.io/downloads, and be sure to check the box that sets Path values when prompted.
 
-2. Bring up a terminal (Mac) or cmd (Windows) window, and copy and paste the following commands to install gbdxtools [(troubleshooting tips)](https://github.com/DigitalGlobe/gbdxtools): <br/>
+2. Install gbdxtools: Open a terminal (Mac) or cmd (Windows) window, and copy and paste the following commands [(troubleshooting tips)](https://github.com/DigitalGlobe/gbdxtools): <br/>
 `pip install gbdxtools` <br/>
 `pip install gbdx-auth`
 
-4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile. <br/> Create the file `~/.gbdx-config` (no extension!), include the following information, and save it to your home directory. 
+3. Create config file: All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile. <br/> Create the file `~/.gbdx-config` (no extension!), include the following information, and save it to your home directory. 
     
     ```
     [gbdx]
@@ -41,22 +41,17 @@ gbdxtools is a pip-installable python package that allows one to easily access G
     user_password = <your_password>
     ```
 
-5. Test your gbdxtools installation. First, bring up a terminal/cmd window and start Python <br/>  
-`python`
-
-6. Copy and paste the following code to test that your gbdxtools installation was successful. This should not result in an error. Once you are done, quit Python by typing `exit`. 
+4. Test your gbdxtools installation: Open a terminal/cmd window and type `python`. Then copy and paste the following code, which will result in an error if gbdxtools is not properly installed. Once you are done, quit Python by typing `exit`. 
 
   ```python
   from gbdxtools import Interface
   gbdx = Interface()
   ```
  
-7. Test the Jupyter installation by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
+6. Test Jupyter: Open a terminal/cmd window and copy and paste the following code to test that Jupyter is installed. This will open the Jupyter Notebook interface in your browser [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
 `jupyter notebook`
  
-8. From here, feel free to create your own Notebook using the browser interface or download and start our tutorial notebook, gbdxtools-APIs.ipynb. Note, this should just open when you start the jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation](https://jupyter.readthedocs.io/en/latest/running.html#running)
-  
-*\*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
+7. If you would like to explore gbdxtools and Jupyter Notebooks, download 'gbdxtools-APIs.ipynb' from this repo and open it in the Jupyter Notebook browser interface. This interface should just open when you start the Jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation (https://jupyter.readthedocs.io/en/latest/running.html#running)
 
 ### Install Docker and register for a Docker Hub account
 The platform utilizes the Docker technology to bundle algorithms and their dependent code into docker images that can be registered as tasks on the platform. 
@@ -65,7 +60,7 @@ The platform utilizes the Docker technology to bundle algorithms and their depen
 
 2. Download and install the [Docker client](https://www.docker.com).
 
-3. Test your installation - open Docker and test that the following code doesn't result in an error.
+3. Test your installation - open a terminal/cmd window and copy and paste the following command. This should output info about your Docker installation.
 
     ```
     docker --version
