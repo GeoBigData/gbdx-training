@@ -4,7 +4,7 @@ DigitalGlobe's GBDX platform provides customers with a fast and easy way to sear
 ### Sign up for GBDX and locate your account credentials
 Before we start, you'll need your GBDX username, password, and API key.  
 
-1. Sign up for GBDX - if you're new to GBDX, you'll need to create an account. If you receive an email invitation to GBDX from your company, follow the instructions to create your user account. Otherwise, start here-
+1. Sign up for GBDX - if you're new to GBDX, you'll need to create an account. If you received an email invitation to GBDX from your company, follow the instructions to create your user account. Otherwise, start here-
 
 2. Go to the [GBDX home page](https://gbdx.geobigdata.io/login).
 
