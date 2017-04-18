@@ -43,10 +43,10 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 
 4. Test your gbdxtools installation: Open a terminal/cmd window and type `python`. Then copy and paste the following code, which will result in an error if gbdxtools is not properly installed. Once you are done, quit Python by typing `exit`. 
 
-  ```python
-  from gbdxtools import Interface
-  gbdx = Interface()
-  ```
+   ```python
+   from gbdxtools import Interface
+   gbdx = Interface()
+   ```
  
 6. Test Jupyter: Open a terminal/cmd window and copy and paste the following code to test that Jupyter is installed. This will open the Jupyter Notebook interface in your browser [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
 `jupyter notebook`
