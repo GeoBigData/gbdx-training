@@ -30,7 +30,7 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 `pip install gbdxtools` <br/>
 `pip install gbdx-auth`
 
-4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile. <br/> Create the file `~/.gbdx-config` (no extension!), save it to your home directory, and include the following information. 
+4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile. <br/> Create the file `~/.gbdx-config` (no extension!), include the following information, and save it to your home directory. 
     
     ```
     [gbdx]
