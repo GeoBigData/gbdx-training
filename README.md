@@ -22,7 +22,7 @@ Before we start, you'll need your GBDX username, password, and API key.
 
 
 ### Install gbdxtools
-gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. We recommend you first install Anaconda, an open source Python distribution that simplifies package management. The Anaconda distribution also installs Pip, Jupyter, and Ipython - all very useful packages for Python development on GBDX. We have made our gbdxtools tutorials available as Jupyter Notebooks, but plain Python code is also provided. 
+gbdxtools is a pip-installable python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. Pre-requisites for installing gbdxtools are Python and Pip. However, we recommend that you first install Anaconda, an open source Python distribution that simplifies package management, which will install Python and Pip for you. The Anaconda install also includes Jupyter, which will be very handy during hands-on tutorials. We use Jupyter Notebooks extensively for GBDX demos. 
 
 1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that sets Path values when prompted.
 
