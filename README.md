@@ -26,15 +26,11 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 
 1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that sets Path values when prompted.
 
-2. Bring up a terminal (Mac) or cmd (Windows) window.
-
-3. Install gbdxtools using the following two commands [troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools): <br/>
+2. Bring up a terminal (Mac) or cmd (Windows) window, and copy and paste the following commands to install gbdxtools [(troubleshooting tips)](https://github.com/DigitalGlobe/gbdxtools): <br/>
 `pip install gbdxtools` <br/>
 `pip install gbdx-auth`
 
-4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile.
-
-Create the file `~/.gbdx-config` (no extension!), save it to your home directory, and include the following information. 
+4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile. <br/> Create the file `~/.gbdx-config` (no extension!), save it to your home directory, and include the following information. 
     
     ```
     [gbdx]
@@ -45,17 +41,20 @@ Create the file `~/.gbdx-config` (no extension!), save it to your home directory
     user_password = <your_password>
     ```
 
-5. Test your installation - open Python in the terminal/cmd and test that the following code doesn't result in an error.
+5. Test your gbdxtools installation. First, bring up a terminal/cmd window and start Python <br/>  
+`python`
+
+6. Copy and paste the following code to test that your gbdxtools installation was successful. This should not result in an error. Once you are done, quit Python by typing `exit`. 
 
   ```python
   from gbdxtools import Interface
   gbdx = Interface()
   ```
  
-6. Test that Jupyter Notebook runs by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
+7. Test the Jupyter installation by typing this at the command line [documentation here](https://jupyter.readthedocs.io/en/latest/running.html#running): <br/>
 `jupyter notebook`
  
-7. From here, feel free to create your own Notebook using the browser interface or download and start our tutorial notebook, gbdxtools-APIs.ipynb. Note, this should just open when you start the jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation](https://jupyter.readthedocs.io/en/latest/running.html#running)
+8. From here, feel free to create your own Notebook using the browser interface or download and start our tutorial notebook, gbdxtools-APIs.ipynb. Note, this should just open when you start the jupyter server, but if not, simply open the following URL in a browser: http://localhost:8888 [Documentation](https://jupyter.readthedocs.io/en/latest/running.html#running)
   
 *\*If you choose not to install Anaconda, you will still need to install [Python](https://www.python.org) and [Pip](https://pip.pypa.io) before installing gbdxtools.*
 
