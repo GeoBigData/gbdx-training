@@ -26,13 +26,15 @@ gbdxtools is a pip-installable python package that allows one to easily access G
 
 1. Install [Anaconda](https://www.continuum.io/downloads)\*, and be sure to check the box that sets Path values when prompted.
 
-2. Start a terminal session (on windows, search for and run the cmd program).
+2. Bring up a terminal (Mac) or cmd (Windows) window.
 
-3. Install gbdxtools using the following two commands at the command line [troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools): <br/>
+3. Install gbdxtools using the following two commands [troubleshooting tips](https://github.com/DigitalGlobe/gbdxtools): <br/>
 `pip install gbdxtools` <br/>
 `pip install gbdx-auth`
 
-4. gbdxtools configuration file - create the file `~/.gbdx-config`, save it to your home directory, and include the following information. 
+4. All operations on GBDX require credentials. gbdxtools expects a config file to exist at ~/.gbdx-config with your GBDX credentials. Your credentials are listed in https://gbdx.geobigdata.io/profile.
+
+Create the file `~/.gbdx-config` (no extension!), save it to your home directory, and include the following information. 
     
     ```
     [gbdx]
@@ -42,8 +44,8 @@ gbdxtools is a pip-installable python package that allows one to easily access G
     user_name = <your_user_name>
     user_password = <your_password>
     ```
-    
-5. Test your installation - open Python in the terminal and test that the following code doesn't result in an error.
+
+5. Test your installation - open Python in the terminal/cmd and test that the following code doesn't result in an error.
 
   ```python
   from gbdxtools import Interface
