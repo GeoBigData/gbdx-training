@@ -1,18 +1,18 @@
 {
     "inputPortDescriptors": [{
         "required": true,
-        "description": "Directory containing image.",
-        "name": "input_image",
+        "description": "Directory containing a raster.",
+        "name": "input_raster",
         "type": "directory"
     }, {
         "required": true,
-        "description": "Directory containing shapefile",
+        "description": "Directory containing a shapefile",
         "name": "input_shapefile",
         "type": "directory"
     }],
     "outputPortDescriptors": [{
         "required": true,
-        "description": "Cropped tif.",
+        "description": "A cropped tif.",
         "name": "data_out",
         "type": "directory"
     }],
@@ -20,11 +20,11 @@
         "type": "DOCKER",
         "command": "",
         "properties": {
-            "image": "dgetman/clip_raster_now:latest"
+            "image": "gbdxtrainer/clip_raster_docker_gt:latest"
         }
     }],
     "description": "Clips a raster to shapefile.",
-    "name": "clip_raster_[replace this with your initials]",
+    "name": "clip_raster_gt",
     "version": "0.0.1",
     "properties": {
         "isPublic": false,
