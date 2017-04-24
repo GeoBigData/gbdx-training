@@ -113,7 +113,7 @@ The Postman client lets you test API requests and create collections of frequent
 
 
 ### Resources <br />
-GBDX Jupyter Notebooks
+GBDX Hosted Jupyter Kernel
 https://juno.timbr.io/hub/notebooks
 
 GBDX Web App <br />
