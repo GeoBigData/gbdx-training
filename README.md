@@ -112,7 +112,10 @@ The Postman client lets you test API requests and create collections of frequent
       *this token is valid for seven days, after which you will need to repeat this step
 
 
-### Resources
+### Resources <br />
+GBDX Jupyter Notebooks
+https://juno.timbr.io/hub/notebooks
+
 GBDX Web App <br />
 https://gbdx.geobigdata.io 
 
