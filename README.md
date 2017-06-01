@@ -6,7 +6,7 @@ What is it that you would like to get out of GBDX? We have resources for every t
 
 ### AnswerFactory track:
 This track is for users who would like to easily obtain information about imagery using pre-configured classification and feature extractions algorithms.
-1. watch the recorded presentation ["What is GBDX?"](www.google.com)
+1. watch the recorded presentation ["GBDX Overview"](www.google.com). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 2. check out the AnswerFactory module in this repo, which contains a guide to using AnswerFactory and a recorded demo
 3. check out further documentation on AnswerFactory at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/answerfactory-overview)
 
