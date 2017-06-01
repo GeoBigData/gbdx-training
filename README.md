@@ -12,16 +12,15 @@ This track is for users who would like to easily obtain information about imager
 
 ### GBDX APIs and Python track:  
 If you would a python-friendly way of interacting with GBDX, learn how to use gbdxtools by taking the following steps:
-1. watch the recorded presentation ["What is GBDX?"](www.google.com)
-2. watch the recorded presentation ["How does GBDX work?"](www.google.com)
-3. check out the gbdxtools module in this repo, which includes videos and instructions on how to get set up with gbdxtools, example code, and a recorded demo
-4. check out further documentation on gbdxtools at [gbdxtools readthedocs.io](http://gbdxtools.readthedocs.io/en/latest/)
-5. optional: if you would like a convenient way to test the APIs, check out our Postman collections at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections)
+1. watch the recorded presentation ["GBDX Overview"](www.google.com). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
+2. check out the gbdxtools module in this repo, which includes videos and instructions on how to get set up with gbdxtools, example code, and a recorded demo
+3. check out further documentation on gbdxtools at [gbdxtools readthedocs.io](http://gbdxtools.readthedocs.io/en/latest/)
+4. optional: if you would like a convenient way to test the APIs, check out our Postman collections at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections)
 
 ### Custom Task track:
 If you've developed a capability that you'd like to integrate with GBDX - to use with your tools and data and/or ours - learn how to dockerize your capability into a 'Task' that runs on GBDX by taking the following steps: 
-1. complete all of the steps that are listed in the gbdxtools track, being certain to install Docker
-2. check out the Custom Task module in this repo, which instructions on how to dockerize your Task, a recorded demo, example code, test data, and advanced topic documentation and demos
+1. complete all of the steps that are listed in the gbdxtools track, being certain to install Docker and register for a Docker Hub account
+2. check out the Custom Task module in this repo, which instructions on how to dockerize your Task and a recorded demo
 3. check out further documentation at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/task-and-workflow-course)
 
 ### GBDX ninja track:
