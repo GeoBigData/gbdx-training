@@ -6,13 +6,13 @@ What is it that you would like to get out of GBDX? We have resources for every t
 
 ### AnswerFactory track:
 This track is for users who would like to easily obtain information about imagery using pre-configured classification and feature extractions algorithms.
-1. watch the recorded presentation ["GBDX Overview"](www.google.com). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
+1. watch the recorded presentation ["GBDX Overview"](https://digitalglobe.wistia.com/medias/kbqln5pwks). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 2. check out the AnswerFactory module in this repo, which contains a guide to using AnswerFactory and a recorded demo
 3. check out further documentation on AnswerFactory at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/answerfactory-overview)
 
 ### GBDX APIs and Python track:  
 If you would a python-friendly way of interacting with GBDX, learn how to use gbdxtools by taking the following steps:
-1. watch the recorded presentation ["GBDX Overview"](www.google.com). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
+1. watch the recorded presentation ["GBDX Overview"](https://digitalglobe.wistia.com/medias/kbqln5pwks). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 2. check out the gbdxtools module in this repo, which includes videos and instructions on how to get set up with gbdxtools, example code, and a recorded demo
 3. check out further documentation on gbdxtools at [gbdxtools readthedocs.io](http://gbdxtools.readthedocs.io/en/latest/)
 4. optional: if you would like a convenient way to test the APIs, check out our Postman collections at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections)
