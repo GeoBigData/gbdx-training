@@ -7,4 +7,4 @@ In this tutorial, we are going to demonstrate how to create a project that extra
 # to get started
 - From this repository, download the zipped file SHA.zip
 - Read the written AnswerFactory tutorial, `'AnswerFactory_tutorial.md'` which will walk you through the steps of creating a project in AnswerFactory
-- Optionally, watch the recorded [AnswerFactory tutorial](https://www.google.com) and follow along
+- Optionally, watch the recorded [AnswerFactory tutorial](https://digitalglobe.wistia.com/medias/u39g09l8ee) and follow along
