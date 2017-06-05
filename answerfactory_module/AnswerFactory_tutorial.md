@@ -1,6 +1,6 @@
 ### Create a project
 1. SIGN INTO ANSWERFACTORY<br/>
-Sign into AnswerFactory using your GBDX credentials. This will be the email address and password you created for your GBDX account. 
+[Sign into AnswerFactory](https://vector.geobigdata.io/answer-factory/login) using your GBDX credentials. This will be the email address and password you created for your GBDX account.
 
 2. CREATE A NEW PROJECT<br/>
 Click on the "New Project" button at the top of the page. This will take you to the Create New Project homepage with the Project Information Panel to the left of the screen.
