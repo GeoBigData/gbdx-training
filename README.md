@@ -2,7 +2,7 @@
 DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a fast and easy way to search, order, and process DigitalGlobe imagery. We provide several tools for doing big data analytics on our platform, and the ability to leverage your own capabilities against your data or ours. This guide is provided to help discover the tools and resources you need to quickly and easily qet GBDX savvy.
 
 # how to use these resources
-What is it that you would like to get out of GBDX? We have resources for every type of user, categorized into different tracks below. Decide what kind of tools suite your needs and follow the steps within each track to find tutorials and documentation that will streamline your GBDX experience. 
+What is it that you would like to get out of GBDX? We have resources for every type of user, categorized into different tracks below. Decide what kind of tools suit your needs and follow the steps within each track to find tutorials and documentation that will streamline your GBDX experience.
 
 ### AnswerFactory track:
 This track is for users who would like to easily obtain information about imagery using pre-configured classification and feature extractions algorithms.
@@ -10,17 +10,17 @@ This track is for users who would like to easily obtain information about imager
 2. check out the AnswerFactory module in this repo, which contains a guide to using AnswerFactory and a recorded demo
 3. check out further documentation on AnswerFactory at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/answerfactory-overview)
 
-### GBDX APIs and Python track:  
-If you would a python-friendly way of interacting with GBDX, learn how to use gbdxtools by taking the following steps:
+### GBDX APIs and Python track:
+If you would like a python-friendly way of interacting with GBDX, learn how to use gbdxtools by taking the following steps:
 1. watch the recorded presentation ["GBDX Overview"](https://digitalglobe.wistia.com/medias/kbqln5pwks). The presentation slides are provided [here](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 2. check out the gbdxtools module in this repo, which includes videos and instructions on how to get set up with gbdxtools, example code, and a recorded demo
 3. check out further documentation on gbdxtools at [gbdxtools readthedocs.io](http://gbdxtools.readthedocs.io/en/latest/)
 4. optional: if you would like a convenient way to test the APIs, check out our Postman collections at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/postman-instructions-collections)
 
 ### Custom Task track:
-If you've developed a capability that you'd like to integrate with GBDX - to use with your tools and data and/or ours - learn how to dockerize your capability into a 'Task' that runs on GBDX by taking the following steps: 
+If you've developed a capability that you'd like to integrate with GBDX - to use with your tools and data and/or ours - learn how to dockerize your capability into a 'Task' that runs on GBDX by taking the following steps:
 1. complete all of the steps that are listed in the gbdxtools track, being certain to install Docker and register for a Docker Hub account
-2. check out the Custom Task module in this repo, which instructions on how to dockerize your Task and a recorded demo
+2. check out the Custom Task module in this repo, which has instructions on how to dockerize your Task and a recorded demo
 3. check out further documentation at [GBDX University](https://gbdxdocs.digitalglobe.com/docs/task-and-workflow-course)
 
 ### GBDX ninja track:
