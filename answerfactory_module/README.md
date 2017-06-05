@@ -10,4 +10,4 @@ In this tutorial, we are going to demonstrate how to create a project that extra
 - Optionally, watch the recorded [AnswerFactory tutorial](https://digitalglobe.wistia.com/medias/u39g09l8ee) and follow along
 
 ___
-__We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.__
+We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.
