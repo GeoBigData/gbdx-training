@@ -5,7 +5,7 @@ AnswerFactory is a GBDX-powered web app that allows users to extract information
 In this tutorial, we are going to demonstrate how to create a project that extracts aircraft features from imagery, then we'll demonstrate how to download the vector data and view it in a GIS.
 
 # to get started
-- From this repository, download the zipped file SHA.zip
+- From this repository, [download the zipped file SHA.zip](https://github.com/GeoBigData/gbdx-training/raw/master/answerfactory_module/SHA.zip)
 - Read the written AnswerFactory tutorial, [`'AnswerFactory_tutorial.md'`](./AnswerFactory_tutorial.md) which will walk you through the steps of creating a project in AnswerFactory
 - Optionally, watch the recorded [AnswerFactory tutorial](https://digitalglobe.wistia.com/medias/u39g09l8ee) and follow along
 
