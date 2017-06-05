@@ -8,7 +8,7 @@ This tutorial will walk you through the multi-step process of putting a Task on 
 It is strongly recommended that you follow the steps for the gbdxtools track first, as that will give you the background knowledge to understand how your Task will integrate with GBDX, and because you will need gbdxtools in order to register your Task and test it within a Workflow. 
 
 __Install gbdxtools and Docker__
-1. Instructions for installing gbdxtools can be found in the gbdxtools module of this repo
+1. Instructions for installing gbdxtools can be found in the [gbdxtools module](../gbdxtools_module/README.md) of this repo
 2. Install Docker from https://www.docker.com/
 3. Test your Docker installation by starting Docker and pasting in the following command, which should return your Docker version 
 ```
@@ -17,7 +17,7 @@ docker version
 4. Sign up for a free Docker Hub account at https://hub.docker.com/
 
 __Download and start the Notebook tutorial:__
-1. Download the file custom-task-tutorial.ipynb from this repository.
+1. Download the file [custom-task-tutorial.ipynb](https://github.com/GeoBigData/gbdx-training/blob/master/custom_task_module/custom-task-tutorial.ipynb) from this repository.
 
 2. Open a terminal/cmd window and copy and paste `jupyter notebook`. This will open the Jupyter Notebook interface in your browser [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). 
 
