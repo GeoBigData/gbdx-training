@@ -24,3 +24,6 @@ __Download and start the Notebook tutorial:__
 3. Within in the Jupyter Notebook interface, navigate to where you saved the custom-task-tutorial.ipynb file and click on it to start the notebook.
 
 4. The custom-task-tutorial.ipynb explains all of the steps required to register a custom task to GBDX, along with example code. You can execute the code within the notebook by using the keyboard shortcut SHIFT + ENTER, or select the play button in the toolbar. Follow the instructions in the notebook and optionally watch the [recording of this tutorial](https://digitalglobe.wistia.com/medias/8z9hj4g960). 
+
+___
+__We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.__
