@@ -81,4 +81,4 @@ Windows: try to select the filename and delete the '.txt' extensions. You may ne
 Mac: select the config file, right-click and select 'Get Info' to verify that you've saved the file without an extension. 
 
 ___
-__We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.__
+We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.
