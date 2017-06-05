@@ -5,7 +5,7 @@ Users can and are encouraged to build their own custom analytic capability, what
 This tutorial will walk you through the multi-step process of putting a Task on GBDX, starting with some sample code that clips a raster to a shapefile as our example Task. The provided tutorial notebook walks you through each step, and if you execute the blocks of code as you follow along, will write out the files that are necessary to the Task registration process directly to your computer. Feel free to follow the steps and write your own files outside of the notebook if you prefer.  
 
 # to get started
-It is strongly recommended that you follow the steps for the gbdxtools track first, as that will give you the background knowledge to understand how your Task will integrate with GBDX, and becasue you will need gbdxtools in order to register your Task and test it within a Workflow. 
+It is strongly recommended that you follow the steps for the gbdxtools track first, as that will give you the background knowledge to understand how your Task will integrate with GBDX, and because you will need gbdxtools in order to register your Task and test it within a Workflow. 
 
 __Install gbdxtools and Docker__
 1. Instructions for installing gbdxtools can be found in the gbdxtools module of this repo
