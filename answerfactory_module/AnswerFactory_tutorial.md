@@ -1,18 +1,18 @@
 ### Create a project
 1. SIGN INTO ANSWERFACTORY<br/>
-Sign into AnswerFactory using your GBDX credentials. This will be the email address and password you created for your GBDX account. 
+[Sign into AnswerFactory](https://vector.geobigdata.io/answer-factory/) using your GBDX credentials. This will be the email address and password you created for your GBDX account.
 
 2. CREATE A NEW PROJECT<br/>
 Click on the "New Project" button at the top of the page. This will take you to the Create New Project homepage with the Project Information Panel to the left of the screen.
 
 3. ADD AN AREA OF INTEREST (AOI)<br/>
-We have provided a shapefile over Shanghai Hongqiao International Airport for this tutorial. If you haven't done so already, please download the "SHA.zip" file from this github repo. <br/> <br/> Upload this shapefile to AnswerFactory by clicking on the "Upload Shapefile" button in the Project Panel and selecting the zipped file. The map wil snap to the AOI defined by the shapefile, and you will see more configurable options in the Project Panel.  
+We have provided a shapefile over Shanghai Hongqiao International Airport for this tutorial. If you haven't done so already, please download the "SHA.zip" file from this github repo. <br/> <br/> Upload this shapefile to AnswerFactory by clicking on the "Upload Shapefile" button in the Project Panel and selecting the zipped file. The map will snap to the AOI defined by the shapefile, and you will see more configurable options in the Project Panel.  
 
 4. NAME YOUR PROJECT<br/>
 For this tutorial, give your project a unique name by naming it something like, "extract_aircraft" and attach your initials at the end. This name will be checked against existing names to prevent multiple projects from having the same name. 
 
-5. ADD THE 'EXTRACT AIRCRAFT 'ANSWER TO YOUR PROJECT<br/>
-For this demo, you are going to run the AnswerFactory 'Extract Aircraft' recipe. This recipe runs an algorithm over an image to identify aircraft and generate vectors that indicate where the aircraft are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. <br/> <br/> Click on the Add Answers button to bring up the modal for selecting answers. Click in the field to open the dropdown list of currently available answers. Choose the 'Extract Aircraft' selection at the top of the list, which will pop up in a panel on the right side of your screen. 
+5. ADD THE 'EXTRACT AIRCRAFT' ANSWER TO YOUR PROJECT<br/>
+For this demo, you are going to run the AnswerFactory 'Extract Aircraft' recipe. This recipe runs an algorithm over an image to identify aircraft and generate vectors that indicate where the aircraft are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. <br/> <br/> Click on the Add Answers button to bring up the modal for selecting answers. Click in the field to open the dropdown list of currently available answers. Choose the 'Extract Aircraft' selection at the top of the list, which will pop up in a panel on the right side of your screen.
 
 6. SAVE PROJECT<br/>
 Click on the Create Project button at the bottom of the Project Panel. When prompted, confirm that you want to create the project. <br/> <br/> At this point, the analysis has begun. You should see a message on the right side of the screen that states, "Currently running Extract Aircraft'.
