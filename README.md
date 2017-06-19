@@ -30,3 +30,6 @@ For a complete GBDX full immersion experience, you can work through each of the 
 - milestone #3: Run an advanced Workflow, such as an LULC Workflow, on imagery and locate in your customer S3 bucket
 - milestone #4: Register a Custom Task to GBDX using our 'clip_raster' example Task and locate your clipped image in your customer S3 bucket
 - milestone #5: Register a Custom Task to GBDX using a capability/algorithm that you've developed and use it within a Workflow, locate the output of your Custom Task in your customer S3 bucket
+
+___
+We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.
