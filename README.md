@@ -32,4 +32,4 @@ For a complete GBDX full immersion experience, you can work through each of the 
 - milestone #5: Register a Custom Task to GBDX using a capability/algorithm that you've developed and use it within a Workflow, locate the output of your Custom Task in your customer S3 bucket
 
 ___
-We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with comments and suggestions.
+We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with questions, comments or suggestions.
