@@ -19,7 +19,7 @@ Before we start, you'll need your GBDX username, password, and API key.
 
 __Install Anaconda and gbdxtools:__ 
 
-Pre-requisites for installing gbdxtools are Python and Pip. However, we recommend that you first install Anaconda, an open source Python distribution that simplifies package management, this will install Python and Pip for you. The Anaconda install also includes Jupyter, which you will need if you choose to use the provided Jupyter Notebook for this tutorial. 
+Pre-requisites for installing gbdxtools are Python and Pip. However, we recommend that you first install Anaconda, an open source Python distribution that simplifies package management, this will install Python and Pip for you. The Anaconda distribution also installs Jupyter, which you will need if you choose to use the provided Jupyter Notebook for this tutorial. 
 
 1. Install Anaconda: Download and install Anaconda from https://www.continuum.io/downloads, and be sure to check the box that sets Path values when prompted.
 
