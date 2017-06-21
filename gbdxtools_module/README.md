@@ -5,25 +5,17 @@ GBDXtools is a pip-installable Python package that allows one to easily access G
 In this tutorial, we'll demonstrate how to search the DigitalGlobe archive via the Catalog API, order imagery using the Order API, and run an analysis workflow with the Workflow API. 
 
 ## to get started
-__Sign up for GBDX and locate your account credentials:__
+__Activate your GBDX acount credentials and locate your API key
 
-Before we start, you'll need your GBDX username, password, and API key. IF YOU ALREADY HAVE A GBDX ACCOUNT, SKIP AHEAD TO STEP #6
+Before we start, you'll need your GBDX username, password, and API key. 
 
-1. If you're new to GBDX, you'll need to create an account. If you received an email invitation to GBDX from your company, follow the instructions to create your user account. Otherwise, start here-
+1. Activate your account - once you've been assigned to your company's GBDX account (we will do this for you, please coordinate with your company's GBDX POC), you'll be sent an email from DigitalGlobe with instructions on how to activate your account. Open the message and click on "Confirm my account." An account confirmation will appear. Now you're ready to start using GBDX.
 
-2. Go to the [GBDX home page](https://gbdx.geobigdata.io/login).
+2. Sign in to the [GBDX Web App](https://gbdx.geobigdata.io) with your GBDX username and password.
 
-3. Select "Sign up" from the login box. Enter the email name and password you want to use for this account, then click "SIGN UP."
+3. Find your profile - first click the user icon in the lower left corner, then your username.
 
-4. Fill in your personal information and account information. Choose "Register GBDX Account."
-
-5. Activate your account - after you register, you'll get an email message from DigitalGlobe asking you to activate your account. Open the message and click on "Confirm my account." An account confirmation will appear. Now you're ready to start using the web application.
-
-6. Sign in to the [GBDX Web App](https://gbdx.geobigdata.io) with your GBDX username and password.
-
-7. Find your profile - first click the user icon in the lower left corner, then your username.
-
-8. Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up gbdxtools to interact with GBDX APIs.
+4. Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up gbdxtools to interact with GBDX APIs.
 
 __Install Anaconda and gbdxtools:__ 
 
