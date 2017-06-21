@@ -5,7 +5,7 @@ GBDXtools is a pip-installable Python package that allows one to easily access G
 In this tutorial, we'll demonstrate how to search the DigitalGlobe archive via the Catalog API, order imagery using the Order API, and run an analysis workflow with the Workflow API. 
 
 ## to get started
-__Activate your GBDX acount credentials and locate your API key
+__Activate your GBDX acount credentials and locate your API key__
 
 Before we start, you'll need your GBDX username, password, and API key. 
 
