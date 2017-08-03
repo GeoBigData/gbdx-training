@@ -1,0 +1,15 @@
+# gbdxtools_env.yml
+name: gbdxtools
+channels: !!python/tuple
+- !!python/unicode
+  'conda-forge'
+- !!python/unicode
+  'defaults'
+dependencies:
+- conda-forge::python=2.7
+- conda-forge::rasterio=1.0a9=np112py27_0
+- conda-forge::shapely=1.5.17=np112py27_3
+- conda-forge::fiona=1.7.7=np112py27_0
+- conda-forge::pyproj=1.9.5.1=py27_0
+- pip:
+  - gbdxtools==0.11.14
