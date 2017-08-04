@@ -70,7 +70,7 @@ activate gbdxtools
 ```
 2.6 Try importing all the modules (if no errors are raised, everything is working right)
 ```
-python -c 'import rasterio; import fiona; import shapely; import gbdxtools'
+python -c "import rasterio; import fiona; import shapely; import gbdxtools"
 ```
 
 __3. Activate your GBDX acount credentials and locate your API key__ 
