@@ -11,20 +11,21 @@ The following steps walk you through an easy, proven way of installing gbdxtools
 __1. Install Anaconda__
 The first required step is to install Anaconda, an open source Python distribution that simplifies package management, dependencies, and environments (we recommend this step even if you already have a Python installation). This distribution includes Conda, which you will need in order to install gbdxtools using the provided conda environment file, and Jupyter Notebook, which you'll need to run the provided Jupyter Notebook that contains the gbdxtools tutorial.
 
-1.1 Download and install the full version of [Anaconda](https://www.continuum.io/downloads)
+1.1 Download and install the **full version** of [Anaconda](https://www.continuum.io/downloads)
 
 Requirements:
 - All users:
 	- Python 2.7 version
-		- *this will not interfere with other Python versions you may already have*
+		- *this should not not interfere with other Python versions you may already have*
+    - 64-Bit is preferred
+    - Make sure to install the full version Anaconda and not Miniconda to ensure all required dependencies are included
 - Windows users:
-	- 64-Bit is preferred
 	- During the installation, please check the box that sets Path values when prompted
-		- *please do this even though it is not the recommended setting*
+		- *please do this even though it is not the default setting*
 
 __2. Install gbdxtools__
 
-We have provided a Conda environment file for easy installion of gbdxtools within a virtual Python environment, along with its required dependencies. Virtual environments keep the dependencies required by different projects in separate places, so that they don't interfere with each other. Please use the following Conda commands to install gbdxtools.
+We have provided a Conda environment file for easy installion of gbdxtools, along with its required dependencies, within a Conda virtual environment. Virtual environments keep the dependencies required by different projects in separate places, so that they don't interfere with each other. Please use the following Conda commands to install gbdxtools.
 
 Mac users:
 
