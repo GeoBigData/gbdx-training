@@ -95,16 +95,16 @@ __4.3__ Start Jupyter Notebook
 ```
 jupyter notebook
 ```
-__4.4__ Click gbdxtools-tutorial.ipynb to launch the Notebook.
+__4.4__ Click gbdxtools-tutorial.ipynb to launch the notebook.
 
 __4.5__ Switch to the gbdxtools environment kernel:
 - select the "Kernel" dropdown menu from the toolbar
 - hover over "Change Kernel"
 - select Python [conda env:gbdxtools]
 
-__4.5__ The Notebook contains explanations of GBDX APIs and example code, which you can execute within the Notebook by selecting the cell and using the keyboard shortcut SHIFT + ENTER, or select the play button in the toolbar.
+__4.5__ The notebook contains explanations of GBDX APIs and example code, which you can execute within the notebook by selecting the cell and using the keyboard shortcut SHIFT + ENTER, or select the play button in the toolbar.
 
-__4.6__ Within the Notebook itself, *Step 1.2* instructs you to enter your credentials to authenticate into GBDX. These are the email and password you used to sign up for GBDX, and the Client ID and Client Secret that you located in step 3. Enter these now and run this code cell to check that gbdxtools is installed correctly and that you have the correct credentials (if no errors are raised, everything is working right).
+__4.6__ Within the notebook itself, *Step 1.2* instructs you to enter your credentials to authenticate into GBDX. These are the email and password you used to sign up for GBDX, and the Client ID and Client Secret that you located in step 3. Enter these now and run this code cell to check that gbdxtools is installed correctly and that you have the correct credentials (if no errors are raised, everything is working right).
 
 __4.7__ Follow the instructions in the notebook and optionally watch the [recording of this tutorial](https://digitalglobe.wistia.com/medias/u3tmwds3xo).
 
