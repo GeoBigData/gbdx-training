@@ -87,11 +87,11 @@ __4. Start the Notebook tutorial__
 
 Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the notebook Dashboard from your browser. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools tutorial notebook.
 
-__4.1__ Download the file `gbdxtools-tutorial.ipynb` from this repository
+__4.1__ Download the file [gbdxtools-tutorial.ipynb](../gbdxtools_module/gbdxtools-tutorial.ipynb) from this repository
 
-__4.2__ Open a terminal/cmd window and navigate to the directory where you have saved gbdxtools-tutorial.ipynb
+__4.2__ Go back to the terminal window where you have activated the gbdxtools environment and navigate to the directory where you have saved gbdxtools-tutorial.ipynb
 
-__4.3__ Start Jupyter Notebook
+__4.3__ Start the Jupyter Notebook App
 ```
 jupyter notebook
 ```
