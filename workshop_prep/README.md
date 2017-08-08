@@ -92,9 +92,9 @@ __4. Start Jupyter Notebook and authenticate into GBDX__
 
 Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the Notebook Dashboard from your browser. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools test notebook.
 
-__4.1__ Download the file `gbdxtools-test.ipynb` from this repository.
+__4.1__ Download the file [gbdxtools-test.ipynb](../workshop_prep/gbdxtools-test.ipynb) from this repository.
 
-__4.2__ Open a terminal/cmd window and navigate to the directory where you saved gbdxtools-test.ipynb.
+__4.2__ Go back to the terminal window where you have activated the gbdxtools environment and navigate to the directory where you saved gbdxtools-test.ipynb.
 
 __4.3__ Start the Jupyter Notebook app.
 ```
