@@ -14,7 +14,7 @@ GBDXtools is a GBDX Python package that allows one to easily access GBDX APIs to
 The following steps walk you through an easy, proven way of installing gbdxtools and its dependencies on Mac, Windows or Linux.
 
 __1. Install Anaconda__
-The first required step is to install Anaconda, an open source Python distribution that simplifies package management, dependencies, and environments (we recommend this step even if you already have a Python installation). This distribution includes Conda, which you will need in order to install gbdxtools using the provided conda environment file, and Jupyter Notebook, which you'll need to run the provided Jupyter Notebook that contains the gbdxtools tutorial.
+The first required step is to install Anaconda, an open source Python distribution that simplifies package management, dependencies, and environments (we recommend this step even if you already have a Python installation). This distribution includes Conda, which you will need in order to install gbdxtools using the provided conda environment file, and Jupyter Notebook, which you'll need to run the provided Jupyter Notebooks that contains the GBDX tutorials.
 
 __1.1__ Download and install the **full version** of [Anaconda](https://www.continuum.io/downloads)
 
@@ -34,7 +34,7 @@ We have provided a Conda environment file for easy installion of gbdxtools, alon
 
 Mac users:
 
-__2.1__ Download the [gbdxtools_env.yml](../gbdxtools_module/gbdxtools_env.yml) file from this repo
+__2.1__ Download the [gbdxtools_env.yml](../workshop_prep/gbdxtools_env.yml) file from this repo
 
 __2.2__ Open a terminal window
 
@@ -52,12 +52,12 @@ source activate gbdxtools
 ```
 __2.6__ Try importing all the modules (if no errors are raised, everything is working right)
 ```
-python -c 'import rasterio; import fiona; import shapely; import gbdxtools'
+python -c "import rasterio; import fiona; import shapely; import gbdxtools"
 ```
 
 Windows users:
 
-__2.1__ Download the [gbdxtools_env.yml](../gbdxtools_module/gbdxtools_env.yml) file from this repo
+__2.1__ Download the [gbdxtools_env.yml](../workshop_prep/gbdxtools_env.yml) file from this repo
 
 __2.2__ Open cmd.exe
 
@@ -90,7 +90,7 @@ __3.4__ Look for the strings called “Client ID” and “Client Secret.” The
 
 __4. Start Jupyter Notebook and authenticate into GBDX__
 
-Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called Notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the Notebook Dashboard from your browser. From here, you can open and close Notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools test Notebook.
+Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the Notebook Dashboard from your browser. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools test notebook.
 
 __4.1__ Download the file `gbdxtools-test.ipynb` from this repository.
 
@@ -100,14 +100,14 @@ __4.3__ Start the Jupyter Notebook app.
 ```
 jupyter notebook
 ```
-__4.4__ Click gbdxtools-test.ipynb to launch the Notebook.
+__4.4__ Click gbdxtools-test.ipynb to launch the notebook.
 
 __4.5__ Switch to the gbdxtools environment kernel:
 - select the "Kernel" dropdown menu from the toolbar
 - hover over "Change Kernel"
 - select Python [conda env:gbdxtools]
 
-__4.5__ Follow the directions that demonstrate how to run code in a Notebook and test the GBDX credentials you retrieved in step 3.
+__4.5__ Follow the directions that demonstrate how to run code in a notebook and test the GBDX credentials you retrieved in step 3.
 
 __Docker__
 
@@ -128,7 +128,7 @@ __6.3__ Bring up a terminal/cmd window. The following Docker command will return
 docker --version
 ```
 
-__6.4__ Test pull a Docker image: Use the following command to pull the miniconda image from Docker Hub. Miniconda is a lighweight alternative to Anaconda that is simply the Conda package manager and its dependencies.
+__6.4__ Test pull a Docker image: Use the following command to pull the miniconda image from Docker Hub. Miniconda is a lighweight alternative to Anaconda that is simply the Conda package manager and its dependencies, in a Docker image.
 ```
 docker pull continuumio/miniconda
 ```
@@ -136,7 +136,7 @@ __6.6__ Confirm that the image downloaded, you should see it listed it when you 
 ```
 docker images
 ```
-__6.7__ Tag the image so that you can edit it and push it to your own repository. Replace <username> with your Docker Hub username.
+__6.7__ Tag the image so that you can edit it and push it to your own repository. Replace `<username>' with your Docker Hub username.
 ```
 docker tag continuumio/miniconda <username>/miniconda-docker
 ```
@@ -146,7 +146,7 @@ __6.8__ Test push a Docker image: first, log in to Docker Hub using your Docker 
 docker login -u <username> -p <password>
 ```
 
-__6.9__ Test push a Docker image: Use the following command to push your tagged image to your Docker Hub account. Remember to replace <username> with your Docker Hub username. This may take a few minutes, but it should appear as a repository on Docker Hub under your account.
+__6.9__ Test push a Docker image: Use the following command to push your tagged image to your Docker Hub account. Remember to replace `<username>` with your Docker Hub username. This may take a few minutes, but it should appear as a repository on Docker Hub under your account.
 ```
 docker push <username>/miniconda-docker
 ```
@@ -158,6 +158,7 @@ When you are finished with this tutorial, shut down the Jupyter Notebook and ker
 __7.1__ Stop the Jupyter Notebook by typing `CONTROL + C`, then `'Y'` to confirm that you would like to shut down the notebook server.
 
 Mac users:
+
 __7.2__ Deactivate the virtual environment
 ```
 source deactivate
@@ -168,6 +169,7 @@ conda remove --name gbdxtools --all
 ```
 
 Windows users:
+
 __7.2__ Deactivate the virtual environment
 ```
 deactivate gbdxtools
@@ -186,14 +188,14 @@ Save a gbdxtools config file to your home directory with your GBDX credentials. 
 __8.1__ You will need your GBDX credentials again (located within your profile information in the [GBDX Web App](https://gbdx.geobigdata.io/profile)).
 
 __8.2__ Create a blank text file and copy and paste the following information:
-    ```
-    [gbdx]
-    auth_url = https://geobigdata.io/auth/v1/oauth/token/
-    client_id = <your_client_id>
-    client_secret = <your_client_secret>
-    user_name = <your_user_name>
-    user_password = <your_password>
-    ```
+```
+[gbdx]
+auth_url = https://geobigdata.io/auth/v1/oauth/token/
+client_id = <your_client_id>
+client_secret = <your_client_secret>
+user_name = <your_user_name>
+user_password = <your_password>
+```
 __8.3__ Replace `<your_client_id>` and `<your_client_secret>` with your credentials, also `<your_user_name>` and `<your_password>` with the username and password associated with your GBDX account.
 
 __8.4__ Save this file in your home directory with the filename `.gbdx-config`
@@ -204,10 +206,10 @@ __8.5__ Test your gbdxtools installation and config file:
 	- Open a terminal/cmd window and type `python`
 	- Copy and paste the following code, which will result in an error if it can't locate your config file or if the formatting is incorrect
 
-   ```python
-   from gbdxtools import Interface
-   gbdx = Interface()
-   ```
+```python
+from gbdxtools import Interface
+gbdx = Interface()
+```
    - Once you are done, quit Python by typing `exit()`
 
 
