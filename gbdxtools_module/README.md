@@ -144,14 +144,15 @@ Save a gbdxtools config file to your home directory with your GBDX credentials. 
 __6.1__ You will need your GBDX credentials again (located within your profile information in the [GBDX Web App](https://gbdx.geobigdata.io/profile)).
 
 __6.2__ Create a blank text file and copy and paste the following information:
-    ```
-    [gbdx]
-    auth_url = https://geobigdata.io/auth/v1/oauth/token/
-    client_id = <your_client_id>
-    client_secret = <your_client_secret>
-    user_name = <your_user_name>
-    user_password = <your_password>
-    ```
+```
+[gbdx]
+auth_url = https://geobigdata.io/auth/v1/oauth/token/
+client_id = <your_client_id>
+client_secret = <your_client_secret>
+user_name = <your_user_name>
+user_password = <your_password>
+```
+
 __6.3__ Replace `<your_client_id>` and `<your_client_secret>` with your credentials, also `<your_user_name>` and `<your_password>` with the username and password associated with your GBDX account.
 
 __6.4__ Save this file in your home directory with the filename `.gbdx-config`
@@ -160,13 +161,13 @@ __6.4__ Save this file in your home directory with the filename `.gbdx-config`
 
 __6.5__ Test your gbdxtools installation and config file:
 	- Open a terminal/cmd window and type `python`
-	- Copy and paste the following code, which will result in an error if it can't locate your config file or if the formatting is incorrect
+	- Copy and paste the following code, which will result in an error if it can't locate your config file or if the formatting is incorrect.
 
-   ```python
-   from gbdxtools import Interface
-   gbdx = Interface()
-   ```
-   - Once you are done, quit Python by typing `exit()`
+```python
+from gbdxtools import Interface
+gbdx = Interface()
+```
+- Once you are done, quit Python by typing `exit()`
 <br/>
 
 Config file troubleshooting:
