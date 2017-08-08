@@ -112,9 +112,10 @@ __5. Shut it down__
 
 When you are finished with this tutorial, shut down the Jupyter Notebook and kernel, and deactivate the Conda environment where you installed gbdxtools.
 
-__5.1__ Stop the jupyter notebook by using the keyboard shortcut `control + c`, then typing for `'Y'` to confirm that you would like to shut down the notebook server.
+__5.1__ Stop the jupyter notebook by using the keyboard shortcut `CONTROL + C`, then `'Y'` to confirm that you would like to shut down the notebook server.
 
 Mac users:
+
 __5.2__ Deactivate the virtual environment
 ```
 source deactivate
@@ -125,6 +126,7 @@ conda remove --name gbdxtools --all
 ```
 
 Windows users:
+
 __5.2__ Deactivate the virtual environment
 ```
 deactivate gbdxtools
