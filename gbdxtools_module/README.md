@@ -85,7 +85,7 @@ __3.4__ Look for the strings called “Client ID” and “Client Secret.” The
 
 __4. Start the Notebook tutorial__
 
-Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called Notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the Notebook Dashboard from your browser. From here, you can open and close Notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools tutorial Notebook.
+Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the notebook Dashboard from your browser. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools tutorial notebook.
 
 __4.1__ Download the file `gbdxtools-tutorial.ipynb` from this repository
 
