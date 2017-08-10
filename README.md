@@ -32,4 +32,12 @@ For a complete GBDX full immersion experience, you can work through each of the 
 - milestone #5: Register a Custom Task to GBDX using a capability/algorithm that you've developed and use it within a Workflow, locate the output of your Custom Task in your customer S3 bucket
 
 ___
+Resources:
+[__GBDX Web App__](https://gbdx.geobigdata.io/login)
+[__AnswerFactory__](https://vector.geobigdata.io/answer-factory/login)
+[__GBDX University__](https://gbdxdocs.digitalglobe.com/)
+[__GBDXtools Documentation__](http://gbdxtools.readthedocs.io/en/latest/)
+[__S3 Browser__](http://s3browser.geobigdata.io/login.html)
+[__GBDX Stories__](http://gbdxstories.digitalglobe.com/)
+___
 We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with questions, comments or suggestions.
