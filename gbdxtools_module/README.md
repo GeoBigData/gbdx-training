@@ -27,7 +27,7 @@ __2. Install gbdxtools__
 
 We have provided a Conda environment file for easy installion of gbdxtools, along with its required dependencies, within a Conda virtual environment. Virtual environments keep the dependencies required by different projects in separate places, so that they don't interfere with each other. Please use the following Conda commands to install gbdxtools.
 
-Mac users:
+__Mac users__:
 
 __2.1__ Download the [gbdxtools_env.yml](../gbdxtools_module/gbdxtools_env.yml) file from this repo
 
@@ -50,7 +50,7 @@ __2.6__ Try importing all the modules (if no errors are raised, everything is wo
 python -c 'import rasterio; import fiona; import shapely; import gbdxtools'
 ```
 
-Windows users:
+__Windows users__:
 
 __2.1__ Download the [gbdxtools_env.yml](../gbdxtools_module/gbdxtools_env.yml) file from this repo
 
