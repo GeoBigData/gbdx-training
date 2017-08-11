@@ -114,7 +114,7 @@ When you are finished with this tutorial, shut down the Jupyter Notebook and ker
 
 __5.1__ Stop the jupyter notebook by using the keyboard shortcut `CONTROL + C`, then `'Y'` to confirm that you would like to shut down the notebook server.
 
-Mac users:
+__Mac users__:
 
 __5.2__ Deactivate the virtual environment
 ```
@@ -125,7 +125,7 @@ __5.3__ (Optional) Remove the environment
 conda remove --name gbdxtools --all
 ```
 
-Windows users:
+__Windows users__:
 
 __5.2__ Deactivate the virtual environment
 ```
