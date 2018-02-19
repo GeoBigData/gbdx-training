@@ -53,9 +53,17 @@ new methods: running a Task in a Workflow, tracking Task and Workflow status, lo
 
 There are several notebooks in the GBDX Notebooks Hub that demonstrate useful methods and tools, you will find them in the Discover section. Here is a short list of recommended notebooks.
 
+[Searching and Ordering Imagery](www.google.com)
+
+[Workflow Basics](www.google.com)
+
 [Ordering and Working with Imagery](https://notebooks.geobigdata.io/hub/notebooks/5a0370dfe21cea77cee2436b)
 <br />
 new methods: search and order imagery to GBDX
+
+[Imagery and Areas of Interest](https://notebooks.geobigdata.io/hub/notebooks/5a037c12f74cf64a53479964)
+<br />
+new methods:index an image with different types of geometries, the image geointerface
 
 [Base Layer Matching to Maps API](https://notebooks.geobigdata.io/hub/notebooks/5a70d42b2966da03cacf765e)
 <br />
