@@ -1,15 +1,11 @@
 ## intro
-GBDXtools is a GBDX Python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery.
-
-## what you will learn
-In this tutorial, we'll demonstrate how to search the DigitalGlobe archive via the Catalog API, order imagery using the Order API, and run an analysis workflow with the Workflow API.
+GBDXtools is a GBDX Python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. If you've completed any of the GBDX Notebooks tutorials, then you've seen gbdxtools in action. In this tutorial, we provide a easy method of installing gbdxtools in your local dev environment. 
 
 ## to get started
-The following steps walk you through an easy, proven way of installing gbdxtools and its dependencies on Mac, Windows or Linux.
 
+### 1. Install Anaconda
 
-__1. Install Anaconda__
-The first required step is to install Anaconda, an open source Python distribution that simplifies package management, dependencies, and environments (we recommend this step even if you already have a Python installation). This distribution includes Conda, which you will need in order to install gbdxtools using the provided conda environment file, and Jupyter Notebook, which you'll need to run the provided Jupyter Notebook that contains the gbdxtools tutorial.
+The first required step is to install Anaconda, an open source Python distribution that simplifies package management, dependencies, and environments (we recommend this step even if you already have a Python installation). This distribution includes Conda, which you will need in order to install gbdxtools using the provided conda environment file. 
 
 __1.1__ Download and install the **full version** of [Anaconda](https://www.continuum.io/downloads)
 
@@ -23,7 +19,7 @@ Requirements:
 	- During the installation, please check the box that sets Path values when prompted
 		- *please do this even though it is not the default setting*
 
-__2. Install gbdxtools__
+### 2. Install gbdxtools
 
 We have provided a Conda environment file for easy installion of gbdxtools, along with its required dependencies, within a Conda virtual environment. Virtual environments keep the dependencies required by different projects in separate places, so that they don't interfere with each other. Please use the following Conda commands to install gbdxtools.
 
@@ -73,7 +69,7 @@ __2.6__ Try importing all the modules (if no errors are raised, everything is wo
 python -c "import rasterio; import fiona; import shapely; import gbdxtools"
 ```
 
-__3. Activate your GBDX acount credentials and locate your API key__
+### 3. Activate your GBDX acount credentials and locate your API key
 
 __3.1__ Activate your account - once you've been assigned to your company's GBDX account (we will do this for you, please coordinate with your company's GBDX POC), you'll be sent an email from DigitalGlobe with instructions on how to activate your account. Open the message and click on "ACTIVATE YOUR ACCOUNT". This will pop up a window where you will prompted to set a password.
 
@@ -83,32 +79,49 @@ __3.3__ Find your profile - first click the user icon in the lower left corner, 
 
 __3.4__ Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up gbdxtools to interact with GBDX APIs.
 
-__4. Start the Notebook tutorial__
+### 4a. Test your gbdxtools installation
 
-Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. When you start the app, it will launch a Python 'kernel' and the notebook Dashboard from your browser. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools tutorial notebook.
+You can start Python from the gbdxtools environment, copy and paste the following code, and fill in your GBDX credentials. You will know that you've successfully installed gbdxtools if there's no error and it prints your GBDX S3 information. 
 
-__4.1__ Download the file [gbdxtools-tutorial.ipynb](../gbdxtools_module/gbdxtools-tutorial.ipynb) from this repository
+```python
+import gbdxtools
+gbdx = gbdxtools.Interface(
+    username='',
+    password='',
+    client_id='',
+    client_secret='')
+    
+gbdx.s3.info
+```
 
-__4.2__ Go back to the terminal window where you have activated the gbdxtools environment and navigate to the directory where you have saved gbdxtools-tutorial.ipynb
+From here, you can code against DigitalGlobe imagery using gbdxtools just as you did in the GBDX Notebooks tutorials, using the exact same gbdxtools commands.  
 
-__4.3__ Start the Jupyter Notebook App
+### 4b. Test your gbdxtools installation in a Jupyter Notebook
+
+We provided the same code for testing your gbdxtools installation in a Jupyter Notebook, if this is more convenient for you. If you've completed any of the GBDX Notebooks tutorials, then you'll be familiar with this layout.
+
+Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. Starting the Jupyter Notebook app will launch a Python 'kernel' and Notebook Dashboard in a browser window. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools test notebook.
+
+__4.1__ Download the file [gbdxtools-test.ipynb](../gbdxtools_module/gbdxtools-test.ipynb) from this repository
+
+__4.2__ Go back to the terminal window where you have activated the gbdxtools environment and navigate to the directory where you have saved gbdxtools-test.ipynb
+
+__4.3__ Start the Jupyter Notebook App by typing the following command in the terminal
 ```
 jupyter notebook
 ```
-__4.4__ Click gbdxtools-tutorial.ipynb to launch the notebook.
+__4.4__ Click gbdxtools-test.ipynb to launch the notebook.
 
 __4.5__ Switch to the gbdxtools environment kernel:
 - select the "Kernel" dropdown menu from the toolbar
 - hover over "Change Kernel"
 - select Python [conda env:gbdxtools]
 
-__4.5__ The notebook contains explanations of GBDX APIs and example code, which you can execute within the notebook by selecting the cell and using the keyboard shortcut SHIFT + ENTER, or select the play button in the toolbar.
+__4.6__ Use the Shift-Return ⇧↩︎ keyboard shortcut to execute code within a cell. The first code cell will ouput your Python instance.
 
-__4.6__ Within the notebook itself, *Step 1.2* instructs you to enter your credentials to authenticate into GBDX. These are the email and password you used to sign up for GBDX, and the Client ID and Client Secret that you located in step 3. Enter these now and run this code cell to check that gbdxtools is installed correctly and that you have the correct credentials (if no errors are raised, everything is working right).
+__4.7__ In the Notebook - *Step 1.2* instructs you to enter your credentials to authenticate into GBDX. These are the email and password you used to sign up for GBDX, and the Client ID and Client Secret that you located in step 3. Enter these now and run this code cell to check that gbdxtools is successfully installed and that you have valid credentials (if no errors are raised, everything is working correctly).
 
-__4.7__ Follow the instructions in the notebook and optionally watch the [recording of this tutorial](https://digitalglobe.wistia.com/medias/u3tmwds3xo).
-
-__5. Shut it down__
+### 5. Shut it down
 
 When you are finished with this tutorial, shut down the Jupyter Notebook and kernel, and deactivate the Conda environment where you installed gbdxtools.
 
