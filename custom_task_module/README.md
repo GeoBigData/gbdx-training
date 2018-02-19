@@ -8,12 +8,15 @@ The tutorial describes the files required to register a Task. If you execute the
 
 # to get started
 __GBDX Notebooks__
+
 Become familiar with Tasks and Workflows through tutorials in the [GBDX Notebooks module](../gbdx_notebooks_module/README.md)
 
 __Install Anaconda and gbdxtools__
+
 Instructions are provided in the [gbdxtools module](../gbdxtools_module/README.md)
 
 __Install Docker__
+
 1. Install Docker from https://www.docker.com/
 2. Test your Docker installation by starting Docker and pasting in the following command, which should return your Docker version 
 ```
@@ -22,6 +25,7 @@ docker version
 3. Sign up for a free Docker Hub account at https://hub.docker.com/
 
 __Download and start the Notebook tutorial:__
+
 1. Download the file [custom-task-tutorial.ipynb](https://github.com/GeoBigData/gbdx-training/blob/master/custom_task_module/custom-task-tutorial.ipynb) from this repository.
 
 2. Open a terminal/cmd window and copy and paste `jupyter notebook`. This will open the Jupyter Notebook interface in your browser [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). 
