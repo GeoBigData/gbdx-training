@@ -5,6 +5,7 @@ DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a 
 In this presentation, we explain what GBDX is, why we built it, we'll highlight solutions that partners are building on GBDX, and introduce important technical concepts. These technical concepts will be covered in more detail in the hands-on tutorials.
 
 [GBDX Overview recorded presentation](https://digitalglobe.wistia.com/medias/kbqln5pwks)
+
 [GBDX Overview slides](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 
 ## GBDX and Python: GBDX Notebooks
