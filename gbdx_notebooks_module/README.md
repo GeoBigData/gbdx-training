@@ -73,3 +73,19 @@ new methods: generate color balanced imagery with histogram matching
 [Color Matching Imagery to Browse Imagery](https://notebooks.geobigdata.io/hub/notebooks/5a29c32256e0d252e24aa1f5)
 <br />
 new methods: color balancing for very light or dark imagery
+
+___
+### Resources
+
+[__GBDX University__](https://gbdxdocs.digitalglobe.com/)
+
+[__GBDX Notebooks Hub__](https://notebooks.geobigdata.io)
+
+[__GBDXtools Documentation__](http://gbdxtools.readthedocs.io/en/latest/)
+
+[__S3 Browser__](http://s3browser.geobigdata.io/login.html)
+
+[__GBDX Stories__](http://gbdxstories.digitalglobe.com/)
+___
+We would love to hear your feedback. Feel free to email GBDX-support@digitalglobe.com with questions, comments or suggestions.
+
