@@ -6,6 +6,7 @@ The notebook tutorials listed below are designed to guide you through the basics
 
 ## to get started
 - sign into the [GBDX Notebooks Hub](https://notebooks.geobigdata.io) using your GBDX credentials
+- link to your Github account [instructions here](https://gbdxdocs.digitalglobe.com/docs/gbdx-notebooks-course#section-getting-started)
 - select a tutorial from below (they progress from very basic to advanced)
 - click the notebook link, which will take you to the tutorial notebook in the GBDX Notebook Hub
 - click "Clone and Edit" to create your own personal version of the notebook
