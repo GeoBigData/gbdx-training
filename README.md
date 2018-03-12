@@ -16,21 +16,21 @@ demonstrate how to analyze those building footprints against the original source
 # Intro
 DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a fast and easy way to search, order, and process DigitalGlobe imagery. We provide several tools for doing big data analytics on our platform, and the ability to leverage your own capabilities against your data or ours. This guide is provided to help discover the tools and resources you need to quickly and easily start developing on GBDX.
 
-## GBDX Overview
+# GBDX Overview
 In this presentation, we explain what GBDX is, why we built it, we'll highlight solutions that partners are building on GBDX, and introduce important technical concepts. These technical concepts will be covered in more detail in the hands-on tutorials.
 
 [GBDX Overview recorded presentation](https://digitalglobe.wistia.com/medias/kbqln5pwks)
 
 [GBDX Overview slides](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
 
-## GBDX and Python: GBDX Notebooks
+# GBDX and Python: GBDX Notebooks
 The quickest, easiest way to get started on GBDX. Start coding Python against DigitalGlobe imagery in a hosted Jupyter Notebook environment. You don't need to install anything and there are easy tools for searching and loading imagery directly in the notebook.
 
 These tutorials cover the skills and concepts you need to start developing on GBDX with Python. The tutorials progress from learning the basics of coding in the Notebook, to developing robust analysis methods and deploying them at scale on GBDX, and will also cover foundational skills such as searching the Catalog and ordering imagery to GBDX.
 
 You'll find all the resources to get started on GBDX in the [GBDX Notebooks module](../gbdx_notebooks_module) in this repo.
 
-## GBDX and Python: Direct Access
+# GBDX and Python: Direct Access
 
 The tutorials and resources in this section are provided to help you transition from developing via GBDX Notebooks to developing in your local Python environment. This requires installing additional libraries and software, but also provides greater flexibility and integration with your existing analysis tools.
 
