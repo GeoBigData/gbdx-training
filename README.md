@@ -1,3 +1,18 @@
+# Quickstart
+Want to see what GBDX can do? Follow the links below to view examples of combining the power of immediate imagery access with additional data sources to derive information and insight. Although it took a lot of coding to create the analyses, you can simply scroll through the webpage to view not only the code, but also view results in an interactive map. 
+
+### [Imagery to Insights with GBDX - Boat Traffic](https://notebooks.geobigdata.io/hub/notebooks/5a931838bf151131f290fe26?tab=code)
+
+This Notebook demonstrates how to quickly go from imagery to insight by combining a boat extraction analysis with weather data to gain meaningful insights about boat traffic near Point Piper, Australia.
+<img src="https://s3.amazonaws.com/gbdx-training/esg_images/boats_ex.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
+
+### [Ecopia Building Footprints and GBDX](https://notebooks.geobigdata.io/hub/notebooks/5a87205bbf151131f290fd51?tab=code)
+
+DigitalGlobe has partnered with Ecopia to produce highly accurate, up-to-date 2D building footprints. In this Notebook, we
+demonstrate how to analyze those building footprints against the original source imagery to create an enhanced dataset. Combining these datasets with the power of GBDX gives us quick and powerful insight into new business use cases and research questions.
+
+<img src="https://s3.amazonaws.com/gbdx-training/esg_images/footprints_ex.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
+
 # Intro
 DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a fast and easy way to search, order, and process DigitalGlobe imagery. We provide several tools for doing big data analytics on our platform, and the ability to leverage your own capabilities against your data or ours. This guide is provided to help discover the tools and resources you need to quickly and easily start developing on GBDX.
 
@@ -21,18 +36,20 @@ The tutorials and resources in this section are provided to help you transition 
 
 ### Install gbdxtools 
 
-gbdxtools is a Python library for interacting with the GBDX API. If you've completed any of the GBDX Notebooks tutorials, then you've used gbdxtools. 
+gbdxtools is a Python library for interacting with the GBDX API. If you've worked on any of the GBDX Notebooks tutorials, then you've used gbdxtools. 
 
-The instructions in this module will help you install gbdxtools in your local development environment, where it's easy to integrate your GBDX workflow with your existing analysis tools. Once you installed gbdxtools, you can code against DigitalGlobe imagery in exactly the same way as you did in the GBDX Notebooks tutorials, using the same gbdxtools commands. 
+The instructions in this module will help you install gbdxtools in your local development environment, where it's easy to integrate your GBDX workflow with your existing analysis tools. Once you've installed gbdxtools, you can code against DigitalGlobe imagery in exactly the same way as you did in the GBDX Notebooks tutorials, using the same gbdxtools code and commands. 
 
 Find these instructions in the [gbdxtools module](../gbdxtools_module) in this repo.
 
 ### Custom Task tutorial
 Once you're ready to turn your analysis methods into production-ready analysis tools, you can package your code and dependencies into a Docker, then register it as Task on GBDX. From there, it's simple to run that Task as many times as you want on as much imagery as you need.
 
-If you completed the tutorials from the GBDX Notebooks module, you already registered a Task on GBDX and ran it in a Workflow. You didn't have to Dockerize your code or register it on GBDX, however, because GBDX Notebooks handles these steps for you.
+If you completed the tutorials from the GBDX Notebooks module, you've already registered a Task on GBDX and used it in a Workflow. In that case, GBDX Notebooks automatically handled all of the Task registration steps for you. 
 
-We provide a tutorial that will walk you through these steps in your local development environment in the [Custom Task module](../custom_task_module) in this repo. 
+In this tutorial, we demonstrate how to manually register a Task to GBDX. We provide the code for an example Task, and walk you through the steps of Dockerizing that code, registering it as a Task, then running it in a Workflow on GBDX. This will allow you the greatest flexibility in creating your own, custom analysis tools and running them at scale. 
+
+Find these instructions in the [Custom Task module](../custom_task_module) in this repo.
 
 ___
 ### Resources
