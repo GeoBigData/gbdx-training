@@ -43,9 +43,9 @@ The instructions in this module will help you install gbdxtools in your local de
 Find these instructions in the [gbdxtools module](../gbdxtools_module) in this repo.
 
 ### Custom Task tutorial
-Once you're ready to turn your analysis methods into production-ready analysis tools, you can package your code and dependencies into a Docker, then register it as Task on GBDX. From there, it's simple to run that Task as many times as you want on as much imagery as you need.
+Once you're ready to turn your analysis methods into production-ready analysis tools, you can package your code and dependencies into a Docker, then register it as a Task on GBDX. From there, it's simple to run that Task as many times as you want on as much imagery as you need.
 
-If you completed the tutorials from the GBDX Notebooks module, you've already registered a Task on GBDX and used it in a Workflow. In that case, GBDX Notebooks automatically handled all of the Task registration steps for you. 
+If you completed the tutorials from the GBDX Notebooks module, you've already registered a Task on GBDX and used it in a Workflow. In that environment, GBDX Notebooks automatically handled all of the Task registration steps for you. 
 
 In this tutorial, we demonstrate how to manually register a Task to GBDX. We provide the code for an example Task, and walk you through the steps of Dockerizing that code, registering it as a Task, then running it in a Workflow on GBDX. This will allow you the greatest flexibility in creating your own, custom analysis tools and running them at scale. 
 
