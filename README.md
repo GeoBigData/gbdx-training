@@ -14,7 +14,6 @@ demonstrate how to analyze those building footprints against the original source
 <img src="https://s3.amazonaws.com/gbdx-training/esg_images/footprints_ex.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
 
 # Intro
-
 DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a fast and easy way to search, order, and process DigitalGlobe imagery. We provide several tools for doing big data analytics on our platform, and the ability to leverage your own capabilities against your data or ours. This guide is provided to help discover the tools and resources you need to quickly and easily start developing on GBDX.
 
 # GBDX Overview
