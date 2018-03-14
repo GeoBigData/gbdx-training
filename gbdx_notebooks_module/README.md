@@ -1,5 +1,5 @@
 ## intro
-GBDX Notebooks is hosted Python environment that provides immediate access to analysis-ready imagery in a familiar Jupyter Notebook environment. This environment is preconfigured with data science and geoprocessing tools that make it easy to develop new analysis methods and run them at scale on GBDX.
+GBDX Notebooks is a hosted Python environment that provides immediate access to analysis-ready imagery in a familiar Jupyter Notebook environment. This environment is preconfigured with data science and geoprocessing tools that make it easy to develop new analysis methods and run them at scale on GBDX.
 
 ## what you will learn
 The notebook tutorials listed below are designed to guide you through the basics of coding against imagery in the notebook to deploying an algorithm and running it at scale on GBDX.
@@ -14,11 +14,11 @@ The notebook tutorials listed below are designed to guide you through the basics
 
 ## tutorials
 
-__1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5a57f08fb72f7f5bf2ef326e?tab=code)__  `python exercises`
+__1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5a7df223bf151131f290fc84?tab=code)__  `python exercises`
 
 Learn to navigate the notebook interface, how to write and execute code in the notebook, plot a graph, and start a blank notebook.
 
-__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5a57f08fb72f7f5bf2ef326e?tab=code)__  `view image`  `array operations`
+__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5a835d37bf151131f290fce4?tab=code)__  `view image`  `array operations`  `NDVI`
 
 Learn how to fetch image pixel data and view it in the notebook, then run an easy vegetation analysis on the imagery.
 
@@ -44,7 +44,7 @@ There are several notebooks in the GBDX Notebooks Hub that demonstrate useful me
  
 [Searching and Ordering Imagery](https://notebooks.geobigdata.io/hub/notebooks/5aa1694fbf151131f290ffff?tab=code)  `catalog search`  `order imagery`
 
-[Workflow Basics](www.google.com)  `tasks`  `workflows`  `image preprocessing`  `task inputs and outputs`  `s3 output`
+[Workflow Basics](https://notebooks.geobigdata.io/hub/notebooks/5aa70674bf151131f291007d?tab=code)  `tasks`  `workflows`  `image preprocessing`  `task inputs and outputs`  `s3 output`
 
 [Imagery and Areas of Interest](https://notebooks.geobigdata.io/hub/notebooks/5a037c12f74cf64a53479964?tab=code)  `index image with various geometries`  `image geointerface` 
 
