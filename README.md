@@ -28,7 +28,7 @@ The quickest, easiest way to get started on GBDX. Start coding Python against Di
 
 These tutorials cover the skills and concepts you need to start developing on GBDX with Python. The tutorials progress from learning the basics of coding in the Notebook, to developing robust analysis methods and deploying them at scale on GBDX, and will also cover foundational skills such as searching the Catalog and ordering imagery to GBDX.
 
-You'll find all the resources to get started on GBDX in the [GBDX Notebooks module](../gbdx_notebooks_module) in this repo.
+You'll find all the resources to get started on GBDX in the [GBDX Notebooks module](../gbdx_notebooks_module/README.md) in this repo.
 
 # GBDX and Python: Direct Access
 
@@ -40,7 +40,7 @@ gbdxtools is a Python library for interacting with the GBDX API. If you've worke
 
 The instructions in this module will help you install gbdxtools in your local development environment, where it's easy to integrate your GBDX workflow with your existing analysis tools. Once you've installed gbdxtools, you can code against DigitalGlobe imagery in exactly the same way as you did in the GBDX Notebooks tutorials, using the same gbdxtools code and commands. 
 
-Find these instructions in the [gbdxtools module](../gbdxtools_module) in this repo.
+Find these instructions in the [gbdxtools module](../gbdxtools_module/README.md) in this repo.
 
 ### Custom Task tutorial
 Once you're ready to turn your analysis methods into production-ready analysis tools, you can package your code and dependencies into a Docker, then register it as a Task on GBDX. From there, it's simple to run that Task as many times as you want on as much imagery as you need.
@@ -49,7 +49,7 @@ If you completed the tutorials from the GBDX Notebooks module, you've already re
 
 In this tutorial, we demonstrate how to manually register a Task to GBDX. We provide the code for an example Task, and walk you through the steps of Dockerizing that code, registering it as a Task, then running it in a Workflow on GBDX. This will allow you the greatest flexibility in creating your own, custom analysis tools and running them at scale. 
 
-Find these instructions in the [Custom Task module](../custom_task_module) in this repo.
+Find these instructions in the [Custom Task module](../custom_task_module/README.md) in this repo.
 
 ___
 ### Resources
