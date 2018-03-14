@@ -4,14 +4,14 @@ Want to see what GBDX can do? Follow the links below to view examples of combini
 ### [Imagery to Insights with GBDX - Boat Traffic](https://notebooks.geobigdata.io/hub/notebooks/5a931838bf151131f290fe26?tab=code)
 
 This Notebook demonstrates how to quickly go from imagery to insight by combining a boat extraction analysis with weather data to gain meaningful insights about boat traffic near Point Piper, Australia.
-<img src="https://s3.amazonaws.com/gbdx-training/esg_images/boats_ex.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
+<img src="https://s3.amazonaws.com/gbdx-training/esg_images/boats2.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
 
 ### [Ecopia Building Footprints and GBDX](https://notebooks.geobigdata.io/hub/notebooks/5a87205bbf151131f290fd51?tab=code)
 
 DigitalGlobe has partnered with Ecopia to produce highly accurate, up-to-date 2D building footprints. In this Notebook, we
 demonstrate how to analyze those building footprints against the original source imagery to create an enhanced dataset. Combining these datasets with the power of GBDX gives us quick and powerful insight into new business use cases and research questions.
 
-<img src="https://s3.amazonaws.com/gbdx-training/esg_images/footprints_ex.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
+<img src="https://s3.amazonaws.com/gbdx-training/esg_images/footprints2.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
 
 # Intro
 DigitalGlobe's Geospatial Big Data Platform, or GBDX, provides customers with a fast and easy way to search, order, and process DigitalGlobe imagery. We provide several tools for doing big data analytics on our platform, and the ability to leverage your own capabilities against your data or ours. This guide is provided to help discover the tools and resources you need to quickly and easily start developing on GBDX.
