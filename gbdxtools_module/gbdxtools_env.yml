@@ -15,4 +15,4 @@ dependencies:
 - conda-forge::pyproj=1.9.5.1=py27_0
 - conda-forge::nb_conda=2.1.0=py27_0
 - pip:
-  - gbdxtools==0.11.14
+  - gbdxtools
