@@ -42,9 +42,9 @@ In the previous Notebook, we walked through how to deploy our coastline extracti
 
 There are several notebooks in the GBDX Notebooks Hub that demonstrate useful methods and tools, you will find them in the Discover section. Here is a short list of recommended notebooks.
  
-[Searching and Ordering Imagery](https://notebooks.geobigdata.io/hub/notebooks/5aa1694fbf151131f290ffff?tab=code)  `catalog search`  `order imagery`
+[Searching and Ordering Imagery](https://notebooks.geobigdata.io/hub/notebooks/5ab02230bf151131f291019b?tab=code)  `catalog search`  `order imagery`
 
-[Workflow Basics](https://notebooks.geobigdata.io/hub/notebooks/5aa70674bf151131f291007d?tab=code)  `tasks`  `workflows`  `image preprocessing`  `task inputs and outputs`  `s3 output`
+[Workflow Basics](https://notebooks.geobigdata.io/hub/notebooks/5ab022afbf151131f291019c?tab=code)  `tasks`  `workflows`  `image preprocessing`  `task inputs and outputs`  `s3 output`
 
 [Imagery and Areas of Interest](https://notebooks.geobigdata.io/hub/notebooks/5a037c12f74cf64a53479964?tab=code)  `index image with various geometries`  `image geointerface` 
 
