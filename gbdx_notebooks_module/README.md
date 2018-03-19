@@ -14,27 +14,27 @@ The notebook tutorials listed below are designed to guide you through the basics
 
 ## tutorials
 
-__1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5a7df223bf151131f290fc84?tab=code)__  `python exercises`
+__1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5ab01b3dbf151131f291018f?tab=code)__  `python exercises`
 
 Learn to navigate the notebook interface, how to write and execute code in the notebook, plot a graph, and start a blank notebook.
 
-__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5a835d37bf151131f290fce4?tab=code)__  `view image`  `array operations`  `NDVI`
+__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5ab01f0fbf151131f2910195?tab=code)__  `view image`  `array operations`  `NDVI`
 
 Learn how to fetch image pixel data and view it in the notebook, then run an easy vegetation analysis on the imagery.
 
-__3. [Algorithm prototyping](https://notebooks.geobigdata.io/hub/notebooks/5a57f08fb72f7f5bf2ef326e?tab=code)__  `NDWI`  `coastline extraction` 
+__3. [Algorithm prototyping](https://notebooks.geobigdata.io/hub/notebooks/5ab01f63bf151131f2910196?tab=code)__  `NDWI`  `coastline extraction` 
 
 In this Notebook, we walk through a simple methodology for extracting coastlines from 8-band multispectral imagery. This tutorial demonstrates how to link together several concepts from remote sensing, image science, and GIS to produce a complete geospatial analysis. The steps in the workflow include: (1) calculating a Normalized Difference Water Index; (2) thresholding the water index into a binary image; (3) cleaning up small features; and (4) converting the land/water boundaries into vector polylines representing coastlines.
 
-__4. [Algorithm scaling](https://notebooks.geobigdata.io/hub/notebooks/5a58317a8aeae044c479bf20?tab=code)__  `pip install`  `edge cases`  `image chips`  `image affine`  `visualization`
+__4. [Algorithm scaling](https://notebooks.geobigdata.io/hub/notebooks/5ab0202abf151131f2910198?tab=code)__  `pip install`  `edge cases`  `image chips`  `image affine`  `visualization`
 
 In this Notebook, we will extend the simple methodology for extracting coastlines that we built in the previous tutorial. Our goal in this Notebook is to be able to run the same methodology over a much bigger geographic area. Specifically, we are going to show two different approaches to running the algorithm over an entire image rather than just one small part of that image, like we used last time.
 
-__5. [Deploy algorithm as a Task](https://notebooks.geobigdata.io/hub/notebooks/5a6657eaaa91896cfe650558?tab=code)__  `task inputs`  `task outputs`  `task deploy`  
+__5. [Deploy algorithm as a Task](https://notebooks.geobigdata.io/hub/notebooks/5ab020a0bf151131f2910199?tab=code)__  `task inputs`  `task outputs`  `task deploy`  
 
 In this Notebook, we provide a walkthrough of how to deploy our coastline extraction algorithm as a GBDX Task, using some helpful tools built right into the GBDX Notebooks interface. Once we've done this, we can execute the same Task against multiple images all at the same time: each will be kicked off as a separate, parallel workflow, without being constrained to the computational limits of a single machine.
 
-__6. [Run algorithm as a Task on GBDX](https://notebooks.geobigdata.io/hub/notebooks/5a691c0caa91896cfe65060c?tab=code)__  `workflows`  `S3 output`  `vizualizing output`
+__6. [Run algorithm as a Task on GBDX](https://notebooks.geobigdata.io/hub/notebooks/5ab020f1bf151131f291019a?tab=code)__  `workflows`  `S3 output`  `vizualizing output`
 
 In the previous Notebook, we walked through how to deploy our coastline extraction algorithm as a GBDX Task, enabling us to run it on the GBDX platform instead of inside of our Notebook. In this final Notebook, we are going to use the GBDX Task we created to run coastline extraction over multiple images, in parallel, using GBDX Workflows. Using this approach, we'll be able to extract a highly detailed coastline for the entire island of Kauai, in less than 10 minutes.
 
