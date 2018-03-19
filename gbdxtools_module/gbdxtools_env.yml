@@ -4,15 +4,15 @@ channels: !!python/tuple
 - !!python/unicode
   'conda-forge'
 - !!python/unicode
-  'conda-forge/label/dev'
-- !!python/unicode
   'defaults'
+- !!python/unicode
+  'digitalglobe' 
 dependencies:
 - conda-forge::python=2.7
-- conda-forge/label/dev::rasterio=1.0a9
-- conda-forge::shapely=1.5.17=np112py27_3
-- conda-forge::fiona=1.7.8=py27_1
-- conda-forge::pyproj=1.9.5.1=py27_0
-- conda-forge::nb_conda=2.1.0=py27_0
-- pip:
-  - gbdxtools
+- conda-forge::numpy
+- conda-forge::rasterio=0.36.0
+- conda-forge::gdal
+- conda-forge::fiona
+- conda-forge::pyproj
+- conda-forge::ipython
+- digitalglobe::gbdxtools
