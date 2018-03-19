@@ -28,7 +28,7 @@ The quickest, easiest way to get started on GBDX. Start coding Python against Di
 
 These tutorials cover the skills and concepts you need to start developing on GBDX with Python. The tutorials progress from learning the basics of coding in the Notebook, to developing robust analysis methods and deploying them at scale on GBDX, and will also cover foundational skills such as searching the Catalog and ordering imagery to GBDX.
 
-You'll find all the resources to get started on GBDX in the [GBDX Notebooks module](../gbdx_notebooks_module/README.md) in this repo.
+You'll find all the resources to get started on GBDX in the [GBDX Notebooks module](./gbdx_notebooks_module/README.md) in this repo.
 
 # GBDX and Python: Direct Access
 
