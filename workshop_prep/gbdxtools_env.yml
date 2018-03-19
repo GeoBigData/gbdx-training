@@ -1,0 +1,18 @@
+# environment.yml
+name: gbdxtools
+channels: !!python/tuple
+- !!python/unicode
+  'conda-forge'
+- !!python/unicode
+  'defaults'
+- !!python/unicode
+  'digitalglobe' 
+dependencies:
+- conda-forge::python=2.7
+- conda-forge::numpy
+- conda-forge::rasterio=0.36.0
+- conda-forge::gdal
+- conda-forge::fiona
+- conda-forge::pyproj
+- conda-forge::ipython
+- digitalglobe::gbdxtools
