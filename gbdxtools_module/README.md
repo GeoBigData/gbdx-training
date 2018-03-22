@@ -1,5 +1,5 @@
 ## intro
-GBDXtools is a GBDX Python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. If you've completed any of the GBDX Notebooks tutorials, then you've seen gbdxtools in action. An important to know is that once you've installed gbdxtools locally, you can write and run analysis code in your local Python environment exactly as you would in GBDX Notebooks. 
+GBDXtools is a GBDX Python package that allows one to easily access GBDX APIs to search the DigitalGlobe catalog, and order and process imagery. If you've completed any of the GBDX Notebooks tutorials, then you've seen gbdxtools in action. An important thing to know is that once you've installed gbdxtools locally, you can write and run analysis code in your local Python environment exactly as you would in GBDX Notebooks. 
 
 ## to get started
 
