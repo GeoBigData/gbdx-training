@@ -69,15 +69,9 @@ __2.6__ Try importing all the modules (if no errors are raised, everything is wo
 python -c "import rasterio; import fiona; import shapely; import gbdxtools"
 ```
 
-### 3. Activate your GBDX acount credentials and locate your API key
+### 3. Activate your GBDX acount credentials
 
 __3.1__ Activate your account - once you've been assigned to your company's GBDX account (we will do this for you, please coordinate with your company's GBDX POC), you'll be sent an email from DigitalGlobe with instructions on how to activate your account. Open the message and click on "ACTIVATE YOUR ACCOUNT". This will pop up a window where you will prompted to set a password.
-
-__3.2__ Sign in to the [GBDX Web App](https://gbdx.geobigdata.io) with your GBDX username and password.
-
-__3.3__ Find your profile - first click the user icon in the lower left corner, then your username.
-
-__3.4__ Look for the strings called “Client ID” and “Client Secret.” These are the GBDX credentials you'll need later to set up gbdxtools to interact with GBDX APIs.
 
 ### 4a. Test your gbdxtools installation
 
@@ -87,9 +81,8 @@ You can start Python from the gbdxtools environment, copy and paste the followin
 import gbdxtools
 gbdx = gbdxtools.Interface(
     username='',
-    password='',
-    client_id='',
-    client_secret='')
+    password=''
+    )
     
 gbdx.s3.info
 ```
