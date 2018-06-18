@@ -21,7 +21,7 @@ In this presentation, we explain what GBDX is, why we built it, we'll highlight 
 
 [GBDX Overview recorded presentation](https://digitalglobe.wistia.com/medias/kbqln5pwks)
 
-[GBDX Overview slides](https://docs.google.com/presentation/d/1SPsvbI6l1fO9zfeRTUSEdoV1M17bfYDp1xeCHWXfACU/edit?usp=sharing)
+[GBDX Overview slides](https://docs.google.com/presentation/d/171n5JYn4CZoX0Hy7vEtPaiJbm-sTCicdSHUzInoE89w/edit?usp=sharing)
 
 # GBDX and Python: GBDX Notebooks
 The quickest, easiest way to get started on GBDX. Start coding Python against DigitalGlobe imagery in a hosted Jupyter Notebook environment. You don't need to install anything and there are easy tools for searching and loading imagery directly in the notebook.
