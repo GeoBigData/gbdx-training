@@ -135,7 +135,7 @@ __Windows users__:
 
 __5.2__ Deactivate the virtual environment
 ```
-deactivate gbdxtools
+deactivate
 ```
 __5.3__ (Optional) Remove the environment
 
@@ -152,14 +152,11 @@ __6.1__ You will need your GBDX credentials again (located within your profile i
 __6.2__ Create a blank text file and copy and paste the following information:
 ```
 [gbdx]
-auth_url = https://geobigdata.io/auth/v1/oauth/token/
-client_id = <your_client_id>
-client_secret = <your_client_secret>
 user_name = <your_user_name>
 user_password = <your_password>
 ```
 
-__6.3__ Replace `<your_client_id>` and `<your_client_secret>` with your credentials, also `<your_user_name>` and `<your_password>` with the username and password associated with your GBDX account.
+__6.3__ Replace `<your_user_name>` and `<your_password>` with the username (probably your email) and password associated with your GBDX account.
 
 __6.4__ Save this file in your home directory with the filename `.gbdx-config`
 	- be sure to include the `.` at the beginning of the filename
