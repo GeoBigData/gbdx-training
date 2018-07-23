@@ -15,4 +15,5 @@ dependencies:
 - conda-forge::fiona
 - conda-forge::pyproj
 - conda-forge::ipython
+- conda-forge::nb_conda
 - digitalglobe::gbdxtools
