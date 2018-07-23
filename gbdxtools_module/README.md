@@ -50,7 +50,7 @@ __Windows users__:
 
 __2.1__ Download the [gbdxtools_env.yml](../gbdxtools_module/gbdxtools_env.yml) file from this repo
 
-__2.2__ Open cmd.exe
+__2.2__ Start Anaconda Prompt
 
 __2.3__ Update conda
 ```
@@ -73,7 +73,7 @@ python -c "import rasterio; import fiona; import shapely; import gbdxtools"
 
 __3.1__ Activate your account - once you've been assigned to your company's GBDX account (we will do this for you, please coordinate with your company's GBDX POC), you'll be sent an email from DigitalGlobe with instructions on how to activate your account. Open the message and click on "ACTIVATE YOUR ACCOUNT". This will pop up a window where you will prompted to set a password.
 
-### 4a. Test your gbdxtools installation
+### 4. Test your gbdxtools installation
 
 You can start Python from the gbdxtools environment, copy and paste the following code, and fill in your GBDX credentials. You will know that you've successfully installed gbdxtools if there's no error and it prints your GBDX S3 information. 
 
@@ -88,31 +88,6 @@ gbdx.s3.info
 ```
 
 From here, you can code against DigitalGlobe imagery using gbdxtools just as you did in the GBDX Notebooks tutorials, using the exact same gbdxtools commands.  
-
-### 4b. Test your gbdxtools installation in a Jupyter Notebook
-
-We provided the same code for testing your gbdxtools installation in a Jupyter Notebook, if this is more convenient for you. If you've completed any of the GBDX Notebooks tutorials, then you'll be familiar with this layout.
-
-Jupyter Notebook is an open-source web application that makes it easy to create and share documents - called notebooks - that contain live code and explanatory text. Starting the Jupyter Notebook app will launch a Python 'kernel' and Notebook Dashboard in a browser window. From here, you can open and close notebooks and manage running kernels [(documentation here)](https://jupyter.readthedocs.io/en/latest/running.html#running). Use the following instructions to start the provided gbdxtools test notebook.
-
-__4.1__ Download the file [gbdxtools-test.ipynb](../gbdxtools_module/gbdxtools-test.ipynb) from this repository
-
-__4.2__ Go back to the terminal window where you have activated the gbdxtools environment and navigate to the directory where you have saved gbdxtools-test.ipynb
-
-__4.3__ Start the Jupyter Notebook App by typing the following command in the terminal
-```
-jupyter notebook
-```
-__4.4__ Click gbdxtools-test.ipynb to launch the notebook.
-
-__4.5__ Switch to the gbdxtools environment kernel:
-- select the "Kernel" dropdown menu from the toolbar
-- hover over "Change Kernel"
-- select Python [conda env:gbdxtools]
-
-__4.6__ Use the Shift-Return ⇧↩︎ keyboard shortcut to execute code within a cell. The first code cell will ouput your Python instance.
-
-__4.7__ In the Notebook - *Step 1.2* instructs you to enter your credentials to authenticate into GBDX. These are the email and password you used to sign up for GBDX, and the Client ID and Client Secret that you located in step 3. Enter these now and run this code cell to check that gbdxtools is successfully installed and that you have valid credentials (if no errors are raised, everything is working correctly).
 
 ### 5. Shut it down
 
@@ -145,25 +120,29 @@ conda remove --name gbdxtools --all
 ___
 __6. Optional .gbdx-config file:__
 
-Save a gbdxtools config file to your home directory with your GBDX credentials. This will allow you to authenticate a gbdxtools session without needing to enter your credentials each time.
+It is recommended that you save your GBDX credentials in a config file, which is safer and more convenient than coding in your GBDX credentials. 
 
-__6.1__ You will need your GBDX credentials again (located within your profile information in the [GBDX Web App](https://gbdx.geobigdata.io/profile)).
-
-__6.2__ Create a blank text file and copy and paste the following information:
+__6.1__ Create a blank text file and copy and paste the following information:
 ```
 [gbdx]
 user_name = <your_user_name>
 user_password = <your_password>
 ```
 
-__6.3__ Replace `<your_user_name>` and `<your_password>` with the username (probably your email) and password associated with your GBDX account.
+__6.2__ Replace `<your_user_name>` and `<your_password>` with the username (email) and password associated with your GBDX account.
 
-__6.4__ Save this file in your home directory with the filename `.gbdx-config`
+__6.3__ Save this file in your user directory with the filename `.gbdx-config`
 	- be sure to include the `.` at the beginning of the filename
 	- the filename needs to be saved without an extension
 
-__6.5__ Test your gbdxtools installation and config file:
-	- Open a terminal/cmd window and type `python`
+__Mac users__:
+Typing `cd ~` in the terminal will take to your user directory, place your config file here. 
+
+__Windows users__:
+Typing `echo %USERPROFILE%` will print out the user directory, place your config file here.
+
+__6.4__ Test your gbdxtools installation and config file:
+	- Open a terminal/cmd window and type `ipython`
 	- Copy and paste the following code, which will result in an error if it can't locate your config file or if the formatting is incorrect.
 
 ```python
