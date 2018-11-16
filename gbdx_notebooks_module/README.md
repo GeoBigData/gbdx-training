@@ -48,8 +48,6 @@ There are several notebooks in the GBDX Notebooks Hub that demonstrate useful me
 
 [Imagery and Areas of Interest](https://notebooks.geobigdata.io/hub/notebooks/5a037c12f74cf64a53479964?tab=code)  `index image with various geometries`  `image geointerface` 
 
-[Base Layer Matching to Maps API](https://notebooks.geobigdata.io/hub/notebooks/5a70d42b2966da03cacf765e?tab=code)  `color balancing with histogram matching`
-
 [Color Matching Imagery to Browse Imagery](https://notebooks.geobigdata.io/hub/notebooks/5a29c32256e0d252e24aa1f5?tab=code)  `color balancing for light or dark imagery`
 
 
