@@ -18,11 +18,11 @@ __1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5b27f7
 
 Learn to navigate the notebook interface, how to write and execute code in the notebook, plot a graph, and start a blank notebook.
 
-__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5b27f8262c7831647a306e3f?tab=code)__  `view image`  `array operations`  `NDVI`
+__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5c006459f3acbc49e7a459f4?tab=code)__  `view image`  `array operations`  `NDVI`
 
 Learn how to fetch image pixel data and view it in the notebook, then run an easy vegetation analysis on the imagery.
 
-__3. [Algorithm prototyping](https://notebooks.geobigdata.io/hub/notebooks/5b27f9862c7831647a306e49?tab=code)__  `NDWI`  `coastline extraction` 
+__3. [Algorithm prototyping](https://notebooks.geobigdata.io/hub/notebooks/5c006459f3acbc49e7a459f4?tab=code)__  `NDWI`  `coastline extraction` 
 
 In this Notebook, we walk through a simple methodology for extracting coastlines from 8-band multispectral imagery. This tutorial demonstrates how to link together several concepts from remote sensing, image science, and GIS to produce a complete geospatial analysis. The steps in the workflow include: (1) calculating a Normalized Difference Water Index; (2) thresholding the water index into a binary image; (3) cleaning up small features; and (4) converting the land/water boundaries into vector polylines representing coastlines.
 
