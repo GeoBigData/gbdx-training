@@ -18,7 +18,7 @@ __1. [GBDX Notebook basics](https://notebooks.geobigdata.io/hub/notebooks/5b27f7
 
 Learn to navigate the notebook interface, how to write and execute code in the notebook, plot a graph, and start a blank notebook.
 
-__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5c006459f3acbc49e7a459f4?tab=code)__  `view image`  `array operations`  `NDVI`
+__2. [Simple NDVI](https://notebooks.geobigdata.io/hub/notebooks/5b27f8262c7831647a306e3f?tab=code)__  `view image`  `array operations`  `NDVI`
 
 Learn how to fetch image pixel data and view it in the notebook, then run an easy vegetation analysis on the imagery.
 
