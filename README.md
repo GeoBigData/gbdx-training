@@ -1,12 +1,12 @@
 # Quickstart
 Want to see what GBDX can do? Follow the links below to view examples of combining the power of immediate imagery access with additional data sources to derive information and insight. Although it took a lot of coding to create the analyses, you can simply scroll through the webpage to view not only the code, but also view results in an interactive map. 
 
-### [Imagery to Insights with GBDX - Boat Traffic](https://notebooks.geobigdata.io/hub/notebooks/5a931838bf151131f290fe26?tab=code)
+### [Imagery to Insights with GBDX - Boat Traffic](https://notebooks.geobigdata.io/hub/notebooks/uoxerx07mx5eqkq3y381)
 
 This Notebook demonstrates how to quickly go from imagery to insight by combining a boat extraction analysis with weather data to gain meaningful insights about boat traffic near Point Piper, Australia.
 <img src="https://s3.amazonaws.com/gbdx-training/esg_images/boats2.png" style="float: right; width: 600px; margin-right: 40px; margin-left: 40px; margin-bottom: 40px">
 
-### [Ecopia Building Footprints and GBDX](https://notebooks.geobigdata.io/hub/notebooks/5a87205bbf151131f290fd51?tab=code)
+### [Ecopia Building Footprints and GBDX](https://notebooks.geobigdata.io/hub/notebooks/64bvsjjzz486qjoyhlbs)
 
 DigitalGlobe has partnered with Ecopia to produce highly accurate, up-to-date 2D building footprints. In this Notebook, we
 demonstrate how to analyze those building footprints against the original source imagery to create an enhanced dataset. Combining these datasets with the power of GBDX gives us quick and powerful insight into new business use cases and research questions.
